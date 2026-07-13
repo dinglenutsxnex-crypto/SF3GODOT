@@ -60,7 +60,7 @@ jobs:
       - name: Locate Godot binary
         id: godot-bin
         run: |
-          BIN=$(find ~/godot -maxdepth 2 -type f -iname "Godot_v*_mono_linux_x86_64" | head -n1)
+          BIN=$(find ~/godot -maxdepth 2 -type f -iname "Godot_v*_mono_linux.x86_64" | head -n1)
           chmod +x "$BIN"
           echo "path=$BIN" >> "$GITHUB_OUTPUT"
 
