@@ -1,0 +1,9 @@
+.godot/
+*.uid
+bin/
+obj/
+*.user
+*.suo
+.idea/
+.vs/
+*.meta
