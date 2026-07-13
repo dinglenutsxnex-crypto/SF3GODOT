@@ -63,6 +63,8 @@ namespace UnityEngine
         public RenderTexture() { }
         public RenderTexture(int width, int height, int depth) { }
         public RenderTexture(int width, int height, int depth, RenderTextureFormat format) { }
+        public RenderTexture(int width, int height, int depth, RenderTextureFormat format, RenderTextureReadWrite readWrite) { }
+        public RenderTexture(RenderTexture textureToCopy) { }
         public static RenderTexture GetTemporary(int width, int height, int depthBuffer) => null;
         public static RenderTexture GetTemporary(int width, int height) => null;
         public static RenderTexture GetTemporary(int width, int height, int depthBuffer, RenderTextureFormat format) => null;
@@ -77,7 +79,7 @@ namespace UnityEngine
         public bool IsCreated() => false;
         public void DiscardContents() { }
         public static RenderTexture active { get; set; }
-        public static void MarkRestoreExpected() { }
+        public void MarkRestoreExpected() { }
         public void GenerateMips() { }
     }
 
@@ -201,7 +203,7 @@ namespace UnityEngine
         public Vector2 anchorMax { get; set; }
         public Vector2 pivot { get; set; }
         public Vector2 sizeDelta { get; set; }
-        public Vector2 anchoredPosition3D { get; set; }
+        public Vector3 anchoredPosition3D { get; set; }
         public Vector2 offsetMin { get; set; }
         public Vector2 offsetMax { get; set; }
         public void SetSizeWithCurrentAnchors(Axis axis, float size) { }

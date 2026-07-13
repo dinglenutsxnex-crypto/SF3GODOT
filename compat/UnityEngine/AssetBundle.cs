@@ -1,4 +1,4 @@
-﻿namespace UnityEngine
+namespace UnityEngine
 {
 	public class AssetBundle
 	{
@@ -7,7 +7,7 @@
 		public bool isStreamedSceneAssetBundle => false;
 
 		public static AssetBundleCreateRequest LoadFromFileAsync(string path) => null;
-		public static AssetBundleLoadFromFile LoadFromFile(string path) => null;
+		public static AssetBundle LoadFromFile(string path) => null;
 		public static AssetBundleCreateRequest LoadFromMemoryAsync(byte[] binary) => null;
 		public static AssetBundleCreateRequest LoadFromStreamAsync(System.IO.Stream stream) => null;
 		public static AssetBundle LoadFromFile(string path, uint crc) => null;

@@ -12,6 +12,11 @@ namespace UnityEngine
         public TouchScreenKeyboardStatus status => default;
         public static TouchScreenKeyboard Open(string text) => null;
         public static TouchScreenKeyboard Open(string text, TouchScreenKeyboardType keyboardType) => null;
+        public static TouchScreenKeyboard Open(string text, TouchScreenKeyboardType keyboardType, bool autocorrection) => null;
+        public static TouchScreenKeyboard Open(string text, TouchScreenKeyboardType keyboardType, bool autocorrection, bool multiline) => null;
+        public static TouchScreenKeyboard Open(string text, TouchScreenKeyboardType keyboardType, bool autocorrection, bool multiline, bool secure) => null;
+        public static TouchScreenKeyboard Open(string text, TouchScreenKeyboardType keyboardType, bool autocorrection, bool multiline, bool secure, bool alert) => null;
+        public static TouchScreenKeyboard Open(string text, TouchScreenKeyboardType keyboardType, bool autocorrection, bool multiline, bool secure, bool alert, string textPlaceholder) => null;
     }
 
     public enum TouchScreenKeyboardType

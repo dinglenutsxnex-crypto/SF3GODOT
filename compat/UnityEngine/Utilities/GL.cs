@@ -12,8 +12,13 @@ namespace UnityEngine
 		public static void LoadIdentity() { }
 		public static void MultMatrix(Matrix4x4 mat) { }
 
-		public static void Begin(GLMode mode) { }
+		public static void Begin(int mode) { }
 		public static void End() { }
+		public const int LINES = 1;
+		public const int LINE_STRIP = 2;
+		public const int TRIANGLES = 4;
+		public const int TRIANGLE_STRIP = 5;
+		public const int QUADS = 7;
 		public static void Vertex3(float x, float y, float z) { }
 		public static void Vertex(Vector3 v) { }
 		public static void Color(Color c) { }
@@ -39,6 +44,7 @@ namespace UnityEngine
 		public static Matrix4x4 GetGPUProjectionMatrix(Matrix4x4 proj, bool renderIntoTexture) => default;
 		public static Matrix4x4 GetGPUProjectionMatrix(Matrix4x4 proj, int renderTargetIdentifier) => default;
 		public static void Viewport(Rect pixelRect) { }
+		public static void ClearWithSkybox(bool clearDepth, Camera camera) { }
 		public static void ClearWithSkybox(bool clearDepth, bool clearColor, Camera camera) { }
 	}
 

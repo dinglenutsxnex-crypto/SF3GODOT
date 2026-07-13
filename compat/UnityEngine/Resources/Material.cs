@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 namespace UnityEngine
 {
-	public class Material
+	public class Material : Object
 	{
-		public string name { get; set; }
-		public HideFlags hideFlags { get; set; }
+		public new string name { get; set; }
+		public new HideFlags hideFlags { get; set; }
 		public Texture mainTexture { get; set; }
 		public Vector2 mainTextureOffset { get; set; }
 		public Vector2 mainTextureScale { get; set; }
@@ -68,7 +68,7 @@ namespace UnityEngine
 		public Vector2 GetTextureScale(string name) => default;
 		public Vector2 GetTextureScale(int nameID) => default;
 
-		public int GetTag(string tag, bool searchFallbacks) => 0;
+		public string GetTag(string tag, bool searchFallbacks) => "";
 		public string GetTag(string tag, bool searchFallbacks, string defaultValue) => "";
 		public void SetOverrideTag(string tag, string val) { }
 		public bool IsPassEnabled(int pass) => false;
@@ -78,6 +78,6 @@ namespace UnityEngine
 		public static implicit operator bool(Material exists) => exists != null;
 
 		public void CopyPropertiesFromMaterial(Material mat) { }
-		public int GetInstanceID() => 0;
+		public new int GetInstanceID() => 0;
 	}
 }

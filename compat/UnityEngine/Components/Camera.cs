@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine.Rendering;
 
 namespace UnityEngine
@@ -39,7 +39,7 @@ namespace UnityEngine
 		public float stereoConvergence => 0f;
 		public float stereoSeparation => 0f;
 		public bool stereoEnabled => false;
-		public static Eye stereoActiveEye => Eye.Left;
+		public Eye stereoActiveEye => Eye.Left;
 
 		public TransparencySortMode transparencySortMode { get; set; }
 		public int eventMask { get; set; }

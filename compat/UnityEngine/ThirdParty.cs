@@ -102,6 +102,7 @@ namespace UniRx
         public static IObservable<long> Timer(TimeSpan dueTime, TimeSpan period) => null;
         public static IObservable<T> FromEvent<T>(Action<Action<T>> addHandler, Action<Action<T>> removeHandler) => null;
         public static IObservable<Unit> FromEvent(Action addHandler, Action removeHandler) => null;
+        public static IObservable<long> EveryUpdate() => null;
     }
 
     public static class ObservableExtensions

@@ -12,6 +12,7 @@ namespace UnityEngine.UI
     {
         public RectTransform rectTransform => GetComponent<RectTransform>();
         public virtual Material mainMaterial { get; set; }
+        public virtual Material material { get; set; }
         public virtual Color color { get; set; }
         public bool raycastTarget { get; set; }
         public virtual void SetAllDirty() { }
@@ -30,7 +31,8 @@ namespace UnityEngine.UI
 
     public class Text : MaskableGraphic
     {
-        public virtual string text { get; set; }
+        protected string m_Text;
+        public virtual string text { get => m_Text; set => m_Text = value; }
         public Font font { get; set; }
         public int fontSize { get; set; }
         public FontStyle fontStyle { get; set; }

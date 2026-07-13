@@ -50,12 +50,16 @@ namespace SF3.Moves
 				{
 					_duration = 0;
 				}
-				TryGetFloat(out _amplitude.x, "AmpX", 0f, string.Empty, null, false);
-				TryGetFloat(out _amplitude.y, "AmpY", 0f, string.Empty, null, false);
-				TryGetFloat(out _amplitude.z, "AmpZ", 0f, string.Empty, null, false);
-				TryGetFloat(out _period.x, "PeriodX", 0f, string.Empty, null, false);
-				TryGetFloat(out _period.y, "PeriodY", 0f, string.Empty, null, false);
-				TryGetFloat(out _period.z, "PeriodZ", 0f, string.Empty, null, false);
+				float amplitudeX = 0f, amplitudeY = 0f, amplitudeZ = 0f;
+				float periodX = 0f, periodY = 0f, periodZ = 0f;
+				TryGetFloat(out amplitudeX, "AmpX", 0f, string.Empty, null, false);
+				TryGetFloat(out amplitudeY, "AmpY", 0f, string.Empty, null, false);
+				TryGetFloat(out amplitudeZ, "AmpZ", 0f, string.Empty, null, false);
+				TryGetFloat(out periodX, "PeriodX", 0f, string.Empty, null, false);
+				TryGetFloat(out periodY, "PeriodY", 0f, string.Empty, null, false);
+				TryGetFloat(out periodZ, "PeriodZ", 0f, string.Empty, null, false);
+				_amplitude = new Vector3(amplitudeX, amplitudeY, amplitudeZ);
+				_period = new Vector3(periodX, periodY, periodZ);
 			}
 		}
 

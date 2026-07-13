@@ -8,6 +8,7 @@ namespace UnityEngine
 		public static void Blit(Texture source, RenderTexture dest, Material mat) { }
 		public static void Blit(Texture source, RenderTexture dest, Material mat, int pass) { }
 		public static void Blit(Texture source, Material mat) { }
+		public static void Blit(Texture source, Material mat, int pass) { }
 		public static void DrawMesh(Mesh mesh, Vector3 position, Quaternion rotation) { }
 		public static void DrawMesh(Mesh mesh, Vector3 position, Quaternion rotation, Material material, int layer) { }
 		public static void DrawMesh(Mesh mesh, Matrix4x4 matrix, Material material) { }
@@ -31,6 +32,7 @@ namespace UnityEngine
 		public static void DrawTexture(Rect screenRect, string text) { }
 
 		public static void SetRenderTarget(RenderTexture rt) { }
+		public static void SetRenderTarget(RenderTexture rt, int mipLevel) { }
 		public static void SetRenderTarget(RenderBuffer colorBuffer, RenderBuffer depthBuffer) { }
 		public static RenderTexture active { get; set; }
 
@@ -52,6 +54,7 @@ namespace UnityEngine
 
 		public static void DrawProceduralIndirectNow(Material material, Bounds bounds, MeshTopology topology, ComputeBuffer bufferWithArgs) { }
 		public static void DrawProceduralIndirectNow(Material material, Bounds bounds, MeshTopology topology, ComputeBuffer bufferWithArgs, int argsOffset) { }
+		public static void DrawProceduralIndirectNow(MeshTopology topology, ComputeBuffer bufferWithArgs, int argsOffset) { }
 
 		public static void ConvertTexture(Texture texture, RenderTexture renderTexture) { }
 

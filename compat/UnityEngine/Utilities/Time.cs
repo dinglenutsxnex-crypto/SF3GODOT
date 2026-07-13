@@ -1,4 +1,4 @@
-﻿using Godot;
+using Godot;
 
 namespace UnityEngine
 {
@@ -6,7 +6,7 @@ namespace UnityEngine
 	{
 		public static float time { get; internal set; }
 		public static float realtimeSinceStartup => (float)(System.DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() / 1000.0);
-		public static float timeScale { get => Engine.GetTimeScale(); set => Engine.SetTimeScale(value); }
+		public static float timeScale { get => (float)Engine.GetTimeScale(); set => Engine.SetTimeScale(value); }
 		public static int frameCount => Engine.GetFramesDrawn();
 		public static float deltaTime = 0.0f;
 		public static float fixedDeltaTime = 0.0f;

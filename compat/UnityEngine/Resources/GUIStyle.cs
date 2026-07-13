@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace UnityEngine
 {
@@ -9,13 +9,13 @@ namespace UnityEngine
 		public bool wordWrap;
 		public TextAnchor alignment;
 
-		public GUIStyle() => throw new NotImplementedException();
-		public GUIStyle(GUIStyle original) => throw new NotImplementedException();
-
+		public GUIStyle() { }
+		public GUIStyle(GUIStyle original) { }
+		public static implicit operator GUIStyle(string name) => new GUIStyle();
 
 		public float CalcHeight(GUIContent content, float width)
 		{
-			throw new NotImplementedException();
+			return 0f;
 		}
 	}
 }

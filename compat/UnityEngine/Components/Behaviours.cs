@@ -148,6 +148,7 @@ namespace UnityEngine
     public class AnimationCurve
     {
         public Keyframe[] keys { get; set; }
+        public Keyframe this[int index] => keys[index];
         public int length => keys?.Length ?? 0;
         public AnimationCurveMode preWrapMode { get; set; }
         public AnimationCurveMode postWrapMode { get; set; }
@@ -179,7 +180,7 @@ namespace UnityEngine
 
     public class AudioListener : Behaviour
     {
-        public float volume { get; set; }
+        public static float volume { get; set; }
         public bool pause { get; set; }
     }
 
@@ -293,60 +294,70 @@ namespace UnityEngine
         public MinMaxCurve startSizeCurve => default;
         public MinMaxGradient startColorGradient => default;
         public MinMaxCurve startRotationCurve => default;
+
+        public struct MainModule
+        {
+            public MinMaxCurve startLifetime { get; set; }
+            public MinMaxCurve startSpeed { get; set; }
+            public MinMaxCurve startSize { get; set; }
+            public MinMaxGradient startColor { get; set; }
+            public MinMaxCurve startRotation { get; set; }
+            public bool flipRotation { get; set; }
+            public float gravityModifier { get; set; }
+            public bool playOnAwake { get; set; }
+            public float simulationSpeed { get; set; }
+            public bool loop { get; set; }
+            public bool prewarm { get; set; }
+            public int maxParticles { get; set; }
+            public float duration => 0f;
+            public ParticleSystemSimulationSpace simulationSpace { get; set; }
+            public ParticleSystemScalingMode scalingMode { get; set; }
+        }
+
+        public struct EmissionModule
+        {
+            public bool enabled { get; set; }
+            public MinMaxCurve rateOverTime { get; set; }
+            public MinMaxCurve rateOverDistance { get; set; }
+            public int burstCount => 0;
+        }
+
+        public struct ShapeModule
+        {
+            public bool enabled { get; set; }
+            public ParticleSystemShapeType shapeType { get; set; }
+            public float radius { get; set; }
+            public float angle { get; set; }
+            public Vector3 position { get; set; }
+            public Vector3 rotation { get; set; }
+            public Vector3 scale { get; set; }
+        }
+
+        public struct MinMaxGradient
+        {
+            public Color color;
+            public Gradient gradient;
+            public MinMaxGradient(Color color) { this.color = color; gradient = null; }
+            public MinMaxGradient(Gradient gradient) { this.gradient = gradient; color = default; }
+            public static implicit operator MinMaxGradient(Color color) => new MinMaxGradient(color);
+            public static implicit operator MinMaxGradient(Gradient gradient) => new MinMaxGradient(gradient);
+        }
+
+        public struct MinMaxCurve
+        {
+            public float constant;
+            public float constantMin;
+            public float constantMax;
+            public MinMaxCurve(float constant) { this.constant = constant; constantMin = constant; constantMax = constant; }
+            public MinMaxCurve(float min, float max) { constant = 0; constantMin = min; constantMax = max; }
+            public static implicit operator MinMaxCurve(float constant) => new MinMaxCurve(constant);
+        }
     }
 
     public enum ParticleSystemStopBehavior
     {
         StopEmittingAndClear,
         StopEmitting,
-    }
-
-    public struct MainModule
-    {
-        public MinMaxCurve startLifetime { get; set; }
-        public MinMaxCurve startSpeed { get; set; }
-        public MinMaxCurve startSize { get; set; }
-        public MinMaxGradient startColor { get; set; }
-        public MinMaxCurve startRotation { get; set; }
-        public bool flipRotation { get; set; }
-        public float gravityModifier { get; set; }
-        public bool playOnAwake { get; set; }
-        public float simulationSpeed { get; set; }
-        public bool loop { get; set; }
-        public bool prewarm { get; set; }
-        public int maxParticles { get; set; }
-        public float duration => 0f;
-        public ParticleSystemSimulationSpace simulationSpace { get; set; }
-        public ParticleSystemScalingMode scalingMode { get; set; }
-    }
-
-    public struct EmissionModule
-    {
-        public bool enabled { get; set; }
-        public MinMaxCurve rateOverTime { get; set; }
-        public MinMaxCurve rateOverDistance { get; set; }
-        public int burstCount => 0;
-    }
-
-    public struct ShapeModule
-    {
-        public bool enabled { get; set; }
-        public ParticleSystemShapeType shapeType { get; set; }
-        public float radius { get; set; }
-        public float angle { get; set; }
-        public Vector3 position { get; set; }
-        public Vector3 rotation { get; set; }
-        public Vector3 scale { get; set; }
-    }
-
-    public struct MinMaxGradient
-    {
-        public Color color;
-        public Gradient gradient;
-        public MinMaxGradient(Color color) { this.color = color; gradient = null; }
-        public MinMaxGradient(Gradient gradient) { this.gradient = gradient; color = default; }
-        public static implicit operator MinMaxGradient(Color color) => new MinMaxGradient(color);
-        public static implicit operator MinMaxGradient(Gradient gradient) => new MinMaxGradient(gradient);
     }
 
     public enum ParticleSystemSimulationSpace
@@ -387,21 +398,11 @@ namespace UnityEngine
         Particle,
     }
 
-    public struct MinMaxCurve
-    {
-        public float constant;
-        public float constantMin;
-        public float constantMax;
-        public MinMaxCurve(float constant) { this.constant = constant; constantMin = constant; constantMax = constant; }
-        public MinMaxCurve(float min, float max) { constant = 0; constantMin = min; constantMax = max; }
-        public static implicit operator MinMaxCurve(float constant) => new MinMaxCurve(constant);
-    }
-
     public class Projector : Behaviour
     {
         public Material material { get; set; }
         public Material[] materials { get; set; }
-        public float orthographic { get; set; }
+        public bool orthographic { get; set; }
         public float orthographicSize { get; set; }
         public float fieldOfView { get; set; }
         public float nearClipPlane { get; set; }
@@ -415,7 +416,7 @@ namespace UnityEngine
         public class Entry
         {
             public EventTriggerType eventID;
-            public System.Action<BaseEventData> callback;
+            public UnityEngine.Events.UnityEvent<BaseEventData> callback = new UnityEngine.Events.UnityEvent<BaseEventData>();
         }
     }
 
@@ -455,6 +456,8 @@ namespace UnityEngine
         public Component GetComponentInChildren(Type type, bool includeInactive) => null;
         public T[] GetComponentsInChildren<T>() => null;
         public T[] GetComponentsInChildren<T>(bool includeInactive) => null;
+        public void GetComponentsInChildren<T>(System.Collections.Generic.List<T> results) { }
+        public void GetComponentsInChildren<T>(bool includeInactive, System.Collections.Generic.List<T> results) { }
         public T GetComponentInParent<T>() => default;
         public T GetComponentInParent<T>(bool includeInactive) => default;
         public T[] GetComponentsInParent<T>() => null;
@@ -466,8 +469,11 @@ namespace UnityEngine
         public void SendMessage(string methodName, object value) { }
         public void SendMessage(string methodName, SendMessageOptions options) { }
         public void SendMessageUpwards(string methodName) { }
+        public void SendMessageUpwards(string methodName, object value) { }
         public void BroadcastMessage(string methodName) { }
         public void BroadcastMessage(string methodName, object parameter) { }
+        public void BroadcastMessage(string methodName, SendMessageOptions options) { }
+        public void BroadcastMessage(string methodName, object parameter, SendMessageOptions options) { }
         public bool CompareTag(string tag) => false;
     }
 }

@@ -4,7 +4,7 @@ namespace UnityEngine
 {
     public static class RectTransformUtility
     {
-        public static Vector2 WorldToScreenPoint(RectTransform rect, Vector3 worldPoint) => default;
+        public static Vector2 WorldToScreenPoint(Camera cam, Vector3 worldPoint) => default;
         public static bool ScreenPointToLocalPointInRectangle(RectTransform rect, Vector2 screenPoint, Camera cam, out Vector2 localPoint) { localPoint = default; return false; }
         public static Vector3 ScreenPointToWorldPointInRectangle(RectTransform rect, Vector2 screenPoint, Camera cam) => default;
         public static void FlipLayoutOnAxis(RectTransform rect, int axis, bool keepPositioning, bool recursive) { }
@@ -34,7 +34,7 @@ namespace UnityEngine
         public static IntPtr CallStaticObjectMethod(IntPtr clazz, IntPtr methodID, params jvalue[] args) => IntPtr.Zero;
         public static void CallStaticVoidMethod(IntPtr clazz, IntPtr methodID, params jvalue[] args) { }
         public static jvalue[] CreateArgArray(params object[] args) => null;
-        public static bool ExceptionOccurred() => false;
+        public static IntPtr ExceptionOccurred() => IntPtr.Zero;
         public static void ExceptionDescribe() { }
         public static void ExceptionClear() { }
     }
@@ -61,6 +61,37 @@ namespace UnityEngine
     public class ImageWrapper
     {
         public RectTransform rectTransform => null;
+        public Material material { get; set; }
+    }
+
+    public class TextEditor
+    {
+        public string text { get; set; }
+        public void OnFocus() { }
+        public void Copy() { }
+        public void Paste() { }
+    }
+
+    public static class Social
+    {
+        public static ILocalUser localUser => null;
+    }
+
+    public interface ISocialPlatform
+    {
+        ILocalUser localUser { get; }
+        void Authenticate(System.Action<bool> callback);
+        void Authenticate(ILocalUser user, System.Action<bool> callback);
+    }
+
+    public interface ILocalUser
+    {
+        string userName { get; }
+        string id { get; }
+        bool underage { get; }
+        bool authenticated { get; }
+        void Authenticate(System.Action<bool> callback);
+        void Authenticate(System.Action<bool, string> callback);
     }
 
     public class TextWrapper

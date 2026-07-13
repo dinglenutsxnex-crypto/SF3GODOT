@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Godot;
 
 namespace UnityEngine
@@ -22,6 +22,9 @@ namespace UnityEngine
 		public static bool GetKey(KeyCode key) => false;
 		public static bool GetKeyUp(KeyCode key) => false;
 		public static bool GetKeyDown(KeyCode key) => false;
+		public static bool GetKey(string name) => false;
+		public static bool GetKeyUp(string name) => false;
+		public static bool GetKeyDown(string name) => false;
 
 		public static bool GetMouseButton(int button) => false;
 		public static bool GetMouseButtonDown(int button) => false;

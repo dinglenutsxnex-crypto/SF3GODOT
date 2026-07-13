@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace UnityEngine
 {
@@ -61,6 +61,16 @@ namespace UnityEngine
 		}
 
 		public static T[] FindObjectsOfType<T>(bool includeInactive) where T : class
+		{
+			throw new NotImplementedException();
+		}
+
+		public static Object[] FindObjectsOfType(Type type)
+		{
+			throw new NotImplementedException();
+		}
+
+		public static Object[] FindObjectsOfType(Type type, bool includeInactive)
 		{
 			throw new NotImplementedException();
 		}

@@ -107,10 +107,10 @@ namespace UnityEngine
 
     public class Gradient
     {
-        public ColorKey[] colorKeys { get; set; }
-        public AlphaKey[] alphaKeys { get; set; }
+        public GradientColorKey[] colorKeys { get; set; }
+        public GradientAlphaKey[] alphaKeys { get; set; }
         public GradientMode mode { get; set; }
-        public Gradient() { colorKeys = new ColorKey[0]; alphaKeys = new AlphaKey[0]; }
+        public Gradient() { colorKeys = new GradientColorKey[0]; alphaKeys = new GradientAlphaKey[0]; }
         public Color Evaluate(float time) => default;
     }
 
@@ -260,17 +260,6 @@ namespace UnityEngine
         StretchToFill = 0,
         ScaleAndCrop = 1,
         ScaleToFit = 2,
-    }
-
-    public struct ColorBlock
-    {
-        public Color normalColor { get; set; }
-        public Color highlightedColor { get; set; }
-        public Color pressedColor { get; set; }
-        public Color disabledColor { get; set; }
-        public float colorMultiplier { get; set; }
-        public float fadeDuration { get; set; }
-        public static ColorBlock defaultColorBlock => default;
     }
 
     public enum SkinWeights

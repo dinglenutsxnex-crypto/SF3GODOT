@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 
 namespace UnityEngine
 {
-	public class Transform
+	public class Transform : Object, System.Collections.IEnumerable
 	{
 		public Godot.Node3D node;
 		public Transform transform => this;
@@ -62,6 +62,8 @@ namespace UnityEngine
 		public void Rotate(Vector3 eulers, Space relativeTo) { }
 		public void Rotate(Vector3 axis, float angle) { }
 		public void Rotate(Vector3 axis, float angle, Space relativeTo) { }
+		public void Rotate(float xAngle, float yAngle, float zAngle) { }
+		public void Rotate(float xAngle, float yAngle, float zAngle, Space relativeTo) { }
 		public void RotateAround(Vector3 point, Vector3 axis, float angle) { }
 
 		public void SetParent(Transform parent) { }
@@ -81,8 +83,10 @@ namespace UnityEngine
 
 		public void Translate(Vector3 translation) { }
 		public void Translate(Vector3 translation, Space relativeTo) { }
+		public void Translate(Vector3 translation, Transform relativeTo) { }
 		public void Translate(float x, float y, float z) { }
 		public void Translate(float x, float y, float z, Space relativeTo) { }
+		public void Translate(float x, float y, float z, Transform relativeTo) { }
 
 		public T GetComponent<T>()
 		{
@@ -163,8 +167,16 @@ namespace UnityEngine
 		public void LookAt(Vector3 worldPosition) { }
 		public void LookAt(Vector3 worldPosition, Vector3 worldUp) { }
 
-		public int GetInstanceID() => 0;
+		public new int GetInstanceID() => 0;
 
 		public static implicit operator bool(Transform exists) => exists != null;
+
+		public System.Collections.IEnumerator GetEnumerator()
+		{
+			for (int i = 0; i < childCount; i++)
+			{
+				yield return GetChild(i);
+			}
+		}
 	}
 }

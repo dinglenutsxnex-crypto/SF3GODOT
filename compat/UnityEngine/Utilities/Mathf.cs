@@ -133,6 +133,11 @@ namespace UnityEngine
             target = current + DeltaAngle(current, target);
             return SmoothDamp(current, target, ref currentVelocity, smoothTime, maxSpeed, deltaTime);
         }
+        public static float SmoothDampAngle(float current, float target, ref float currentVelocity, float smoothTime, float maxSpeed = Mathf.Infinity)
+        {
+            float dt = Time.deltaTime;
+            return SmoothDampAngle(current, target, ref currentVelocity, smoothTime, maxSpeed, dt);
+        }
         public static bool IsPowerOfTwo(int value) => value != 0 && (value & (value - 1)) == 0;
         public static int ClosestPowerOfTwo(int value) { int v = value; v--; v |= v >> 1; v |= v >> 2; v |= v >> 4; v |= v >> 8; v |= v >> 16; v++; return v; }
         public static int NextPowerOfTwo(int value) { if (value <= 0) return 1; value--; value |= value >> 1; value |= value >> 2; value |= value >> 4; value |= value >> 8; value |= value >> 16; value++; return value; }
