@@ -19,7 +19,21 @@ Godot generates under `res://android/build`) can assemble a working C# APK.
 **How to apply:** in `export_presets.cfg`, set
 `gradle_build/use_gradle_build=true` (plus reasonable `min_sdk`/`target_sdk`).
 In headless/CI contexts there's no GUI "Install Android Build Template" menu
-item, so run `godot --headless --install-android-build-template --quit`
-before the `--export-debug`/`--export-release` step (CLI flag added in Godot
-4.3 via PR godotengine/godot#85819; source: `main/main.cpp`, look for
-`install_android_build_template`).
+item; use the `--install-android-build-template` CLI flag (added in Godot 4.3
+via PR godotengine/godot#85819). That flag only takes effect when passed on
+the *same* invocation as `--export-debug`/`--export-release` — it's read by
+`main.cpp` into a variable that's only consumed inside the export codepath,
+so a separate standalone `--install-android-build-template --quit` run is a
+no-op. Combine them: `godot --headless --install-android-build-template
+--export-debug "Android" out.apk` (this same command implicitly sets editor
+mode, so `--editor` isn't needed here).
+
+A second, separate silent failure mode: Android/mobile export requires the
+project setting `rendering/textures/vram_compression/import_etc2_astc=true`
+in `project.godot`. If it's unset, `has_valid_project_configuration()` in
+Godot's Android export plugin returns false with **no error message at
+all** (unlike every other config problem, which prints a reason) — the log
+just shows the generic "Exporting to Android when using C#/.NET is
+experimental" advisory line and then a bare export failure. Source:
+`ResourceImporterTextureSettings::should_import_etc2_astc()` /
+`EditorExportPlatformAndroid::has_valid_project_configuration()`.

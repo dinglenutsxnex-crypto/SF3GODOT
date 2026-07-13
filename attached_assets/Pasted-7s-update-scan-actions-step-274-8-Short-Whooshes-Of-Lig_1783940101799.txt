@@ -1,0 +1,42 @@
+7s
+	_update_scan_actions: step 274: 8_Short_Whooshes_Of_Light_Weapon_V10_bip.mp3
+	_update_scan_actions: step 275: 8_Short_Whooshes_Of_Light_Weapon_V16_bip.mp3
+	_update_scan_actions: step 276: 8_Short_Whooshes_Of_Light_Weapon_V17_bip.mp3
+	_update_scan_actions: step 277: 8_Short_Whooshes_Of_Light_Weapon_V21_bip.mp3
+	_update_scan_actions: step 278: 8_Short_Whooshes_Of_Medium_Weapon_V2_bip.mp3
+	_update_scan_actions: step 279: 8_Short_Whooshes_Of_Medium_Weapon_V3_bip.mp3
+	_update_scan_actions: step 280: 8_Short_Whooshes_Of_Medium_Weapon_V12_bip.mp3
+	_update_scan_actions: step 281: 8_Short_Whooshes_Of_Medium_Weapon_V17_bip.mp3
+	_update_scan_actions: step 282: 8_Short_Whooshes_Of_Medium_Weapon_V19_bip.mp3
+	_update_scan_actions: step 283: nunchak_hit_1.mp3
+	_update_scan_actions: step 284: nunchak_hit_2.mp3
+	_update_scan_actions: step 285: nunchak_hit_3.mp3
+	_update_scan_actions: step 286: nunchak_hit_4.mp3
+	_update_scan_actions: step 287: nunchak_hit_5.mp3
+	_update_scan_actions: step 288: nunchak_light_1.mp3
+	_update_scan_actions: step 289: nunchak_light_2.mp3
+	_update_scan_actions: step 290: nunchak_light_3.mp3
+	_update_scan_actions: step 291: nunchak_light_low_1.mp3
+	_update_scan_actions: step 292: nunchak_light_low_2.mp3
+	_update_scan_actions: step 293: nunchak_light_low_3.mp3
+	_update_scan_actions: step 294: bone_crunching.mp3
+	_update_scan_actions: step 295: throw_whoosh.mp3
+_update_scan_actions: end
+ERROR: Cannot export project with preset "Android" due to configuration errors:
+Exporting to Android when using C#/.NET is experimental.
+
+   at: _fs_changed (editor/editor_node.cpp:1087)
+ERROR: Project export for preset "Android" failed.
+   at: _fs_changed (editor/editor_node.cpp:1103)
+[Godot MCP] Server stopped
+[Godot MCP] Plugin unloaded — server stopped
+loading_editor_layout: begin: Loading editor steps: 5
+	loading_editor_layout: step 0: Loading editor layout...
+loading_editor_layout: end
+WARNING: Scan thread aborted...
+     at: _notification (editor/editor_file_system.cpp:1710)
+ERROR: Condition "!EditorSettings::get_singleton() || !EditorSettings::get_singleton()->has_setting(p_setting)" is true. Returning: Variant()
+   at: _EDITOR_GET (editor/editor_settings.cpp:1445)
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2378)
+Error: Process completed with exit code 1.
