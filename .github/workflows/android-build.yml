@@ -1,0 +1,108 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  GODOT_VERSION: "4.4.1-stable"
+  GODOT_VERSION_DIR: "4.4.1.stable.mono"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: "platform-tools platforms;android-34 build-tools;34.0.0 cmdline-tools;latest"
+
+      - name: Cache Godot editor + export templates
+        id: godot-cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/.local/share/godot/export_templates
+          key: godot-${{ env.GODOT_VERSION }}-mono
+
+      - name: Download Godot mono editor + export templates
+        if: steps.godot-cache.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          mkdir -p ~/godot
+          cd ~/godot
+          curl -fL -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_mono_linux_x86_64.zip"
+          unzip -q godot.zip
+          rm godot.zip
+          curl -fL -o templates.tpz "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}/Godot_v${GODOT_VERSION}_mono_export_templates.tpz"
+          mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION_DIR}
+          unzip -q templates.tpz -d /tmp/templates
+          mv /tmp/templates/templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION_DIR}/
+          rm -rf /tmp/templates templates.tpz
+
+      - name: Locate Godot binary
+        id: godot-bin
+        run: |
+          BIN=$(find ~/godot -maxdepth 2 -type f -iname "Godot_v*_mono_linux_x86_64" | head -n1)
+          chmod +x "$BIN"
+          echo "path=$BIN" >> "$GITHUB_OUTPUT"
+
+      - name: Generate debug keystore
+        run: |
+          mkdir -p ~/.android
+          if [ ! -f ~/.android/debug.keystore ]; then
+            keytool -genkey -v -keystore ~/.android/debug.keystore \
+              -storepass android -alias androiddebugkey -keypass android \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -dname "CN=Android Debug,O=Android,C=US"
+          fi
+
+      - name: Configure Godot editor settings (Android SDK + debug keystore)
+        run: |
+          mkdir -p ~/.config/godot
+          {
+            echo '[gd_resource type="EditorSettings" format=3]'
+            echo ''
+            echo '[resource]'
+            echo "export/android/android_sdk_path = \"${ANDROID_SDK_ROOT}\""
+            echo "export/android/debug_keystore = \"${HOME}/.android/debug.keystore\""
+            echo 'export/android/debug_keystore_user = "androiddebugkey"'
+            echo 'export/android/debug_keystore_pass = "android"'
+          } > ~/.config/godot/editor_settings-4.tres
+
+      - name: Restore .NET dependencies
+        run: dotnet restore SF3GODOT.csproj
+
+      - name: Import project (generates .godot cache) and build C# solution
+        run: |
+          "${{ steps.godot-bin.outputs.path }}" --headless --verbose --import || true
+          "${{ steps.godot-bin.outputs.path }}" --headless --build-solutions --quit || true
+
+      - name: Export Android debug APK
+        run: |
+          mkdir -p build/android
+          "${{ steps.godot-bin.outputs.path }}" --headless --export-debug "Android" build/android/SF3GODOT.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SF3GODOT-debug-apk
+          path: build/android/SF3GODOT.apk
+          if-no-files-found: error
