@@ -1,0 +1,281 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp/GameLoad.cs" id="22"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp/TutorialMaskGenerator.cs" id="21"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/NekkiCanvasRoot.cs" id="20"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/ScreenTexture.cs" id="19"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="18"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="17"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="16"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="15"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="14"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="13"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="12"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="11"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="10"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/Nekki/StandardAssets/NekkiBlurOptimized.cs" id="9"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/NekkiUICamera.cs" id="8"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/NekkiUIRootModules.cs" id="7"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp/TutorialManager.cs" id="6"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp/TooltipManager.cs" id="5"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp/Tutorial.cs" id="4"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/NekkiUIRoot.cs" id="3"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp/BattleInterface.cs" id="2"]
+[ext_resource type="Script" path="res://scripts/Assembly-CSharp-firstpass/UIRoot.cs" id="1"]
+
+[node name="UI Root" type="Control"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(0.0027777778, 0.0027777778)
+script = ExtResource("1")
+# NGUI Panel depth: 0
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp/BattleInterface.cs
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/NekkiUIRoot.cs
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp/Tutorial.cs
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp/TooltipManager.cs
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp/TutorialManager.cs
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/NekkiUIRootModules.cs
+
+[node name="Camera" type="Camera2D" parent="UI Root"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+zoom = Vector2(1, 1)
+# Background color: 0, 0, 0, 1
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/NekkiUICamera.cs
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/Nekki/StandardAssets/NekkiBlurOptimized.cs
+
+[node name="BlockContainer" type="Control" parent="UI Root/Camera"]
+position = Vector2(0, 0.78775406)
+rotation = 0
+scale = Vector2(1, 1)
+# NGUI Panel depth: 100
+
+[node name="Container" type="Control" parent="UI Root/Camera/BlockContainer"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+custom_minimum_size = Vector2(100, 100)
+# Anchors: {"left":{"target":0,"relative":0,"absolute":0},"right":{"target":0,"relative":1,"absolute":0},"bottom":{"target":0,"relative":0,"absolute":0},"top":{"target":0,"relative":1,"absolute":0}}
+
+[node name="Left" type="Control" parent="UI Root/Camera/BlockContainer"]
+position = Vector2(-285.7874, -0)
+rotation = 0
+scale = Vector2(1, 1)
+custom_minimum_size = Vector2(472, 720)
+# Anchors: {"left":{"target":63,"relative":0,"absolute":0},"right":{"target":48,"relative":0,"absolute":0},"bottom":{"target":63,"relative":0,"absolute":0},"top":{"target":63,"relative":1,"absolute":0}}
+# BoxCollider size: 472, 720, 0
+
+[node name="Top" type="Control" parent="UI Root/Camera/BlockContainer"]
+position = Vector2(-0.7086792, -205)
+rotation = 0
+scale = Vector2(1, 1)
+custom_minimum_size = Vector2(1042, 310)
+# Anchors: {"left":{"target":63,"relative":0,"absolute":0},"right":{"target":63,"relative":1,"absolute":0},"bottom":{"target":48,"relative":1,"absolute":0},"top":{"target":63,"relative":1,"absolute":0}}
+# BoxCollider size: 1042, 310, 0
+
+[node name="Right" type="Control" parent="UI Root/Camera/BlockContainer"]
+position = Vector2(285.07874, -0)
+rotation = 0
+scale = Vector2(1, 1)
+custom_minimum_size = Vector2(470, 720)
+# Anchors: {"left":{"target":48,"relative":1,"absolute":0},"right":{"target":63,"relative":1,"absolute":0},"bottom":{"target":63,"relative":0,"absolute":0},"top":{"target":63,"relative":1,"absolute":0}}
+# BoxCollider size: 470, 720, 0
+
+[node name="Bottom" type="Control" parent="UI Root/Camera/BlockContainer"]
+position = Vector2(-0.7086792, 205)
+rotation = 0
+scale = Vector2(1, 1)
+custom_minimum_size = Vector2(1042, 310)
+# Anchors: {"left":{"target":63,"relative":0,"absolute":0},"right":{"target":63,"relative":1,"absolute":0},"bottom":{"target":63,"relative":0,"absolute":0},"top":{"target":48,"relative":0,"absolute":0}}
+# BoxCollider size: 1042, 310, 0
+
+[node name="Description" type="Label" parent="UI Root/Camera/BlockContainer"]
+position = Vector2(0, 50.3)
+rotation = 0
+scale = Vector2(1, 1)
+text = ""
+font_size = 16
+modulate = Color(1, 1, 1, 1)
+
+[node name="Sprite" type="TextureRect" parent="UI Root/Camera/BlockContainer/Description"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# Sprite: back_card from atlas 0cd24ef338fd6ff4aaf285185bd30366
+
+[node name="anchor_Left" type="Control" parent="UI Root/Camera"]
+position = Vector2(-640, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_BottomLeft" type="Control" parent="UI Root/Camera"]
+position = Vector2(-640, 360)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_TopLeft" type="Control" parent="UI Root/Camera"]
+position = Vector2(-640, -360)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_Top" type="Control" parent="UI Root/Camera"]
+position = Vector2(0, -360)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_Right" type="Control" parent="UI Root/Camera"]
+position = Vector2(640, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_TopRight" type="Control" parent="UI Root/Camera"]
+position = Vector2(640, -360)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_Bottom" type="Control" parent="UI Root/Camera"]
+position = Vector2(0, 360)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_Center" type="Control" parent="UI Root/Camera"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="anchor_BottomRight" type="Control" parent="UI Root/Camera"]
+position = Vector2(640, 360)
+rotation = 0
+scale = Vector2(1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs
+
+[node name="Panel" type="Control" parent="UI Root/Camera/anchor_BottomRight"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# NGUI Panel depth: 3000
+
+[node name="AlphaVersionLbl" type="Label" parent="UI Root/Camera/anchor_BottomRight/Panel"]
+position = Vector2(-21, -5)
+rotation = 0
+scale = Vector2(1, 1)
+text = "Player"
+font_size = 15
+modulate = Color(1, 1, 1, 1)
+
+[node name="AlphaVersionLbl" type="Label" parent="UI Root/Camera/anchor_BottomRight/Panel"]
+position = Vector2(-233.35, -5)
+rotation = 0
+scale = Vector2(1, 1)
+text = "BETA VERSION (CBT#1f2)"
+font_size = 15
+modulate = Color(1, 1, 1, 1)
+
+[node name="Overlay_controller" type="Control" parent="UI Root"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# NGUI Panel depth: 9999
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/ScreenTexture.cs
+
+[node name="screen_texture" type="Control" parent="UI Root/Overlay_controller"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+custom_minimum_size = Vector2(1280, 720)
+# Anchors: {"left":{"target":0,"relative":0,"absolute":0},"right":{"target":0,"relative":1,"absolute":0},"bottom":{"target":0,"relative":0,"absolute":0},"top":{"target":0,"relative":1,"absolute":0}}
+
+[node name="label" type="Label" parent="UI Root/Overlay_controller/screen_texture"]
+position = Vector2(0, 195)
+rotation = 0
+scale = Vector2(1, 1)
+text = ""
+font_size = 25
+modulate = Color(1, 1, 1, 1)
+
+[node name="block" type="Control" parent="UI Root/Overlay_controller"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# BoxCollider size: 1280, 720, 0
+custom_minimum_size = Vector2(1280, 720)
+# Anchors: {"left":{"target":50,"relative":0,"absolute":0},"right":{"target":50,"relative":1,"absolute":0},"bottom":{"target":50,"relative":0,"absolute":0},"top":{"target":50,"relative":1,"absolute":0}}
+
+[node name="NativeRoot" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -70)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp-firstpass/NekkiCanvasRoot.cs
+
+[node name="Camera" type="Camera2D" parent="NativeRoot"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+zoom = Vector2(5, 5)
+# Background color: 0.19215687, 0.3019608, 0.4745098, 0
+
+[node name="Canvas" type="Node3D" parent="NativeRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.006510417, 0.006510417, 0.006510417)
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+
+[node name="Panel" type="Control" parent="NativeRoot/Canvas"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+
+[node name="NekkiLogo" type="Node3D" parent="NativeRoot/Canvas/Panel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+
+[node name="EventSystem" type="Node3D" parent="NativeRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 70)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+
+[node name="TutorialMaskGenerator" type="Node3D" parent="NativeRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(1, 1, 1)
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp/TutorialMaskGenerator.cs
+
+[node name="Canvas" type="Node3D" parent="NativeRoot/TutorialMaskGenerator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.006510417, 0.006510417, 0.006510417)
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+# Script GUID not mapped: f70555f144d8491a825f0804e09c671c
+
+[node name="Camera" type="Camera2D" parent="NativeRoot/TutorialMaskGenerator"]
+position = Vector2(0, -0)
+rotation = 0
+scale = Vector2(1, 1)
+zoom = Vector2(5, 5)
+# Background color: 1, 1, 1, 0
+
+[node name="root" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -70)
+rotation_degrees = Vector3(0, 0, 0)
+scale = Vector3(0.004716981, 0.004716981, 0.004716981)
+fov = 60
+near = 0.3
+far = 1000
+# Background color: 0.97647065, 0.77647066, 0.18431373, 0.019607844
+# Additional script (ignored, Godot supports one per node): res://scripts/Assembly-CSharp/GameLoad.cs
+
