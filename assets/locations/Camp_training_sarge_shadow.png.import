@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b53bqgf1ml75w"
 path.s3tc="res://.godot/imported/Camp_training_sarge_shadow.png-3286c01129b970e3c99c059b71dd563c.s3tc.ctex"
+path.etc2="res://.godot/imported/Camp_training_sarge_shadow.png-3286c01129b970e3c99c059b71dd563c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/locations/Camp_training_sarge_shadow.png"
-dest_files=["res://.godot/imported/Camp_training_sarge_shadow.png-3286c01129b970e3c99c059b71dd563c.s3tc.ctex"]
+dest_files=["res://.godot/imported/Camp_training_sarge_shadow.png-3286c01129b970e3c99c059b71dd563c.s3tc.ctex", "res://.godot/imported/Camp_training_sarge_shadow.png-3286c01129b970e3c99c059b71dd563c.etc2.ctex"]
 
 [params]
 

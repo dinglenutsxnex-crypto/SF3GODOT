@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcbx7ch2mckbi"
 path.s3tc="res://.godot/imported/dojo_Legion_dojo_legion_glow_half_txr.png-86ffeb720571f5690343694df6d4033c.s3tc.ctex"
+path.etc2="res://.godot/imported/dojo_Legion_dojo_legion_glow_half_txr.png-86ffeb720571f5690343694df6d4033c.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/locations/dojo_Legion_dojo_legion_glow_half_txr.png"
-dest_files=["res://.godot/imported/dojo_Legion_dojo_legion_glow_half_txr.png-86ffeb720571f5690343694df6d4033c.s3tc.ctex"]
+dest_files=["res://.godot/imported/dojo_Legion_dojo_legion_glow_half_txr.png-86ffeb720571f5690343694df6d4033c.s3tc.ctex", "res://.godot/imported/dojo_Legion_dojo_legion_glow_half_txr.png-86ffeb720571f5690343694df6d4033c.etc2.ctex"]
 
 [params]
 

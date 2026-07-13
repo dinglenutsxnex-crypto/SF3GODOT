@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkhm1n3i3xgxx"
 path.s3tc="res://.godot/imported/Camp_training_sarge_head_CM_txr.png-0cfecdaaefa01b10210f72371b456292.s3tc.ctex"
+path.etc2="res://.godot/imported/Camp_training_sarge_head_CM_txr.png-0cfecdaaefa01b10210f72371b456292.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/locations/Camp_training_sarge_head_CM_txr.png"
-dest_files=["res://.godot/imported/Camp_training_sarge_head_CM_txr.png-0cfecdaaefa01b10210f72371b456292.s3tc.ctex"]
+dest_files=["res://.godot/imported/Camp_training_sarge_head_CM_txr.png-0cfecdaaefa01b10210f72371b456292.s3tc.ctex", "res://.godot/imported/Camp_training_sarge_head_CM_txr.png-0cfecdaaefa01b10210f72371b456292.etc2.ctex"]
 
 [params]
 

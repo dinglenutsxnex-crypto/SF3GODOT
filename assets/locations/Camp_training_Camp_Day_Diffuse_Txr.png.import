@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxccbjsatax7"
 path.s3tc="res://.godot/imported/Camp_training_Camp_Day_Diffuse_Txr.png-5612641cbad27aee527fbd36ce7e38c6.s3tc.ctex"
+path.etc2="res://.godot/imported/Camp_training_Camp_Day_Diffuse_Txr.png-5612641cbad27aee527fbd36ce7e38c6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/locations/Camp_training_Camp_Day_Diffuse_Txr.png"
-dest_files=["res://.godot/imported/Camp_training_Camp_Day_Diffuse_Txr.png-5612641cbad27aee527fbd36ce7e38c6.s3tc.ctex"]
+dest_files=["res://.godot/imported/Camp_training_Camp_Day_Diffuse_Txr.png-5612641cbad27aee527fbd36ce7e38c6.s3tc.ctex", "res://.godot/imported/Camp_training_Camp_Day_Diffuse_Txr.png-5612641cbad27aee527fbd36ce7e38c6.etc2.ctex"]
 
 [params]
 

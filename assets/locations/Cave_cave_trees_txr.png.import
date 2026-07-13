@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://grcnhb8olhde"
 path.s3tc="res://.godot/imported/Cave_cave_trees_txr.png-5600d24584c913bf9a566b047312e4ab.s3tc.ctex"
+path.etc2="res://.godot/imported/Cave_cave_trees_txr.png-5600d24584c913bf9a566b047312e4ab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/locations/Cave_cave_trees_txr.png"
-dest_files=["res://.godot/imported/Cave_cave_trees_txr.png-5600d24584c913bf9a566b047312e4ab.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cave_cave_trees_txr.png-5600d24584c913bf9a566b047312e4ab.s3tc.ctex", "res://.godot/imported/Cave_cave_trees_txr.png-5600d24584c913bf9a566b047312e4ab.etc2.ctex"]
 
 [params]
 

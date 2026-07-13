@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://pd55k7wqrpnl"
 path.s3tc="res://.godot/imported/bamboo_bamboo_alpha_txr.png-cdd4ffa09341cb040007c7f0d35a902f.s3tc.ctex"
+path.etc2="res://.godot/imported/bamboo_bamboo_alpha_txr.png-cdd4ffa09341cb040007c7f0d35a902f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://assets/locations/bamboo_bamboo_alpha_txr.png"
-dest_files=["res://.godot/imported/bamboo_bamboo_alpha_txr.png-cdd4ffa09341cb040007c7f0d35a902f.s3tc.ctex"]
+dest_files=["res://.godot/imported/bamboo_bamboo_alpha_txr.png-cdd4ffa09341cb040007c7f0d35a902f.s3tc.ctex", "res://.godot/imported/bamboo_bamboo_alpha_txr.png-cdd4ffa09341cb040007c7f0d35a902f.etc2.ctex"]
 
 [params]
 
