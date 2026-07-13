@@ -95,14 +95,10 @@ jobs:
           "${{ steps.godot-bin.outputs.path }}" --headless --verbose --import || true
           "${{ steps.godot-bin.outputs.path }}" --headless --build-solutions --quit || true
 
-      - name: Install Android Gradle build template
-        run: |
-          "${{ steps.godot-bin.outputs.path }}" --headless --editor --install-android-build-template --quit
-
       - name: Export Android debug APK
         run: |
           mkdir -p build/android
-          "${{ steps.godot-bin.outputs.path }}" --headless --export-debug "Android" build/android/SF3GODOT.apk
+          "${{ steps.godot-bin.outputs.path }}" --headless --install-android-build-template --export-debug "Android" build/android/SF3GODOT.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
