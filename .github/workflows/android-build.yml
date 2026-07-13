@@ -97,7 +97,7 @@ jobs:
 
       - name: Install Android Gradle build template
         run: |
-          "${{ steps.godot-bin.outputs.path }}" --headless --install-android-build-template --quit
+          "${{ steps.godot-bin.outputs.path }}" --headless --editor --install-android-build-template --quit
 
       - name: Export Android debug APK
         run: |
