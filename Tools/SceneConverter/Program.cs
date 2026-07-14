@@ -123,7 +123,9 @@ namespace SceneConverter
                     tscn.Add($"position = Vector2({px}, {py})");
                     float rotDeg = rz * 57.29578f;
                     tscn.Add($"rotation = {rotDeg}");
-                    tscn.Add($"scale = Vector2({sx}, {sy})");
+                    // NGUI often uses tiny scale (0.0028) for coordinate system mapping.
+                    // In Godot with Camera2D, we reset scale to 1 and adjust camera zoom instead.
+                    tscn.Add($"scale = Vector2(1, 1)");
                 }
                 else // Node3D / Camera3D / default
                 {

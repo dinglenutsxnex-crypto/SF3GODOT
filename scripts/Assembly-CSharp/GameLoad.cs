@@ -7,21 +7,25 @@ public class GameLoad : MonoBehaviour
 
 	public GameObject NekkiLogo;
 
-	internal void Awake()
+	protected virtual void Awake()
 	{
-		NekkiLogo.SetActive(true);
+		if (NekkiLogo != null)
+			NekkiLogo.SetActive(true);
 	}
 
-	internal void Start()
+	protected virtual void Start()
 	{
 		Sf3ConsoleCommands.AddCommands();
 		_enterPoint = new EnterPoint();
 		_enterPoint.Init();
 	}
 
-	internal void OnDestroy()
+	protected virtual void OnDestroy()
 	{
-		Debug.Log("Destroy GameLoad " + NekkiLogo.GetInstanceID());
-		GlobalLoad.Unload(NekkiLogo);
+		if (NekkiLogo != null)
+		{
+			Debug.Log("Destroy GameLoad " + NekkiLogo.GetInstanceID());
+			GlobalLoad.Unload(NekkiLogo);
+		}
 	}
 }
