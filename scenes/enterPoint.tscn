@@ -1,20 +1,18 @@
 [gd_scene load_steps=5 format=3 uid="uid://bh5gd56jgqm44"]
 
 [ext_resource type="Script" uid="uid://bmwntty24wu3w" path="res://scripts/Assembly-CSharp-firstpass/UIRoot.cs" id="1"]
-[ext_resource type="Script" uid="uid://dxpwscik2wto3" path="res://scripts/Assembly-CSharp/GameLoad.cs" id="4_0yub7"]
-[ext_resource type="Script" uid="uid://b3v7beamgg33p" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="18"]
-[ext_resource type="Script" uid="uid://bkif72owg6bhb" path="res://scripts/Assembly-CSharp/TutorialMaskGenerator.cs" id="21"]
+[ext_resource type="Script" uid="uid://dxpwscik2wto3" path="res://scripts/Assembly-CSharp/GameLoad.cs" id="2"]
+[ext_resource type="Script" uid="uid://b3v7beamgg33p" path="res://scripts/Assembly-CSharp-firstpass/UIAnchor.cs" id="3"]
+[ext_resource type="Script" uid="uid://bkif72owg6bhb" path="res://scripts/Assembly-CSharp/TutorialMaskGenerator.cs" id="4"]
 
 [node name="enterPoint_Root" type="Node"]
 
 [node name="enterPoint_Root#UI Root" type="Control" parent="."]
-custom_minimum_size = Vector2(1042, 310)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1")
 
-[node name="enterPoint_Root_UI Root_Camera_BlockContainer_Description#Sprite" type="TextureRect" parent="."]
-script = ExtResource("18")
+[node name="enterPoint_Root_UI Root#Camera" type="Camera2D" parent="."]
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_BottomLeft" type="Control" parent="."]
 layout_mode = 3
@@ -23,7 +21,7 @@ offset_left = -640.0
 offset_top = 360.0
 offset_right = -640.0
 offset_bottom = 360.0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_TopLeft" type="Control" parent="."]
 layout_mode = 3
@@ -32,21 +30,21 @@ offset_left = -640.0
 offset_top = -360.0
 offset_right = -640.0
 offset_bottom = -360.0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_Top" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_top = -360.0
 offset_bottom = -360.0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_Right" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 640.0
 offset_right = 640.0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_TopRight" type="Control" parent="."]
 layout_mode = 3
@@ -55,19 +53,19 @@ offset_left = 640.0
 offset_top = -360.0
 offset_right = 640.0
 offset_bottom = -360.0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_Bottom" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_top = 360.0
 offset_bottom = 360.0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_Center" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera#anchor_BottomRight" type="Control" parent="."]
 layout_mode = 3
@@ -76,7 +74,7 @@ offset_left = 640.0
 offset_top = 360.0
 offset_right = 640.0
 offset_bottom = 360.0
-script = ExtResource("18")
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root_Camera_anchor_BottomRight#Panel" type="Control" parent="."]
 layout_mode = 3
@@ -88,6 +86,13 @@ offset_top = -5.0
 offset_right = -233.35
 offset_bottom = -5.0
 text = "BETA VERSION (CBT#1f2)"
+
+[node name="enterPoint_Root_UI Root_Camera#BlockContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="enterPoint_Root_UI Root_Camera#Description" type="TextureRect" parent="."]
+script = ExtResource("3")
 
 [node name="enterPoint_Root_UI Root#Overlay_controller" type="Control" parent="."]
 layout_mode = 3
@@ -101,11 +106,93 @@ anchors_preset = 0
 [node name="enterPoint_Root_UI Root_Overlay_controller#block" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("21")
+script = ExtResource("4")
 
-[node name="enterPoint_Root_NativeRoot_TutorialMaskGenerator#Canvas" type="Node3D" parent="."]
+[node name="enterPoint_Root_UI Root#NativeRoot" type="Node" parent="."]
+
+[node name="enterPoint_Root_UI Root_NativeRoot#Canvas" type="Node3D" parent="."]
 transform = Transform3D(0.00471698, 0, 0, 0, 0.00471698, 0, 0, 0, 0.00471698, 0, 0, 100)
 
-[node name="root" type="Camera3D" parent="."]
+[node name="enterPoint_Root#root" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.454708, -0.235819, -0.101608)
-script = ExtResource("4_0yub7")
+script = ExtResource("2")
+
+[node name="UI_Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1")
+
+[node name="Camera" type="Camera2D" parent="UI_Root"]
+
+[node name="anchor_BottomLeft" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="anchor_TopLeft" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="anchor_Top" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="anchor_Right" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="anchor_TopRight" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="anchor_Bottom" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="anchor_Center" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="anchor_BottomRight" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("3")
+
+[node name="Panel" type="Control" parent="UI_Root/Camera/anchor_BottomRight"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="AlphaVersionLbl" type="Label" parent="UI_Root/Camera/anchor_BottomRight/Panel"]
+
+[node name="BlockContainer" type="Control" parent="UI_Root/Camera"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Description" type="TextureRect" parent="UI_Root/Camera"]
+script = ExtResource("3")
+
+[node name="Overlay_controller" type="Control" parent="UI_Root"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="screen_texture" type="Control" parent="UI_Root/Overlay_controller"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="block" type="Control" parent="UI_Root/Overlay_controller"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("4")
+
+[node name="NativeRoot" type="Node" parent="UI_Root"]
+
+[node name="Canvas" type="Node3D" parent="UI_Root/NativeRoot"]
+
+[node name="root" type="Camera3D" parent="."]
+script = ExtResource("2")
