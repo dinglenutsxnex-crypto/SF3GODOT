@@ -3,7 +3,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 [RequireComponent(typeof(UIWidget))]
 [AddComponentMenu("NGUI/UI/Localize")]
-public class UILocalize : MonoBehaviour
+public partial class UILocalize : MonoBehaviour
 {
 	public string key;
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SF3.Items
 {
-	public class ItemSlotCtr : MonoBehaviour
+	public partial class ItemSlotCtr : MonoBehaviour
 	{
 		public delegate void ItemSelectedEventHandler(PerkSlot slot);
 

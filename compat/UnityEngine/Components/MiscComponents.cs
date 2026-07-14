@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace UnityEngine
 {
-    public class Collider : Component
+    public partial class Collider : Component
     {
         public bool enabled { get; set; }
         public bool isTrigger { get; set; }
@@ -24,7 +24,7 @@ namespace UnityEngine
         public float bounciness { get; set; }
     }
 
-    public class Rigidbody : Component
+    public partial class Rigidbody : Component
     {
         public float mass { get; set; }
         public float drag { get; set; }
@@ -53,7 +53,7 @@ namespace UnityEngine
         public void WakeUp() { }
     }
 
-    public class Rigidbody2D : Component
+    public partial class Rigidbody2D : Component
     {
         public float mass { get; set; }
         public float drag { get; set; }
@@ -150,7 +150,7 @@ namespace UnityEngine
     public class SphereCollider : Collider { public Vector3 center { get; set; } public float radius { get; set; } }
     public class CapsuleCollider : Collider { public Vector3 center { get; set; } public float radius { get; set; } public float height { get; set; } public int direction { get; set; } }
 
-    public class CharacterJoint : Component
+    public partial class CharacterJoint : Component
     {
         public Rigidbody connectedBody { get; set; }
         public Vector3 swingAxis { get; set; }
@@ -185,14 +185,14 @@ namespace UnityEngine
         public float spring;
         public float damper;
     }
-    public class HingeJoint : Component { public Rigidbody connectedBody { get; set; } public bool useMotor { get; set; } public bool useLimits { get; set; } public JointMotor motor { get; set; } public JointLimits limits { get; set; } }
-    public class FixedJoint : Component
+    public partial class HingeJoint : Component { public Rigidbody connectedBody { get; set; } public bool useMotor { get; set; } public bool useLimits { get; set; } public JointMotor motor { get; set; } public JointLimits limits { get; set; } }
+    public partial class FixedJoint : Component
     {
         public Rigidbody connectedBody { get; set; }
         public float breakForce { get; set; }
         public float breakTorque { get; set; }
     }
-    public class Joint : Component
+    public partial class Joint : Component
     {
         public Rigidbody connectedBody { get; set; }
         public float breakForce { get; set; }
@@ -223,12 +223,12 @@ namespace UnityEngine
         public float max;
     }
 
-    public class Collider2D : Behaviour { public bool isTrigger { get; set; } public Bounds bounds { get; } public PhysicsMaterial2D sharedMaterial { get; set; } }
+    public partial class Collider2D : Behaviour { public bool isTrigger { get; set; } public Bounds bounds { get; } public PhysicsMaterial2D sharedMaterial { get; set; } }
     public class BoxCollider2D : Collider2D { public Vector2 size { get; set; } public Vector2 offset { get; set; } }
     public class PolygonCollider2D : Collider2D { public Vector2[] points { get; set; } public int pathCount { get; set; } }
     public class CircleCollider2D : Collider2D { public float radius { get; set; } public Vector2 offset { get; set; } }
 
-    public class Cloth : Component { public float stretchingStiffness { get; set; } public bool useGravity { get; set; } public bool enabled { get; set; } public float bendingStiffness { get; set; } public float damping { get; set; } public float friction { get; set; } public float externalAcceleration { get; set; } public float collisionMass { get; set; } public int solverFrequency { get; set; } }
+    public partial class Cloth : Component { public float stretchingStiffness { get; set; } public bool useGravity { get; set; } public bool enabled { get; set; } public float bendingStiffness { get; set; } public float damping { get; set; } public float friction { get; set; } public float externalAcceleration { get; set; } public float collisionMass { get; set; } public int solverFrequency { get; set; } }
 
     public class Collision
     {

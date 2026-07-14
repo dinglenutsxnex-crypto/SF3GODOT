@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectDebug : MonoBehaviour
+public partial class ObjectDebug : MonoBehaviour
 {
 	private class Unit
 	{

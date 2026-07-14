@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public abstract class UIRect : MonoBehaviour
+public abstract partial class UIRect : MonoBehaviour
 {
 	[Serializable]
 	public class AnchorPoint

@@ -1,7 +1,7 @@
 using SF3;
 using UnityEngine;
 
-public class MaterialAlphaAnimation : MonoBehaviour
+public partial class MaterialAlphaAnimation : MonoBehaviour
 {
 	public enum AnimationStyle
 	{

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class PerkInfoDrawer : MonoBehaviour
+	public partial class PerkInfoDrawer : MonoBehaviour
 	{
 		public UITable perkTable;
 

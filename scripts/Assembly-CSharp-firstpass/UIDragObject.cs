@@ -2,7 +2,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/Interaction/Drag Object")]
-public class UIDragObject : MonoBehaviour
+public partial class UIDragObject : MonoBehaviour
 {
 	public enum DragEffect
 	{

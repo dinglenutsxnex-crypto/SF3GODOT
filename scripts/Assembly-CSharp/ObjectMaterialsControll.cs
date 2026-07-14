@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectMaterialsControll : MonoBehaviour
+public partial class ObjectMaterialsControll : MonoBehaviour
 {
 	private SkinnedMeshRenderer[] _skMeshRenderers;
 

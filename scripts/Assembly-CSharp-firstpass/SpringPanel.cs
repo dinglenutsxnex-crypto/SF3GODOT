@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(UIPanel))]
 [AddComponentMenu("NGUI/Internal/Spring Panel")]
-public class SpringPanel : MonoBehaviour
+public partial class SpringPanel : MonoBehaviour
 {
 	public delegate void OnFinished();
 

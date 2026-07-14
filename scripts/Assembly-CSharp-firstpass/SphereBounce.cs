@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class SphereBounce : MonoBehaviour
+public partial class SphereBounce : MonoBehaviour
 {
 	public float force;
 

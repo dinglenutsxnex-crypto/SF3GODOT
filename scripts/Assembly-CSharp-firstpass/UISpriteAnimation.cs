@@ -4,7 +4,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 [RequireComponent(typeof(UISprite))]
 [AddComponentMenu("NGUI/UI/Sprite Animation")]
-public class UISpriteAnimation : MonoBehaviour
+public partial class UISpriteAnimation : MonoBehaviour
 {
 	[HideInInspector]
 	[SerializeField]

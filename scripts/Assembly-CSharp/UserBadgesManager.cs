@@ -7,7 +7,7 @@ using SF3.UserData;
 using UnityEngine;
 using sf3DTO;
 
-public class UserBadgesManager : MonoBehaviour, IUserDataManager
+public partial class UserBadgesManager : MonoBehaviour, IUserDataManager
 {
 	public interface IBadgeItem
 	{

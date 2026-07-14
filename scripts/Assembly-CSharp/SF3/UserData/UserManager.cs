@@ -18,7 +18,7 @@ using sf3DTO;
 
 namespace SF3.UserData
 {
-	public class UserManager : MonoBehaviour, IUserDataManager
+	public partial class UserManager : MonoBehaviour, IUserDataManager
 	{
 		private enum DefaultUserType
 		{

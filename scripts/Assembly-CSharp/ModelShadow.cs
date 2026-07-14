@@ -4,7 +4,7 @@ using DynamicShadowProjector;
 using SF3;
 using UnityEngine;
 
-public class ModelShadow : MonoBehaviour
+public partial class ModelShadow : MonoBehaviour
 {
 	[Serializable]
 	public class JointData

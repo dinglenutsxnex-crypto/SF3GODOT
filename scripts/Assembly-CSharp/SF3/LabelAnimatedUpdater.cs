@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class LabelAnimatedUpdater : MonoBehaviour
+	public partial class LabelAnimatedUpdater : MonoBehaviour
 	{
 		[SerializeField]
 		private int valueRange = 666;

@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class UnityCollisionRecognizer : MonoBehaviour
+public partial class UnityCollisionRecognizer : MonoBehaviour
 {
 	private Collider _collider;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SF3.Effects
 {
-	public abstract class GameEffectBase : MonoBehaviour, IGameEffect
+	public abstract partial class GameEffectBase : MonoBehaviour, IGameEffect
 	{
 		protected Transform transf;
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Saved Option")]
-public class UISavedOption : MonoBehaviour
+public partial class UISavedOption : MonoBehaviour
 {
 	public string keyName;
 

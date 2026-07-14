@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class AttributesDrawer : MonoBehaviour
+	public partial class AttributesDrawer : MonoBehaviour
 	{
 		[SerializeField]
 		private GameObject attributePrf;

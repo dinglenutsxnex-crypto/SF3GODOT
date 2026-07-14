@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using SF3;
 using UnityEngine;
 
-public class MapBattleStack : MonoBehaviour
+public partial class MapBattleStack : MonoBehaviour
 {
 	private MapBattleUI _battleUi;
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Drag-Resize Widget")]
-public class UIDragResize : MonoBehaviour
+public partial class UIDragResize : MonoBehaviour
 {
 	public UIWidget target;
 

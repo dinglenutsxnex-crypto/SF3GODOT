@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PickDepthFromParent : MonoBehaviour
+public partial class PickDepthFromParent : MonoBehaviour
 {
 	public UIPanel parent;
 

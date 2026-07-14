@@ -2,7 +2,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(RectTransform))]
-public class AdjustUI : MonoBehaviour
+public partial class AdjustUI : MonoBehaviour
 {
 	public enum AnchorModes
 	{

@@ -2,7 +2,7 @@ using System.Linq;
 using SF3;
 using UnityEngine;
 
-public class OptimizedGlow : MonoBehaviour
+public partial class OptimizedGlow : MonoBehaviour
 {
 	private RenderTexture glowRenderTextureA;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KeyChainDebug : MonoBehaviour
+public partial class KeyChainDebug : MonoBehaviour
 {
 	private string appKey = "application key";
 

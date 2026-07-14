@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Nekki.UI;
 using UnityEngine;
 
-public class TutorialBlockNGUI : MonoBehaviour
+public partial class TutorialBlockNGUI : MonoBehaviour
 {
 	protected const int reducingTexture = 2;
 

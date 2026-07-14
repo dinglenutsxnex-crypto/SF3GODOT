@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SystemAlertButton : MonoBehaviour
+public partial class SystemAlertButton : MonoBehaviour
 {
 	[SerializeField]
 	private LocalizationText label;

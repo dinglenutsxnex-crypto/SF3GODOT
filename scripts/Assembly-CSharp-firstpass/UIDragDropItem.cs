@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Drag and Drop Item")]
-public class UIDragDropItem : MonoBehaviour
+public partial class UIDragDropItem : MonoBehaviour
 {
 	public enum Restriction
 	{

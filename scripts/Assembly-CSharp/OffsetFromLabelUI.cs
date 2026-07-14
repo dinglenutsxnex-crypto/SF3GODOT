@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OffsetFromLabelUI : MonoBehaviour
+public partial class OffsetFromLabelUI : MonoBehaviour
 {
 	public UnityEngine.UI.Text label;
 

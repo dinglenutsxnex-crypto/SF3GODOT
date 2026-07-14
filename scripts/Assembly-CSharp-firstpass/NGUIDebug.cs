@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Internal/Debug")]
-public class NGUIDebug : MonoBehaviour
+public partial class NGUIDebug : MonoBehaviour
 {
 	private static bool mRayDebug = false;
 

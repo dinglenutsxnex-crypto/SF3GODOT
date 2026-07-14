@@ -1,7 +1,7 @@
 using SF3.GameModels;
 using UnityEngine;
 
-public class ModelFinder : MonoBehaviour
+public partial class ModelFinder : MonoBehaviour
 {
 	private Model _modelOfObject;
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class GlowEffectController : MonoBehaviour
+	public partial class GlowEffectController : MonoBehaviour
 	{
 		private OptimizedGlow glowEffect;
 

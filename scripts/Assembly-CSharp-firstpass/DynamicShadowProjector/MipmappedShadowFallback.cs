@@ -3,7 +3,7 @@ using UnityEngine;
 namespace DynamicShadowProjector
 {
 	[RequireComponent(typeof(ShadowTextureRenderer))]
-	public class MipmappedShadowFallback : MonoBehaviour
+	public partial class MipmappedShadowFallback : MonoBehaviour
 	{
 		public UObject m_fallbackShaderOrMaterial;
 

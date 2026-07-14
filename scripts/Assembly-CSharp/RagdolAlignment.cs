@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RagdolAlignment : MonoBehaviour
+public partial class RagdolAlignment : MonoBehaviour
 {
 	public float boundsWidth = 10f;
 

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SpriteSlicer2DDemoManager : MonoBehaviour
+public partial class SpriteSlicer2DDemoManager : MonoBehaviour
 {
 	private struct MousePosition
 	{

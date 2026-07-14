@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SwitchUI : MonoBehaviour
+public partial class SwitchUI : MonoBehaviour
 {
 	public GameObject UIRoot;
 

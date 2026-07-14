@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class CheckJoystick : MonoBehaviour
+public partial class CheckJoystick : MonoBehaviour
 {
 	[SerializeField]
 	private UISprite sprite;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SF3.Settings
 {
-	public class GameSettings : MonoBehaviour
+	public partial class GameSettings : MonoBehaviour
 	{
 		private ItemSettings _itemSettings;
 

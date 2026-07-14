@@ -1,7 +1,7 @@
 using Org.BouncyCastle.Utilities;
 using UnityEngine;
 
-public class SysDlg : MonoBehaviour
+public partial class SysDlg : MonoBehaviour
 {
 	private static string _message;
 

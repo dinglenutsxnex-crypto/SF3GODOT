@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SetInfoPanel : MonoBehaviour
+public partial class SetInfoPanel : MonoBehaviour
 {
 	public bool active
 	{

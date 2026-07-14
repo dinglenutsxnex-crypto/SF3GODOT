@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestFightGUI : MonoBehaviour
+public partial class TestFightGUI : MonoBehaviour
 {
 	public HUD userHUD;
 

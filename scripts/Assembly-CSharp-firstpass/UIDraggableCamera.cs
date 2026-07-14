@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
 [AddComponentMenu("NGUI/Interaction/Draggable Camera")]
-public class UIDraggableCamera : MonoBehaviour
+public partial class UIDraggableCamera : MonoBehaviour
 {
 	public Transform rootForBounds;
 

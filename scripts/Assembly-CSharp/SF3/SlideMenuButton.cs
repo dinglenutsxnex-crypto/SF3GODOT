@@ -3,7 +3,7 @@ using UnityEngine;
 namespace SF3
 {
 	[RequireComponent(typeof(CanvasGroup))]
-	public class SlideMenuButton : MonoBehaviour
+	public partial class SlideMenuButton : MonoBehaviour
 	{
 		private CanvasGroup _canvasGroup;
 

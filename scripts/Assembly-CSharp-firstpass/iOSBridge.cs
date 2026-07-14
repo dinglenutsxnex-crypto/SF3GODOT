@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class iOSBridge : MonoBehaviour
+public partial class iOSBridge : MonoBehaviour
 {
 	private Dictionary<string, Action<string>> callbacks = new Dictionary<string, Action<string>>();
 

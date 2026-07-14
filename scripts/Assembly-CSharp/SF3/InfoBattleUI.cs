@@ -11,7 +11,7 @@ using sf3DTO;
 
 namespace SF3
 {
-	public class InfoBattleUI : MonoBehaviour
+	public partial class InfoBattleUI : MonoBehaviour
 	{
 		private const string BATTLE_COOLDOWN_ALIAS = "battle_cooldown";
 

@@ -3,7 +3,7 @@ using SF3;
 using SF3.Moves;
 using UnityEngine;
 
-public class PerkCarousel : MonoBehaviour
+public partial class PerkCarousel : MonoBehaviour
 {
 	private enum Owners
 	{

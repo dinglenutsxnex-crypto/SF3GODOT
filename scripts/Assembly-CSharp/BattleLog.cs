@@ -9,7 +9,7 @@ using SF3.GameModels;
 using SF3.Moves;
 using UnityEngine;
 
-public class BattleLog : MonoBehaviour
+public partial class BattleLog : MonoBehaviour
 {
 	private static BattleLog _instance;
 

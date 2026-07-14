@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class LocationQualitySettings : MonoBehaviour
+	public partial class LocationQualitySettings : MonoBehaviour
 	{
 		[Serializable]
 		public class ToggleQualLvl

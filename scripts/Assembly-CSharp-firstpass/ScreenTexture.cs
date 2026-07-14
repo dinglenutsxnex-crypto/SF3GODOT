@@ -6,7 +6,7 @@ using DOTweenUtils;
 using Nekki.StandardAssets;
 using UnityEngine;
 
-public class ScreenTexture : MonoBehaviour
+public partial class ScreenTexture : MonoBehaviour
 {
 	public enum TextureOutputFilter
 	{

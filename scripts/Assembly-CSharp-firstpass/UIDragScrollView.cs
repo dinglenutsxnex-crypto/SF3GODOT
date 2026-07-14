@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Drag Scroll View")]
-public class UIDragScrollView : MonoBehaviour
+public partial class UIDragScrollView : MonoBehaviour
 {
 	public UIScrollView scrollView;
 

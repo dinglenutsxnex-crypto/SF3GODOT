@@ -122,7 +122,7 @@ namespace UnityEngine.EventSystems
 
     public enum MoveDirection { Left, Up, Right, Down, None }
 
-    public class EventSystem : MonoBehaviour
+    public partial class EventSystem : MonoBehaviour
     {
         public static EventSystem current { get; set; }
         public GameObject currentSelectedGameObject => null;
@@ -148,7 +148,7 @@ namespace UnityEngine.EventSystems
         public static EventFunction<IInitializePotentialDragHandler> initializePotentialDrag => (h, e) => h.OnInitializePotentialDrag((PointerEventData)e);
     }
 
-    public class StandaloneInputModule : MonoBehaviour { }
+    public partial class StandaloneInputModule : MonoBehaviour { }
 }
 
 namespace UnityEngine.Rendering

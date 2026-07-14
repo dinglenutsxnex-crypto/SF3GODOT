@@ -3,7 +3,7 @@ using SF3.Items;
 using SF3.Settings;
 using UnityEngine;
 
-public class ItemReward : MonoBehaviour
+public partial class ItemReward : MonoBehaviour
 {
 	[SerializeField]
 	private NekkiUISprite sprite;

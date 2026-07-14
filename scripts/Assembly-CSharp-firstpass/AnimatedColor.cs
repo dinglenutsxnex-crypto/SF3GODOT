@@ -2,7 +2,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(UIWidget))]
-public class AnimatedColor : MonoBehaviour
+public partial class AnimatedColor : MonoBehaviour
 {
 	public Color color = Color.white;
 

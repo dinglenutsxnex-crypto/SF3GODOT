@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CustomSlideInput : MonoBehaviour
+public partial class CustomSlideInput : MonoBehaviour
 {
 	public delegate void SlideInputEvent(GameObject target);
 

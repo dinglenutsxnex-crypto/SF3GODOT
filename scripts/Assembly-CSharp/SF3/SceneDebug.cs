@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class SceneDebug : MonoBehaviour
+	public partial class SceneDebug : MonoBehaviour
 	{
 		[SerializeField]
 		private MultiTweenTransition _multiTween;

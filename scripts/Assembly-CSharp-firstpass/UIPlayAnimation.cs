@@ -4,7 +4,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/Interaction/Play Animation")]
-public class UIPlayAnimation : MonoBehaviour
+public partial class UIPlayAnimation : MonoBehaviour
 {
 	public static UIPlayAnimation current;
 

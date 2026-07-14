@@ -7,7 +7,7 @@ using SF3.Items;
 using SF3.UserData;
 using UnityEngine;
 
-public class ReelDriver : MonoBehaviour
+public partial class ReelDriver : MonoBehaviour
 {
 	public delegate void ItemSelectedEventHandler(BaseItem item);
 

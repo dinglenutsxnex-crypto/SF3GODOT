@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ActionButton : MonoBehaviour
+public partial class ActionButton : MonoBehaviour
 {
 	public delegate void ActionButtonPressed(bool isPressed);
 

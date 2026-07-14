@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Button Rotation")]
-public class UIButtonRotation : MonoBehaviour
+public partial class UIButtonRotation : MonoBehaviour
 {
 	public Transform tweenTarget;
 

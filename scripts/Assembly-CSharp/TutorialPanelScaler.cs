@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TutorialPanelScaler : MonoBehaviour
+public partial class TutorialPanelScaler : MonoBehaviour
 {
 	[SerializeField]
 	private ImageWrapper[] _targets;

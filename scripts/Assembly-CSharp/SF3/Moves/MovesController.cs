@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SF3.Moves
 {
-	public class MovesController : MonoBehaviour
+	public partial class MovesController : MonoBehaviour
 	{
 		private static readonly SplitController SplitController = new SplitController();
 

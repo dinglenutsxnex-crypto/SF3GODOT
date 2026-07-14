@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireEffect : MonoBehaviour
+public partial class FireEffect : MonoBehaviour
 {
 	private RenderTexture glowRenderTextureA;
 

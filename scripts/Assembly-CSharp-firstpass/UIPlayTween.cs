@@ -4,7 +4,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/Interaction/Play Tween")]
-public class UIPlayTween : MonoBehaviour
+public partial class UIPlayTween : MonoBehaviour
 {
 	public static UIPlayTween current;
 

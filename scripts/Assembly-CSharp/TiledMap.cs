@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TiledMap : MonoBehaviour
+public partial class TiledMap : MonoBehaviour
 {
 	[SerializeField]
 	private string tilePrefix = "map_";

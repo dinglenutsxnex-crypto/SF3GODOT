@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class CombineSkinnedMeshes : MonoBehaviour
+public partial class CombineSkinnedMeshes : MonoBehaviour
 {
 	public bool combineAllMeshesNow;
 

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Key Binding")]
-public class UIKeyBinding : MonoBehaviour
+public partial class UIKeyBinding : MonoBehaviour
 {
 	public enum Action
 	{

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class UICameraAnchor : MonoBehaviour
+public partial class UICameraAnchor : MonoBehaviour
 {
 	public enum Side
 	{

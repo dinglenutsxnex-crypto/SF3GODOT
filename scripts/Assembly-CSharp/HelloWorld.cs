@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class HelloWorld : MonoBehaviour
+public partial class HelloWorld : MonoBehaviour
 {
 	public GUIStyle style;
 

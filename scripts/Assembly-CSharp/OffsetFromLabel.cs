@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OffsetFromLabel : MonoBehaviour
+public partial class OffsetFromLabel : MonoBehaviour
 {
 	public UILabel label;
 

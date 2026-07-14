@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ExtentionBehaviour : MonoBehaviour
+public partial class ExtentionBehaviour : MonoBehaviour
 {
 	private GameObject _gameObject;
 

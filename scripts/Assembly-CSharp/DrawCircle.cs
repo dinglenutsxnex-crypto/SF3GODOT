@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class DrawCircle : MonoBehaviour
+public partial class DrawCircle : MonoBehaviour
 {
 	public float radius;
 

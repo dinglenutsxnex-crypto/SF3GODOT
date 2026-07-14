@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GlowEffect
 {
-	public class Demo : MonoBehaviour
+	public partial class Demo : MonoBehaviour
 	{
 		public bool enableGlow = true;
 

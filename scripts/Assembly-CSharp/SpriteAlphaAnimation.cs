@@ -4,7 +4,7 @@ using SF3;
 using SF3.Utils;
 using UnityEngine;
 
-public class SpriteAlphaAnimation : MonoBehaviour
+public partial class SpriteAlphaAnimation : MonoBehaviour
 {
 	public enum EAnimationStyle
 	{

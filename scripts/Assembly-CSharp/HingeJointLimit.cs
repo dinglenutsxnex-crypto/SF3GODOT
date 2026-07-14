@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HingeJointLimit : MonoBehaviour
+public partial class HingeJointLimit : MonoBehaviour
 {
 	public Transform boneEnd;
 

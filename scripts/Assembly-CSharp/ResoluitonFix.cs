@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ResoluitonFix : MonoBehaviour
+public partial class ResoluitonFix : MonoBehaviour
 {
 	public float defAspectRatio = 1.5f;
 

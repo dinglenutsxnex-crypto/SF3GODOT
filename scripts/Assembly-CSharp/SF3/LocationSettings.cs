@@ -4,7 +4,7 @@ using UnityEngine;
 namespace SF3
 {
 	[ExecuteInEditMode]
-	public class LocationSettings : MonoBehaviour
+	public partial class LocationSettings : MonoBehaviour
 	{
 		public static LocationSettings Instance;
 

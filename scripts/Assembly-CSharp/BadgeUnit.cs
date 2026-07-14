@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BadgeUnit : MonoBehaviour
+public partial class BadgeUnit : MonoBehaviour
 {
 	public UserBadgesManager.BadgeTypes Type;
 

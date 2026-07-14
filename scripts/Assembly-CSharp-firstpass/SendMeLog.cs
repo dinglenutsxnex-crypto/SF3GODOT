@@ -2,7 +2,7 @@ using System.Collections;
 using System.Text;
 using UnityEngine;
 
-public class SendMeLog : MonoBehaviour
+public partial class SendMeLog : MonoBehaviour
 {
 	private static string _email;
 

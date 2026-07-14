@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityStandardAssets.ImageEffects;
 using sf3DTO;
 
-public class CardAnimator : MonoBehaviour, ICardAnimation
+public partial class CardAnimator : MonoBehaviour, ICardAnimation
 {
 	private const string IN_ANIMATION_NAME = "in";
 

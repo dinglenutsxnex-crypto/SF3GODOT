@@ -4,7 +4,7 @@ using System.Linq;
 using SF3.GameModels;
 using UnityEngine;
 
-public class SetupRagdoll : MonoBehaviour
+public partial class SetupRagdoll : MonoBehaviour
 {
 	private class RagdollPartData
 	{

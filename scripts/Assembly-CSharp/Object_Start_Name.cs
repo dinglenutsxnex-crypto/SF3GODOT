@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Object_Start_Name : MonoBehaviour
+public partial class Object_Start_Name : MonoBehaviour
 {
 	public float StartTime;
 

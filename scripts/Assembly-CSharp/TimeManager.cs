@@ -6,7 +6,7 @@ using Nekki.Utils;
 using SF3.Moves;
 using UnityEngine;
 
-public class TimeManager : MonoBehaviour
+public partial class TimeManager : MonoBehaviour
 {
 	public class TimerUnit
 	{

@@ -2,7 +2,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/Internal/Property Binding")]
-public class PropertyBinding : MonoBehaviour
+public partial class PropertyBinding : MonoBehaviour
 {
 	public enum UpdateCondition
 	{

@@ -2,7 +2,7 @@ using SF3.Settings;
 using UnityEngine;
 using sf3DTO;
 
-public class BoosterpackScrollItem : MonoBehaviour
+public partial class BoosterpackScrollItem : MonoBehaviour
 {
 	[SerializeField]
 	private UIDragScrollView _dragScrollView;

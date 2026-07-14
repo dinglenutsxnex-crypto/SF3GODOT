@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DebugListContainerController : MonoBehaviour
+public partial class DebugListContainerController : MonoBehaviour
 {
 	[SerializeField]
 	private UILabel titleLabel;

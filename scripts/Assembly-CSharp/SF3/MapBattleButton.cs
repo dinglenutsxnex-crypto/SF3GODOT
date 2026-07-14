@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class MapBattleButton : MonoBehaviour
+	public partial class MapBattleButton : MonoBehaviour
 	{
 		public enum DecorationType
 		{

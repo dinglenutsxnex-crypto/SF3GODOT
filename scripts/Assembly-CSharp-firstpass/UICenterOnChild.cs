@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Center Scroll View on Child")]
-public class UICenterOnChild : MonoBehaviour
+public partial class UICenterOnChild : MonoBehaviour
 {
 	public delegate void OnCenterCallback(GameObject centeredObject);
 

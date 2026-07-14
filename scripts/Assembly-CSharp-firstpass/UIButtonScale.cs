@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Button Scale")]
-public class UIButtonScale : MonoBehaviour
+public partial class UIButtonScale : MonoBehaviour
 {
 	public Transform tweenTarget;
 

@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class WallConfig : MonoBehaviour
+public partial class WallConfig : MonoBehaviour
 {
 	public enum EWallType
 	{

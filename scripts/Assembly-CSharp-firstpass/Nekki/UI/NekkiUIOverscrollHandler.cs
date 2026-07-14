@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Nekki.UI
 {
-	public class NekkiUIOverscrollHandler : MonoBehaviour
+	public partial class NekkiUIOverscrollHandler : MonoBehaviour
 	{
 		public UIScrollView ScrollView;
 

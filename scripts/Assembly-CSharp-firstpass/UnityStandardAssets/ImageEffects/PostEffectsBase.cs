@@ -5,7 +5,7 @@ namespace UnityStandardAssets.ImageEffects
 {
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(Camera))]
-	public class PostEffectsBase : MonoBehaviour
+	public partial class PostEffectsBase : MonoBehaviour
 	{
 		protected bool supportHDRTextures = true;
 

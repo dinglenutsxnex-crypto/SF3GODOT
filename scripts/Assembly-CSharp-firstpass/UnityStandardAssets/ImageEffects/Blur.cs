@@ -4,7 +4,7 @@ namespace UnityStandardAssets.ImageEffects
 {
 	[ExecuteInEditMode]
 	[AddComponentMenu("Image Effects/Blur/Blur")]
-	public class Blur : MonoBehaviour
+	public partial class Blur : MonoBehaviour
 	{
 		[Range(0f, 10f)]
 		public int iterations = 3;

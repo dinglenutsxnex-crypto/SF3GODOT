@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class DialogButton : MonoBehaviour
+public partial class DialogButton : MonoBehaviour
 {
 	[SerializeField]
 	private UnityEngine.UI.Text _label;

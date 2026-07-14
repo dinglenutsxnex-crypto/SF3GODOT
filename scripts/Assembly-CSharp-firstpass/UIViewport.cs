@@ -3,7 +3,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
 [AddComponentMenu("NGUI/UI/Viewport Camera")]
-public class UIViewport : MonoBehaviour
+public partial class UIViewport : MonoBehaviour
 {
 	public Camera sourceCamera;
 

@@ -8,7 +8,7 @@ using sf3DTO;
 
 namespace SF3.Items
 {
-	public class PerkSlot : MonoBehaviour
+	public partial class PerkSlot : MonoBehaviour
 	{
 		public GameObject perkIcon;
 

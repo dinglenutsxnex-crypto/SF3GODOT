@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace SF3.GameModels
 {
-	public class InteractiveModelObject : MonoBehaviour, IShadowFormModel
+	public partial class InteractiveModelObject : MonoBehaviour, IShadowFormModel
 	{
 		private bool _shadowFormActive;
 

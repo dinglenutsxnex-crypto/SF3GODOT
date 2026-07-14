@@ -7,7 +7,7 @@ namespace DynamicShadowProjector
 	[ExecuteInEditMode]
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Projector))]
-	public class ShadowTextureRenderer : MonoBehaviour
+	public partial class ShadowTextureRenderer : MonoBehaviour
 	{
 		public enum TextureMultiSample
 		{

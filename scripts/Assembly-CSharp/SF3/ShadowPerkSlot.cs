@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class ShadowPerkSlot : MonoBehaviour
+	public partial class ShadowPerkSlot : MonoBehaviour
 	{
 		[SerializeField]
 		private Color _emptyColor;

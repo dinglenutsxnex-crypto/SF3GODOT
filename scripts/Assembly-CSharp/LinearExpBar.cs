@@ -7,7 +7,7 @@ using Jint.Native;
 using Nekki.UI;
 using UnityEngine;
 
-public class LinearExpBar : MonoBehaviour, IAnimatedExpBar
+public partial class LinearExpBar : MonoBehaviour, IAnimatedExpBar
 {
 	public delegate void AnimationEndDelegate();
 

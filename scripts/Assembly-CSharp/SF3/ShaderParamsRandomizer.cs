@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class ShaderParamsRandomizer : MonoBehaviour
+	public partial class ShaderParamsRandomizer : MonoBehaviour
 	{
 		[Serializable]
 		public class RandomizeIntProp

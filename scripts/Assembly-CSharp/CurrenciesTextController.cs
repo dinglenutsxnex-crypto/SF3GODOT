@@ -2,7 +2,7 @@ using SF3.UserData;
 using UnityEngine;
 using sf3DTO;
 
-public class CurrenciesTextController : MonoBehaviour
+public partial class CurrenciesTextController : MonoBehaviour
 {
 	public UILabel coinsBalanceLbl;
 

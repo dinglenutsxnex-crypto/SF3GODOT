@@ -4,7 +4,7 @@ namespace UnityStandardAssets.ImageEffects
 {
 	[ExecuteInEditMode]
 	[AddComponentMenu("Image Effects/Color Adjustments/Contrast Stretch")]
-	public class ContrastStretch : MonoBehaviour
+	public partial class ContrastStretch : MonoBehaviour
 	{
 		[Range(0.0001f, 1f)]
 		public float adaptationSpeed = 0.02f;

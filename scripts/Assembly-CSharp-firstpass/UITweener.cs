@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AnimationOrTween;
 using UnityEngine;
 
-public abstract class UITweener : MonoBehaviour
+public abstract partial class UITweener : MonoBehaviour
 {
 	public enum Method
 	{

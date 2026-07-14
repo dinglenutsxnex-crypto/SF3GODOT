@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Event Trigger")]
-public class UIEventTrigger : MonoBehaviour
+public partial class UIEventTrigger : MonoBehaviour
 {
 	public static UIEventTrigger current;
 

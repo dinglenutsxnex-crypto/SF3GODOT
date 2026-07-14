@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(EventTrigger))]
-public class UIBlocker : MonoBehaviour
+public partial class UIBlocker : MonoBehaviour
 {
 	public enum Priority
 	{

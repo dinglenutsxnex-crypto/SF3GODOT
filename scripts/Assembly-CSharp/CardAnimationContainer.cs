@@ -3,7 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(TweenRotation))]
 [RequireComponent(typeof(TweenPosition))]
-public class CardAnimationContainer : MonoBehaviour
+public partial class CardAnimationContainer : MonoBehaviour
 {
 	[Serializable]
 	public class Animation

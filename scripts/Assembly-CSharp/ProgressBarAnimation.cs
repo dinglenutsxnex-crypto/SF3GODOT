@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(UIProgressBar))]
-public class ProgressBarAnimation : MonoBehaviour
+public partial class ProgressBarAnimation : MonoBehaviour
 {
 	public delegate void AnimationEnd();
 

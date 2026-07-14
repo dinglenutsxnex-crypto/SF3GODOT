@@ -4,7 +4,7 @@ using SF3;
 using SF3.Utils;
 using UnityEngine;
 
-public class CameraDarkness : MonoBehaviour
+public partial class CameraDarkness : MonoBehaviour
 {
 	public enum Stage
 	{

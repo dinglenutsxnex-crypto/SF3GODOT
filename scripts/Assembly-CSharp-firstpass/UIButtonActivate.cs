@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Button Activate")]
-public class UIButtonActivate : MonoBehaviour
+public partial class UIButtonActivate : MonoBehaviour
 {
 	public GameObject target;
 

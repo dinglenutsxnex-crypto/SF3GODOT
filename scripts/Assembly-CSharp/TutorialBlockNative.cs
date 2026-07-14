@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TutorialBlockNative : MonoBehaviour
+public partial class TutorialBlockNative : MonoBehaviour
 {
 	protected const int REDUCING_TEXTURE = 2;
 

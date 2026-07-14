@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BackgroundParallax : MonoBehaviour
+public partial class BackgroundParallax : MonoBehaviour
 {
 	private Transform _cameraTransform;
 

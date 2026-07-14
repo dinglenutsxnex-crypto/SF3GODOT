@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VisualDebugUiSelected : MonoBehaviour
+public partial class VisualDebugUiSelected : MonoBehaviour
 {
 	public UIButton Activate;
 

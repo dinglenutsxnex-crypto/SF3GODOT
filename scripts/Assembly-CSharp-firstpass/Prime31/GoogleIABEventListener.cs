@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Prime31
 {
-	public class GoogleIABEventListener : MonoBehaviour
+	public partial class GoogleIABEventListener : MonoBehaviour
 	{
 		private void OnEnable()
 		{

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class SceneConfig : MonoBehaviour
+public partial class SceneConfig : MonoBehaviour
 {
 	[Serializable]
 	public class BaseProperty

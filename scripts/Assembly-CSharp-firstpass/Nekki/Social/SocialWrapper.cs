@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Nekki.Social
 {
-	public class SocialWrapper : MonoBehaviour
+	public partial class SocialWrapper : MonoBehaviour
 	{
 		private string _currentUserID;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Prime31
 {
-	public class LifecycleHelper : MonoBehaviour
+	public partial class LifecycleHelper : MonoBehaviour
 	{
 		public event Action<bool> onApplicationPausedEvent;
 

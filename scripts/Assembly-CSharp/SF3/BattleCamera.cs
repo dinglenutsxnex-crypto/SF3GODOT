@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class BattleCamera : MonoBehaviour, ISceneInitializationObject
+	public partial class BattleCamera : MonoBehaviour, ISceneInitializationObject
 	{
 		public enum ECameraState
 		{

@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Nekki.UI
 {
 	[RequireComponent(typeof(UIWidget))]
-	public class NekkiUIHitAlphaTest : MonoBehaviour
+	public partial class NekkiUIHitAlphaTest : MonoBehaviour
 	{
 		public UIWidget alphaTestWidget;
 

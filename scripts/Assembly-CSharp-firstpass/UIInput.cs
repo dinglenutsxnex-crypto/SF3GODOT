@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/UI/Input Field")]
-public class UIInput : MonoBehaviour
+public partial class UIInput : MonoBehaviour
 {
 	public enum InputType
 	{

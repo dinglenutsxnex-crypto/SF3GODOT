@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Nekki.UI;
 using UnityEngine;
 
-public class NekkiTooltip : MonoBehaviour, IHasAlias
+public partial class NekkiTooltip : MonoBehaviour, IHasAlias
 {
 	[SerializeField]
 	private string _alias;

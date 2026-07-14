@@ -1,7 +1,7 @@
 using Nekki.UI;
 using UnityEngine;
 
-public class RewardCoin : MonoBehaviour
+public partial class RewardCoin : MonoBehaviour
 {
 	[SerializeField]
 	private NekkiUILabel _name;

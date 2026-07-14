@@ -7,7 +7,7 @@ using UnityEngine;
 namespace SF3.GameModels
 {
 	[Serializable]
-	public class ModelSkin : MonoBehaviour
+	public partial class ModelSkin : MonoBehaviour
 	{
 		[SerializeField]
 		private string _rootBoneName;

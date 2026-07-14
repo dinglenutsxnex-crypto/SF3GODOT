@@ -1,7 +1,7 @@
 using Nekki;
 using UnityEngine;
 
-public class DrawStages : MonoBehaviour
+public partial class DrawStages : MonoBehaviour
 {
 	public float Radius;
 

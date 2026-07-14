@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/UI/Tooltip")]
-public class UITooltip : MonoBehaviour
+public partial class UITooltip : MonoBehaviour
 {
 	protected static UITooltip mInstance;
 

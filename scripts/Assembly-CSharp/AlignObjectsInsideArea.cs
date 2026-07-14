@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AlignObjectsInsideArea : MonoBehaviour
+public partial class AlignObjectsInsideArea : MonoBehaviour
 {
 	public Transform[] objectsToAlign;
 

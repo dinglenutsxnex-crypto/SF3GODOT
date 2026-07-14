@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SF3.Items
 {
-	public class ItemPerkCard : MonoBehaviour
+	public partial class ItemPerkCard : MonoBehaviour
 	{
 		public Transform itemCardPosition;
 

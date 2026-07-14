@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 namespace SF3
 {
-	public class ButtonAudio : MonoBehaviour
+	public partial class ButtonAudio : MonoBehaviour
 	{
 		public enum EButtonState
 		{

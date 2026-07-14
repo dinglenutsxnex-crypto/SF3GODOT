@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/UI/Atlas")]
-public class UIAtlas : MonoBehaviour
+public partial class UIAtlas : MonoBehaviour
 {
 	[Serializable]
 	public class Sprite

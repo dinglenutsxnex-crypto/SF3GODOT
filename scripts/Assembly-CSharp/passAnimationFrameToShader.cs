@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class passAnimationFrameToShader : MonoBehaviour
+public partial class passAnimationFrameToShader : MonoBehaviour
 {
 	private void Update()
 	{

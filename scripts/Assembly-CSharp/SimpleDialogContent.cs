@@ -1,7 +1,7 @@
 using Nekki.UI;
 using UnityEngine;
 
-public class SimpleDialogContent : MonoBehaviour
+public partial class SimpleDialogContent : MonoBehaviour
 {
 	public NekkiUILabel Text;
 

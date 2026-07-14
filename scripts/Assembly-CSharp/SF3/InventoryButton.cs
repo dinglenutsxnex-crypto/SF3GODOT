@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class InventoryButton : MonoBehaviour
+	public partial class InventoryButton : MonoBehaviour
 	{
 		public Vector3 buttonOffset;
 

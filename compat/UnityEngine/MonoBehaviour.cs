@@ -1,9 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace UnityEngine
 {
-	public class MonoBehaviour : Component
+	public partial class MonoBehaviour : Component
     {
         List<IEnumerator> coroutines = new List<IEnumerator>();
 

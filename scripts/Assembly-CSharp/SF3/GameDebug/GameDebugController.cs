@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace SF3.GameDebug
 {
-	public class GameDebugController : MonoBehaviour
+	public partial class GameDebugController : MonoBehaviour
 	{
 		public bool test;
 

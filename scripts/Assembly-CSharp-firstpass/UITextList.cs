@@ -2,7 +2,7 @@ using System.Text;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/UI/Text List")]
-public class UITextList : MonoBehaviour
+public partial class UITextList : MonoBehaviour
 {
 	public enum Style
 	{

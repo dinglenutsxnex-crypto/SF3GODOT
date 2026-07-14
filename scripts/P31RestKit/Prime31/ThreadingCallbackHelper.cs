@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Prime31
 {
-	public class ThreadingCallbackHelper : MonoBehaviour
+	public partial class ThreadingCallbackHelper : MonoBehaviour
 	{
 		private List<Action> _actions = new List<Action>();
 

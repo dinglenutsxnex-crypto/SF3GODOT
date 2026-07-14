@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FoggingController : MonoBehaviour
+public partial class FoggingController : MonoBehaviour
 {
 	[SerializeField]
 	private Image _background;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Prime31
 {
-	public class MonoBehaviourGUI : MonoBehaviour
+	public partial class MonoBehaviourGUI : MonoBehaviour
 	{
 		protected float _width;
 

@@ -4,7 +4,7 @@ using DOTweenUtils;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TutorialPointer : MonoBehaviour
+public partial class TutorialPointer : MonoBehaviour
 {
 	private List<Tweener> _tweeners = new List<Tweener>();
 

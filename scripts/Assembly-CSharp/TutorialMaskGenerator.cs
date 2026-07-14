@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TutorialMaskGenerator : MonoBehaviour
+public partial class TutorialMaskGenerator : MonoBehaviour
 {
 	private const int reducingTexture = 4;
 

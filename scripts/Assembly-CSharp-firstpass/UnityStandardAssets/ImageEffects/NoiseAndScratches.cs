@@ -6,7 +6,7 @@ namespace UnityStandardAssets.ImageEffects
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(Camera))]
 	[AddComponentMenu("Image Effects/Noise/Noise and Scratches")]
-	public class NoiseAndScratches : MonoBehaviour
+	public partial class NoiseAndScratches : MonoBehaviour
 	{
 		public bool monochrome = true;
 

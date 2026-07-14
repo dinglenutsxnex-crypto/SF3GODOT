@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BlurPostEffect : MonoBehaviour
+public partial class BlurPostEffect : MonoBehaviour
 {
 	public int blurIterations;
 

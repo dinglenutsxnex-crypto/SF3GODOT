@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraViewportAnchor : MonoBehaviour
+public partial class CameraViewportAnchor : MonoBehaviour
 {
 	private const float DEFAULT_WIDTH = 1.33f;
 

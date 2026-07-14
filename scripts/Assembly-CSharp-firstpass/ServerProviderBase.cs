@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using SimpleJSON;
 using UnityEngine;
 
-public abstract class ServerProviderBase : MonoBehaviour
+public abstract partial class ServerProviderBase : MonoBehaviour
 {
 	public class Select
 	{

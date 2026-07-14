@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Button Offset")]
-public class UIButtonOffset : MonoBehaviour
+public partial class UIButtonOffset : MonoBehaviour
 {
 	public Transform tweenTarget;
 

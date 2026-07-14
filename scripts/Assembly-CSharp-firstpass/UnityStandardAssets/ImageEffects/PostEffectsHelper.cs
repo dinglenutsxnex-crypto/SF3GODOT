@@ -5,7 +5,7 @@ namespace UnityStandardAssets.ImageEffects
 {
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(Camera))]
-	internal class PostEffectsHelper : MonoBehaviour
+	internal partial class PostEffectsHelper : MonoBehaviour
 	{
 		private void OnRenderImage(RenderTexture source, RenderTexture destination)
 		{

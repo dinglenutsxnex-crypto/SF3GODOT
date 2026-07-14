@@ -12,7 +12,7 @@ using sf3DTO;
 
 namespace SF3.Items
 {
-	public class ShopItemDescription : MonoBehaviour
+	public partial class ShopItemDescription : MonoBehaviour
 	{
 		[Serializable]
 		public class AttributesViewSettings

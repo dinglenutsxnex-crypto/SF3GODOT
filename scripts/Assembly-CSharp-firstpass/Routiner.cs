@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Routiner : MonoBehaviour
+public partial class Routiner : MonoBehaviour
 {
 	private static Routiner _instance;
 

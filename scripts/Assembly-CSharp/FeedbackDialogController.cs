@@ -5,7 +5,7 @@ using SF3;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FeedbackDialogController : MonoBehaviour
+public partial class FeedbackDialogController : MonoBehaviour
 {
 	[SerializeField]
 	private Button _laterButton;

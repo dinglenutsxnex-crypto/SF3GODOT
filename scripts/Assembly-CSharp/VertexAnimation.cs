@@ -1,7 +1,7 @@
 using SF3;
 using UnityEngine;
 
-public class VertexAnimation : MonoBehaviour
+public partial class VertexAnimation : MonoBehaviour
 {
 	[SerializeField]
 	private AnimationCurve vertexMovementCurve;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TrailAnimatedTexture : MonoBehaviour
+public partial class TrailAnimatedTexture : MonoBehaviour
 {
 	public int colCount = 2;
 

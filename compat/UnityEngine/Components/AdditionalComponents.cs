@@ -25,7 +25,7 @@ namespace UnityEngine
         Tiled,
     }
 
-    public class TextMesh : Component
+    public partial class TextMesh : Component
     {
         public string text { get; set; }
         public Font font { get; set; }
@@ -49,7 +49,7 @@ namespace UnityEngine
         public PhysicsMaterial2D(string name) { }
     }
 
-    public class VisibilityHandlerComponent : MonoBehaviour
+    public partial class VisibilityHandlerComponent : MonoBehaviour
     {
     }
 }

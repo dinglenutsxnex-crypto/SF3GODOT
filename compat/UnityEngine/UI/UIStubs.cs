@@ -8,7 +8,7 @@ namespace UnityEngine.UI
         Prelayout, Layout, PostLayout, PreRender, LatePreRender, MaxUpdateValue,
     }
 
-    public class Graphic : MonoBehaviour
+    public partial class Graphic : MonoBehaviour
     {
         public RectTransform rectTransform => GetComponent<RectTransform>();
         public virtual Material mainMaterial { get; set; }
@@ -74,7 +74,7 @@ namespace UnityEngine.UI
         public Rect uvRect { get; set; }
     }
 
-    public class Button : MonoBehaviour
+    public partial class Button : MonoBehaviour
     {
         public ButtonClickedEvent onClick;
         public ColorBlock colors { get; set; }
@@ -89,7 +89,7 @@ namespace UnityEngine.UI
         }
     }
 
-    public class Toggle : MonoBehaviour
+    public partial class Toggle : MonoBehaviour
     {
         public bool isOn { get; set; }
         public ToggleEvent onValueChanged;
@@ -99,7 +99,7 @@ namespace UnityEngine.UI
         public class ToggleEvent { public void AddListener(UnityEngine.Events.UnityAction<bool> call) { } public void RemoveListener(UnityEngine.Events.UnityAction<bool> call) { } }
     }
 
-    public class Slider : MonoBehaviour
+    public partial class Slider : MonoBehaviour
     {
         public float value { get; set; }
         public float minValue { get; set; }
@@ -111,7 +111,7 @@ namespace UnityEngine.UI
         public class SliderEvent { public void AddListener(UnityEngine.Events.UnityAction<float> call) { } public void RemoveListener(UnityEngine.Events.UnityAction<float> call) { } }
     }
 
-    public class InputField : MonoBehaviour
+    public partial class InputField : MonoBehaviour
     {
         public string text { get; set; }
         public int characterLimit { get; set; }
@@ -128,7 +128,7 @@ namespace UnityEngine.UI
         [Serializable] public class SubmitEvent { public void AddListener(UnityEngine.Events.UnityAction<string> call) { } public void RemoveListener(UnityEngine.Events.UnityAction<string> call) { } }
     }
 
-    public class ScrollRect : MonoBehaviour
+    public partial class ScrollRect : MonoBehaviour
     {
         public RectTransform content { get; set; }
         public bool horizontal { get; set; }
@@ -141,7 +141,7 @@ namespace UnityEngine.UI
         [Serializable] public class ScrollRectEvent { public void AddListener(UnityEngine.Events.UnityAction<UnityEngine.Vector2> call) { } public void RemoveListener(UnityEngine.Events.UnityAction<UnityEngine.Vector2> call) { } }
     }
 
-    public class Scrollbar : MonoBehaviour
+    public partial class Scrollbar : MonoBehaviour
     {
         public float value { get; set; }
         public ScrollEvent onValueChanged;
@@ -149,7 +149,7 @@ namespace UnityEngine.UI
         [Serializable] public class ScrollEvent { public void AddListener(UnityEngine.Events.UnityAction<float> call) { } public void RemoveListener(UnityEngine.Events.UnityAction<float> call) { } }
     }
 
-    public class Dropdown : MonoBehaviour
+    public partial class Dropdown : MonoBehaviour
     {
         public int value { get; set; }
         public List<OptionData> options;
@@ -162,7 +162,7 @@ namespace UnityEngine.UI
         [Serializable] public class DropdownEvent { public void AddListener(UnityEngine.Events.UnityAction<int> call) { } public void RemoveListener(UnityEngine.Events.UnityAction<int> call) { } }
     }
 
-    public class GraphicRaycaster : MonoBehaviour
+    public partial class GraphicRaycaster : MonoBehaviour
     {
         public bool ignoreReversedGraphics { get; set; }
         public BlockingObjects blockingObjects { get; set; }
@@ -170,7 +170,7 @@ namespace UnityEngine.UI
         public enum BlockingObjects { None, TwoD, ThreeD, All }
     }
 
-    public class ContentSizeFitter : MonoBehaviour
+    public partial class ContentSizeFitter : MonoBehaviour
     {
         public FitMode horizontalFit { get; set; }
         public FitMode verticalFit { get; set; }
@@ -181,7 +181,7 @@ namespace UnityEngine.UI
     public class VerticalLayoutGroup : HorizontalOrVerticalLayoutGroup { }
     public class HorizontalOrVerticalLayoutGroup : LayoutGroup { }
 
-    public class LayoutGroup : MonoBehaviour
+    public partial class LayoutGroup : MonoBehaviour
     {
         public UnityEngine.RectOffset padding { get; set; }
         public TextAnchor childAlignment { get; set; }
@@ -189,7 +189,7 @@ namespace UnityEngine.UI
         public virtual void SetLayoutVertical() { }
     }
 
-    public class LayoutElement : MonoBehaviour
+    public partial class LayoutElement : MonoBehaviour
     {
         public virtual bool ignoreLayout { get; set; }
         public virtual float minWidth { get; set; }
@@ -201,7 +201,7 @@ namespace UnityEngine.UI
         public virtual int layoutPriority { get; set; }
     }
 
-    public class Shadow : MonoBehaviour
+    public partial class Shadow : MonoBehaviour
     {
         public UnityEngine.Color effectColor { get; set; }
         public UnityEngine.Vector2 effectDistance { get; set; }

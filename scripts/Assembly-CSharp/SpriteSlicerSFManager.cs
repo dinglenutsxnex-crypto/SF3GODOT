@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteSlicerSFManager : MonoBehaviour
+public partial class SpriteSlicerSFManager : MonoBehaviour
 {
 	private List<SpriteSlicer2DSliceInfo> _slicedSpriteInfo = new List<SpriteSlicer2DSliceInfo>();
 

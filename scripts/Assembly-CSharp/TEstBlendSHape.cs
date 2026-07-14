@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TEstBlendSHape : MonoBehaviour
+public partial class TEstBlendSHape : MonoBehaviour
 {
 	public SkinnedMeshRenderer skinnedMeshRenderer;
 

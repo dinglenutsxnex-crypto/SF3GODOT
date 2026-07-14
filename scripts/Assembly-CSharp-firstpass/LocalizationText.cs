@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LocalizationText : MonoBehaviour
+public partial class LocalizationText : MonoBehaviour
 {
 	[SerializeField]
 	private string alias;

@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Nekki.StandardAssets
 {
 	[ExecuteInEditMode]
-	public class PostEffectsBase : MonoBehaviour
+	public partial class PostEffectsBase : MonoBehaviour
 	{
 		protected bool supportHDRTextures = true;
 

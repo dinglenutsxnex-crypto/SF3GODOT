@@ -5,7 +5,7 @@ using Nekki;
 using UnityEngine;
 
 [RequireComponent(typeof(NekkiUIModule))]
-public abstract class NekkiUIDialog : MonoBehaviour
+public abstract partial class NekkiUIDialog : MonoBehaviour
 {
 	private NekkiUIModule _module;
 

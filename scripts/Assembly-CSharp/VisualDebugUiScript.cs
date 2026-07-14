@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VisualDebugUiScript : MonoBehaviour
+public partial class VisualDebugUiScript : MonoBehaviour
 {
 	private static List<VisualDebugUiScript> _units = new List<VisualDebugUiScript>();
 

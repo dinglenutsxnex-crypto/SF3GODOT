@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DragArrow : MonoBehaviour
+public partial class DragArrow : MonoBehaviour
 {
 	public TutorialComponent dragable;
 

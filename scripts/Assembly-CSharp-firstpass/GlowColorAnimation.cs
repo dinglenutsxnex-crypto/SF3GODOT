@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GlowColorAnimation : MonoBehaviour
+public partial class GlowColorAnimation : MonoBehaviour
 {
 	public Color colorA;
 

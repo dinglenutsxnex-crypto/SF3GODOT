@@ -3,7 +3,7 @@ using UnityEngine.Rendering;
 
 namespace UnityEngine
 {
-	public class Camera : Behaviour
+	public partial class Camera : Behaviour
 	{
 		public static Camera main => null;
 		public static Camera current => null;

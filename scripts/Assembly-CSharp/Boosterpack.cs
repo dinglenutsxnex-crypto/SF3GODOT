@@ -2,7 +2,7 @@ using System;
 using SF3.Settings;
 using UnityEngine;
 
-public class Boosterpack : MonoBehaviour
+public partial class Boosterpack : MonoBehaviour
 {
 	private BoosterpackScrollItem _scrollItem;
 

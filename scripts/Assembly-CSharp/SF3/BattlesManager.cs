@@ -15,7 +15,7 @@ using sf3DTO;
 
 namespace SF3
 {
-	public class BattlesManager : MonoBehaviour, IUserDataManager
+	public partial class BattlesManager : MonoBehaviour, IUserDataManager
 	{
 		private static BattleType _currentBattleType;
 

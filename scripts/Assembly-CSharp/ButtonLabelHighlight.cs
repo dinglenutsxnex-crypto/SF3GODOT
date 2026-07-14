@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ButtonLabelHighlight : MonoBehaviour
+public partial class ButtonLabelHighlight : MonoBehaviour
 {
 	public UILabel label;
 

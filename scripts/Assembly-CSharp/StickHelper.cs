@@ -4,7 +4,7 @@ using SF3.GameModels;
 using SF3.Items;
 using UnityEngine;
 
-public class StickHelper : MonoBehaviour
+public partial class StickHelper : MonoBehaviour
 {
 	private bool _isShadowHint;
 

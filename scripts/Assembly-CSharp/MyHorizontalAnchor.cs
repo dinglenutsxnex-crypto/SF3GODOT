@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MyHorizontalAnchor : MonoBehaviour
+public partial class MyHorizontalAnchor : MonoBehaviour
 {
 	public enum AnchorSide
 	{

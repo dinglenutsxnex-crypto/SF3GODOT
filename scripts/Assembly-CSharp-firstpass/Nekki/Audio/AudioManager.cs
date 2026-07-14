@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Nekki.Audio
 {
-	public class AudioManager : MonoBehaviour
+	public partial class AudioManager : MonoBehaviour
 	{
 		private const int DefaultMusicChanel = 0;
 

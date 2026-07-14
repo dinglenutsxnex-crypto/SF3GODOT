@@ -6,7 +6,7 @@ using SF3.UserData;
 using UnityEngine;
 
 [RequireComponent(typeof(NekkiUIDragObject))]
-public class NekkiUIDragScaleWidget : MonoBehaviour
+public partial class NekkiUIDragScaleWidget : MonoBehaviour
 {
 	private const float MinimalScroll = 0.001f;
 

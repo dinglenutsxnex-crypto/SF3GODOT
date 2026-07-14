@@ -4,7 +4,7 @@ using UnityEngine.Audio;
 
 namespace SF3.Audio
 {
-	public class LocationAudioSettings : MonoBehaviour
+	public partial class LocationAudioSettings : MonoBehaviour
 	{
 		[Serializable]
 		public class ParamsEQ

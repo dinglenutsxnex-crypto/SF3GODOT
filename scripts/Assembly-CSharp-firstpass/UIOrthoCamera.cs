@@ -3,7 +3,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
 [AddComponentMenu("NGUI/UI/Orthographic Camera")]
-public class UIOrthoCamera : MonoBehaviour
+public partial class UIOrthoCamera : MonoBehaviour
 {
 	private Camera mCam;
 

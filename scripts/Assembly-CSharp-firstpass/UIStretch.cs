@@ -3,7 +3,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/UI/Stretch")]
-public class UIStretch : MonoBehaviour
+public partial class UIStretch : MonoBehaviour
 {
 	public enum Style
 	{

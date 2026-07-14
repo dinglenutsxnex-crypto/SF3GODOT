@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CameraConfiguration : MonoBehaviour
+public partial class CameraConfiguration : MonoBehaviour
 {
 	public enum AspectRatio
 	{

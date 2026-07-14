@@ -5,7 +5,7 @@ using SF3;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class LocationColorAnimation : MonoBehaviour
+public partial class LocationColorAnimation : MonoBehaviour
 {
 	private enum GradientOrientation
 	{

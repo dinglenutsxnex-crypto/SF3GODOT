@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GooglePlayGames.OurUtils
 {
-	public class PlayGamesHelperObject : MonoBehaviour
+	public partial class PlayGamesHelperObject : MonoBehaviour
 	{
 		private static PlayGamesHelperObject instance = null;
 

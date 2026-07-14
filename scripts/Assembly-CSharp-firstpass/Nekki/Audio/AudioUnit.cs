@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Nekki.Audio
 {
-	public class AudioUnit : MonoBehaviour
+	public partial class AudioUnit : MonoBehaviour
 	{
 		private PlayCommand _cmd;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VisualDebugUIExpandHolder : MonoBehaviour
+public partial class VisualDebugUIExpandHolder : MonoBehaviour
 {
 	private VisualDebugUI.Unit _unit;
 

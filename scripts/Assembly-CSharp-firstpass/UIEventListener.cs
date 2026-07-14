@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Internal/Event Listener")]
-public class UIEventListener : MonoBehaviour
+public partial class UIEventListener : MonoBehaviour
 {
 	public delegate void VoidDelegate(GameObject go);
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DebugLineController : MonoBehaviour
+public partial class DebugLineController : MonoBehaviour
 {
 	internal virtual void onUpdate()
 	{

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MultiTweenTransition : MonoBehaviour
+public partial class MultiTweenTransition : MonoBehaviour
 {
 	public UITweener[] Tweens;
 

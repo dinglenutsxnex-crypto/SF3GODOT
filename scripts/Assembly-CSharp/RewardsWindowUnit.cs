@@ -1,7 +1,7 @@
 using SF3.Items;
 using UnityEngine;
 
-public class RewardsWindowUnit : MonoBehaviour
+public partial class RewardsWindowUnit : MonoBehaviour
 {
 	[SerializeField]
 	private UILabel _label;

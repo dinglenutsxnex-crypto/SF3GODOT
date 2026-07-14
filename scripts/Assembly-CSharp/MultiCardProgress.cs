@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class MultiCardProgress : MonoBehaviour
+public partial class MultiCardProgress : MonoBehaviour
 {
 	public MultiCardProgressAnimationEnd onAnimationEnd;
 

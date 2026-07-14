@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SF3.Settings
 {
-	public class DojoSettings : MonoBehaviour
+	public partial class DojoSettings : MonoBehaviour
 	{
 		[SerializeField]
 		private Color _defaultLocationColor = Color.white;

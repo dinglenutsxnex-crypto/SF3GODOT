@@ -4,7 +4,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/UI/NGUI Font")]
-public class UIFont : MonoBehaviour
+public partial class UIFont : MonoBehaviour
 {
 	[HideInInspector]
 	[SerializeField]

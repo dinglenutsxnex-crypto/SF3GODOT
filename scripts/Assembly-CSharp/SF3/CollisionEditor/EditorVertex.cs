@@ -6,7 +6,7 @@ using UnityEngine;
 namespace SF3.CollisionEditor
 {
 	[ExecuteInEditMode]
-	public class EditorVertex : MonoBehaviour
+	public partial class EditorVertex : MonoBehaviour
 	{
 		private Transform _currentTransform;
 

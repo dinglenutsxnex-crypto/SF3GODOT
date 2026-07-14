@@ -7,7 +7,7 @@ namespace DynamicShadowProjector
 {
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(ShadowTextureRenderer))]
-	public class DrawTargetObject : MonoBehaviour
+	public partial class DrawTargetObject : MonoBehaviour
 	{
 		[Serializable]
 		public struct ReplaceShader

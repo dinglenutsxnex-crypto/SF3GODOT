@@ -4,7 +4,7 @@ using UnityEngine;
 namespace DG.Tweening.Core
 {
 	[AddComponentMenu("")]
-	public class DOTweenComponent : MonoBehaviour, IDOTweenInit
+	public partial class DOTweenComponent : MonoBehaviour, IDOTweenInit
 	{
 		public int inspectorUpdater;
 

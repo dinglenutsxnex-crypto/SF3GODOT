@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PreloaderUI : MonoBehaviour
+public partial class PreloaderUI : MonoBehaviour
 {
 	private static PreloaderUI instance;
 

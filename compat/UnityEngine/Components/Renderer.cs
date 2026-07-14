@@ -2,7 +2,7 @@ using System;
 
 namespace UnityEngine
 {
-    public class Renderer : Component
+    public partial class Renderer : Component
     {
         public Material sharedMaterial { get; set; }
         public Material material { get; set; }

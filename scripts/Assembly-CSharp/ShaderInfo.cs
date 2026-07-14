@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShaderInfo : MonoBehaviour
+public partial class ShaderInfo : MonoBehaviour
 {
 	public Shader Shader;
 

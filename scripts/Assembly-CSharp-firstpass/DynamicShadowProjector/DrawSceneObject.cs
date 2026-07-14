@@ -5,7 +5,7 @@ namespace DynamicShadowProjector
 	[ExecuteInEditMode]
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(ShadowTextureRenderer))]
-	public class DrawSceneObject : MonoBehaviour
+	public partial class DrawSceneObject : MonoBehaviour
 	{
 		[SerializeField]
 		private Shader m_replacementShader;

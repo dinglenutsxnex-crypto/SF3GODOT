@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class passYposToShader : MonoBehaviour
+public partial class passYposToShader : MonoBehaviour
 {
 	private void Start()
 	{

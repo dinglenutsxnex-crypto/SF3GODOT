@@ -3,7 +3,7 @@ using UnityEngine;
 namespace MKGlowSystem
 {
 	[RequireComponent(typeof(Camera))]
-	public class MKGlow : MonoBehaviour
+	public partial class MKGlow : MonoBehaviour
 	{
 		private static float[] gaussFilter = new float[11]
 		{

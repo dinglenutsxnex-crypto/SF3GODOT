@@ -4,7 +4,7 @@ using SF3;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoginEmailDialogController : MonoBehaviour
+public partial class LoginEmailDialogController : MonoBehaviour
 {
 	[SerializeField]
 	private Button _sendButton;

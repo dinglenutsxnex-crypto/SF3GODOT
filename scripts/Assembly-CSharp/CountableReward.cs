@@ -2,7 +2,7 @@ using Nekki.UI;
 using UnityEngine;
 using sf3DTO;
 
-public class CountableReward : MonoBehaviour
+public partial class CountableReward : MonoBehaviour
 {
 	[SerializeField]
 	private float _sizeScaleKoef = 0.38f;

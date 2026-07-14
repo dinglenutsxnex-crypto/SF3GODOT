@@ -2,7 +2,7 @@ using System;
 using SF3.Utils;
 using UnityEngine;
 
-public class PerkUnit : MonoBehaviour
+public partial class PerkUnit : MonoBehaviour
 {
 	[SerializeField]
 	private UISprite progress;

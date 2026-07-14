@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Key Navigation")]
-public class UIKeyNavigation : MonoBehaviour
+public partial class UIKeyNavigation : MonoBehaviour
 {
 	public enum Constraint
 	{

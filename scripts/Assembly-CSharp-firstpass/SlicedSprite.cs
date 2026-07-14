@@ -3,7 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 [RequireComponent(typeof(Rigidbody2D), typeof(PolygonCollider2D))]
-public class SlicedSprite : MonoBehaviour
+public partial class SlicedSprite : MonoBehaviour
 {
 	private MeshRenderer _meshRenderer;
 

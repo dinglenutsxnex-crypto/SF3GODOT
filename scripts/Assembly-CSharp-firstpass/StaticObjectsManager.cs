@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticObjectsManager : MonoBehaviour
+public partial class StaticObjectsManager : MonoBehaviour
 {
 	private static StaticObjectsManager _instance;
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace DynamicShadowProjector.Sample
 {
-	public class Rotate : MonoBehaviour
+	public partial class Rotate : MonoBehaviour
 	{
 		public float m_rotateSpeed = 90f;
 

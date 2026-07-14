@@ -1,7 +1,7 @@
 using SF3.Items;
 using UnityEngine;
 
-public class ItemCardDebugUI : MonoBehaviour
+public partial class ItemCardDebugUI : MonoBehaviour
 {
 	[SerializeField]
 	private ReelItem _reelItem;

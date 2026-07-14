@@ -11,7 +11,7 @@ using UnityEngine;
 namespace SF3
 {
 	[Serializable]
-	public class ModelsManager : MonoBehaviour, ISceneInitializationObject
+	public partial class ModelsManager : MonoBehaviour, ISceneInitializationObject
 	{
 		private class ModelCreationInfo
 		{

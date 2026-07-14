@@ -4,7 +4,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 [RequireComponent(typeof(UIPanel))]
 [AddComponentMenu("NGUI/Interaction/Scroll View")]
-public class UIScrollView : MonoBehaviour
+public partial class UIScrollView : MonoBehaviour
 {
 	public enum Movement
 	{

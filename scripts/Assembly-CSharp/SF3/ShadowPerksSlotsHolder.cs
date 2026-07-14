@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class ShadowPerksSlotsHolder : MonoBehaviour
+	public partial class ShadowPerksSlotsHolder : MonoBehaviour
 	{
 		[SerializeField]
 		private ShadowPerkSlot _topSlot;

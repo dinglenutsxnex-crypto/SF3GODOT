@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FloorController : MonoBehaviour
+public partial class FloorController : MonoBehaviour
 {
 	private static FloorController _instance;
 

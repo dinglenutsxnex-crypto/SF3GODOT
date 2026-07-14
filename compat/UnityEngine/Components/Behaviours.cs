@@ -45,13 +45,13 @@ namespace UnityEngine
         public static implicit operator bool(Component exists) => exists != null;
     }
 
-    public class Behaviour : Component
+    public partial class Behaviour : Component
     {
         public bool enabled { get; set; }
         public bool isActiveAndEnabled => enabled;
     }
 
-    public class Animator : Behaviour
+    public partial class Animator : Behaviour
     {
         public RuntimeAnimatorController runtimeAnimatorController { get; set; }
         public RuntimeAnimatorController GetRuntimeAnimatorController() => runtimeAnimatorController;
@@ -103,7 +103,7 @@ namespace UnityEngine
 
     public class RuntimeAnimatorController : Object { }
 
-    public class Animation : Behaviour
+    public partial class Animation : Behaviour
     {
         public AnimationClip this[string name] { get => null; }
         public AnimationClip clip { get; set; }
@@ -219,15 +219,15 @@ namespace UnityEngine
         public Keyframe(float time, float value, float inTangent, float outTangent) { this.time = time; this.value = value; this.inTangent = inTangent; this.outTangent = outTangent; }
     }
 
-    public class AudioListener : Behaviour
+    public partial class AudioListener : Behaviour
     {
         public static float volume { get; set; }
         public bool pause { get; set; }
     }
 
-    public class AudioBehaviour : Behaviour { }
+    public partial class AudioBehaviour : Behaviour { }
 
-    public class Light : Behaviour
+    public partial class Light : Behaviour
     {
         public LightType type { get; set; }
         public Color color { get; set; }
@@ -272,7 +272,7 @@ namespace UnityEngine
         public void Clear() { }
     }
 
-    public class MeshFilter : Component
+    public partial class MeshFilter : Component
     {
         public Mesh mesh { get; set; }
         public Mesh sharedMesh { get; set; }
@@ -294,7 +294,7 @@ namespace UnityEngine
         public Mesh GetBlendShapeBuffer() => null;
     }
 
-    public class ParticleSystem : Component
+    public partial class ParticleSystem : Component
     {
         public bool isPlaying => false;
         public bool isStopped => false;
@@ -439,7 +439,7 @@ namespace UnityEngine
         Particle,
     }
 
-    public class Projector : Behaviour
+    public partial class Projector : Behaviour
     {
         public Material material { get; set; }
         public Material[] materials { get; set; }
@@ -451,7 +451,7 @@ namespace UnityEngine
         public float aspectRatio { get; set; }
     }
 
-    public class EventTrigger : MonoBehaviour
+    public partial class EventTrigger : MonoBehaviour
     {
         public System.Collections.Generic.List<Entry> triggers;
         public class Entry
@@ -461,7 +461,7 @@ namespace UnityEngine
         }
     }
 
-    public class CanvasGroup : Component
+    public partial class CanvasGroup : Component
     {
         public float alpha { get; set; }
         public bool interactable { get; set; }

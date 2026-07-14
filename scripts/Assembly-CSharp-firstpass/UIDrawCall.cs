@@ -4,7 +4,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/Internal/Draw Call")]
-public class UIDrawCall : MonoBehaviour
+public partial class UIDrawCall : MonoBehaviour
 {
 	public enum Clipping
 	{

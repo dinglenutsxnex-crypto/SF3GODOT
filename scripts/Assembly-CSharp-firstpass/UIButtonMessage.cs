@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Button Message (Legacy)")]
-public class UIButtonMessage : MonoBehaviour
+public partial class UIButtonMessage : MonoBehaviour
 {
 	public enum Trigger
 	{

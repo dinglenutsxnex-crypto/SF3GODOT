@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestTextures : MonoBehaviour
+public partial class TestTextures : MonoBehaviour
 {
 	private static TestTextures _instance;
 

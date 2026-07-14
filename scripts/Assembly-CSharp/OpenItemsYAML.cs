@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Nekki.Yaml;
 using UnityEngine;
 
-public class OpenItemsYAML : MonoBehaviour
+public partial class OpenItemsYAML : MonoBehaviour
 {
 	private const string path = "E:\\Projects\\ShadowFight3\\Assets\\gamedata\\Resources\\GameSettings\\YML\\itemsResult.yaml";
 

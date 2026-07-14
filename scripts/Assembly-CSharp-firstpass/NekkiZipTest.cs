@@ -2,7 +2,7 @@ using System.IO;
 using Nekki.Zip;
 using UnityEngine;
 
-public class NekkiZipTest : MonoBehaviour
+public partial class NekkiZipTest : MonoBehaviour
 {
 	private string _log;
 

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SimpeFPS : MonoBehaviour
+public partial class SimpeFPS : MonoBehaviour
 {
 	public float refreshRate = 0.5f;
 

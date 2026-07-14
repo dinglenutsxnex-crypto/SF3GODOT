@@ -2,7 +2,7 @@ using DG.Tweening;
 using SF3.TutorialAnimations;
 using UnityEngine;
 
-public class TutorialPanel : MonoBehaviour
+public partial class TutorialPanel : MonoBehaviour
 {
 	[SerializeField]
 	private LocalizationText _description;

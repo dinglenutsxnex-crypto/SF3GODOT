@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DownloadObb : MonoBehaviour
+public partial class DownloadObb : MonoBehaviour
 {
 	private void Awake()
 	{

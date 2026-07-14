@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(UISpriteAnimation))]
-public class UISpriteAnimationDelay : MonoBehaviour
+public partial class UISpriteAnimationDelay : MonoBehaviour
 {
 	public float delay = 1f;
 

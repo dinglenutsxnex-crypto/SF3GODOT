@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class DebugDeveloperServerButton : MonoBehaviour
+public partial class DebugDeveloperServerButton : MonoBehaviour
 {
 	[SerializeField]
 	private UILabel _serverName;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/UI/Anchor")]
-public class UIAnchor : MonoBehaviour
+public partial class UIAnchor : MonoBehaviour
 {
 	public enum Side
 	{

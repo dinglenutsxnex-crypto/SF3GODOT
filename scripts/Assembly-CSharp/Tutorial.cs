@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tutorial : MonoBehaviour
+public partial class Tutorial : MonoBehaviour
 {
 	[Serializable]
 	public class ColorSync

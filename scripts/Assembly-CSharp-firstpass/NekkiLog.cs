@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
-public class NekkiLog : MonoBehaviour
+public partial class NekkiLog : MonoBehaviour
 {
 	public enum LogLevels : byte
 	{

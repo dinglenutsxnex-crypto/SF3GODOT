@@ -8,7 +8,7 @@ using SF3.Items;
 using SF3.UserData;
 using UnityEngine;
 
-public class JS : MonoBehaviour
+public partial class JS : MonoBehaviour
 {
 	public class JSEnumsCompliancer
 	{

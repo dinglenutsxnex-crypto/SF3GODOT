@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShadowMapController : MonoBehaviour
+public partial class ShadowMapController : MonoBehaviour
 {
 	[SerializeField]
 	private Texture2D _shadowMapNormal;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Nekki.Social
 {
-	public class Avatars : MonoBehaviour
+	public partial class Avatars : MonoBehaviour
 	{
 		private class Request
 		{

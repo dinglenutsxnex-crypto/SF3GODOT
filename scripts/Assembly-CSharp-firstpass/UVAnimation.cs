@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UVAnimation : MonoBehaviour
+public partial class UVAnimation : MonoBehaviour
 {
 	public Vector2 ScrollSpeed = new Vector2(0.1f, 0f);
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SF3.GameDebug
 {
-	public class DebugActionApplier : MonoBehaviour
+	public partial class DebugActionApplier : MonoBehaviour
 	{
 		public EDebugActions currentDebugAction;
 

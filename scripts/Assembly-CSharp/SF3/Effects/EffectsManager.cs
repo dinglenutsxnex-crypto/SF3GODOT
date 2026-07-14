@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace SF3.Effects
 {
-	public class EffectsManager : MonoBehaviour, ISceneInitializationObject
+	public partial class EffectsManager : MonoBehaviour, ISceneInitializationObject
 	{
 		[Serializable]
 		public class ShaderReplacementEffect

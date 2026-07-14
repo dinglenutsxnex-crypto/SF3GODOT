@@ -2,7 +2,7 @@ using DG.Tweening;
 using DOTweenUtils;
 using UnityEngine;
 
-public class BoosterpackSlash : MonoBehaviour
+public partial class BoosterpackSlash : MonoBehaviour
 {
 	private const float appearFadeDuration = 0.2f;
 

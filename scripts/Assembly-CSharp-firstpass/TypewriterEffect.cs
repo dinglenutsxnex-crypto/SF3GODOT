@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(UILabel))]
 [AddComponentMenu("NGUI/Interaction/Typewriter Effect")]
-public class TypewriterEffect : MonoBehaviour
+public partial class TypewriterEffect : MonoBehaviour
 {
 	private struct FadeEntry
 	{

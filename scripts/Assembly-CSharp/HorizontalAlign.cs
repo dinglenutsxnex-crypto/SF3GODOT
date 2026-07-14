@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HorizontalAlign : MonoBehaviour
+public partial class HorizontalAlign : MonoBehaviour
 {
 	public enum Anchor
 	{

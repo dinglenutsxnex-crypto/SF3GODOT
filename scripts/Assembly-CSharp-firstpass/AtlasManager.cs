@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AtlasManager : MonoBehaviour
+public partial class AtlasManager : MonoBehaviour
 {
 	private static Dictionary<string, UIAtlas> _atlases = new Dictionary<string, UIAtlas>();
 

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class DisconnectOnExit : MonoBehaviour
+public partial class DisconnectOnExit : MonoBehaviour
 {
 	private NetworkConnection _connection;
 

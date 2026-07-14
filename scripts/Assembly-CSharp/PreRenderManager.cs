@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PreRenderManager : MonoBehaviour
+public partial class PreRenderManager : MonoBehaviour
 {
 	public static PreRenderManager Instance;
 

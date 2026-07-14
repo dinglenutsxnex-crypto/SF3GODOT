@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NekkiUIDialogInfo : MonoBehaviour
+public partial class NekkiUIDialogInfo : MonoBehaviour
 {
 	[SerializeField]
 	private UIWidget _modalWidget;

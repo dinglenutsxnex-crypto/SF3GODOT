@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class HorizontalScaleForResolution : MonoBehaviour
+public partial class HorizontalScaleForResolution : MonoBehaviour
 {
 	private const float DEFAULT_ASPECT = 1.33f;
 

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DynamicShadowProjector.Sample
 {
-	public class Swing : MonoBehaviour
+	public partial class Swing : MonoBehaviour
 	{
 		public float m_minAngle = -30f;
 

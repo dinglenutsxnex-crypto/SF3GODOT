@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class AnimatedTextureUV : MonoBehaviour
+public partial class AnimatedTextureUV : MonoBehaviour
 {
 	public int uvAnimationTileX;
 

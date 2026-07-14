@@ -4,7 +4,7 @@ using AnimationOrTween;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Internal/Active Animation")]
-public class ActiveAnimation : MonoBehaviour
+public partial class ActiveAnimation : MonoBehaviour
 {
 	public static ActiveAnimation current;
 

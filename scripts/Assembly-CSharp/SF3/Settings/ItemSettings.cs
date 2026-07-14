@@ -5,7 +5,7 @@ using sf3DTO;
 
 namespace SF3.Settings
 {
-	public class ItemSettings : MonoBehaviour
+	public partial class ItemSettings : MonoBehaviour
 	{
 		[Serializable]
 		private class ItemsRaritySettings

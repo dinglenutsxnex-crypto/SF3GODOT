@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class SystemMessage : MonoBehaviour
+public partial class SystemMessage : MonoBehaviour
 {
 	private const string defaultTitleAlias = "system_message_title";
 

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class AttributeViewer : MonoBehaviour
+	public partial class AttributeViewer : MonoBehaviour
 	{
 		private static readonly Dictionary<AttributeType, string> AtributeNameToSpriteName = new Dictionary<AttributeType, string>
 		{

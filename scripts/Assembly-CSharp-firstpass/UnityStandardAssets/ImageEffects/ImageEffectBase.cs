@@ -4,7 +4,7 @@ namespace UnityStandardAssets.ImageEffects
 {
 	[RequireComponent(typeof(Camera))]
 	[AddComponentMenu("")]
-	public class ImageEffectBase : MonoBehaviour
+	public partial class ImageEffectBase : MonoBehaviour
 	{
 		public Shader shader;
 

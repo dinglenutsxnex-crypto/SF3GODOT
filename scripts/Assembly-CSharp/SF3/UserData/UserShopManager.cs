@@ -8,7 +8,7 @@ using sf3DTO;
 
 namespace SF3.UserData
 {
-	public class UserShopManager : MonoBehaviour, IUserDataManager
+	public partial class UserShopManager : MonoBehaviour, IUserDataManager
 	{
 		private static UserShopManager _instance;
 

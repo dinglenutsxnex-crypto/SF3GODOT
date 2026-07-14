@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UI2DSpriteAnimation : MonoBehaviour
+public partial class UI2DSpriteAnimation : MonoBehaviour
 {
 	[SerializeField]
 	protected int framerate = 20;

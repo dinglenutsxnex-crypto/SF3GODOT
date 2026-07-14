@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GlowEffect
 {
-	public class GlowEffect : MonoBehaviour
+	public partial class GlowEffect : MonoBehaviour
 	{
 		public enum GlowMode
 		{

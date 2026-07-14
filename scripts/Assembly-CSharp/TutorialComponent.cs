@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TutorialComponent : MonoBehaviour
+public partial class TutorialComponent : MonoBehaviour
 {
 	public string id;
 

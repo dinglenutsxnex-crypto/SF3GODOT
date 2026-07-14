@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UISpriteRadiantAnimation : MonoBehaviour
+public partial class UISpriteRadiantAnimation : MonoBehaviour
 {
 	private UIBasicSprite _sprite;
 

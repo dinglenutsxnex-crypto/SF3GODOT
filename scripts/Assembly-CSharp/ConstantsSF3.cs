@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using SF3_Attributes;
 using UnityEngine;
 
-public class ConstantsSF3 : MonoBehaviour
+public partial class ConstantsSF3 : MonoBehaviour
 {
 	public enum QuestEvents
 	{

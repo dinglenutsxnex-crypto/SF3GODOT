@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SF3.BattleUtils
 {
-	public class SF3BattleUtils : MonoBehaviour
+	public partial class SF3BattleUtils : MonoBehaviour
 	{
 		private static SF3BattleUtils _instance;
 

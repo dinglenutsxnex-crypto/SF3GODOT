@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Toggled Objects")]
-public class UIToggledObjects : MonoBehaviour
+public partial class UIToggledObjects : MonoBehaviour
 {
 	public List<GameObject> activate;
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NekkiRectTransformUtility : MonoBehaviour
+public partial class NekkiRectTransformUtility : MonoBehaviour
 {
 	public static Rect RectTransformToScreenSpace(RectTransform rectTransform)
 	{

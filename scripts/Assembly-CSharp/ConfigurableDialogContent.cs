@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(ConfigurableDialogModule))]
-public class ConfigurableDialogContent : MonoBehaviour
+public partial class ConfigurableDialogContent : MonoBehaviour
 {
 	[SerializeField]
 	private LocalizationText _title;

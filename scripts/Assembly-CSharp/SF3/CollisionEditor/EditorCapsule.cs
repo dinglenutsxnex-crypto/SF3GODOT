@@ -4,7 +4,7 @@ using UnityEngine;
 namespace SF3.CollisionEditor
 {
 	[ExecuteInEditMode]
-	public class EditorCapsule : MonoBehaviour
+	public partial class EditorCapsule : MonoBehaviour
 	{
 		public enum ECapsuleType
 		{

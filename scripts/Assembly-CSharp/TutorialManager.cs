@@ -5,7 +5,7 @@ using SF3;
 using SF3.Moves;
 using UnityEngine;
 
-public class TutorialManager : MonoBehaviour
+public partial class TutorialManager : MonoBehaviour
 {
 	private class ShowTutorialPanelIntent
 	{

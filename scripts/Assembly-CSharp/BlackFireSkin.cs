@@ -4,7 +4,7 @@ using System.Linq;
 using SF3.GameModels;
 using UnityEngine;
 
-public class BlackFireSkin : MonoBehaviour
+public partial class BlackFireSkin : MonoBehaviour
 {
 	private struct ClothBone
 	{

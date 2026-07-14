@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Interaction/Wrap Content")]
-public class UIWrapContent : MonoBehaviour
+public partial class UIWrapContent : MonoBehaviour
 {
 	public delegate void OnInitializeItem(GameObject go, int wrapIndex, int realIndex);
 

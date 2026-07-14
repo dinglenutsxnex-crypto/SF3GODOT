@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SF3.Effects
 {
-	public class ParticleSystemCtrl : MonoBehaviour
+	public partial class ParticleSystemCtrl : MonoBehaviour
 	{
 		private bool _unscaledUpdate;
 

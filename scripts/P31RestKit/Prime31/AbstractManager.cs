@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Prime31
 {
-	public abstract class AbstractManager : MonoBehaviour
+	public abstract partial class AbstractManager : MonoBehaviour
 	{
 		private static LifecycleHelper _prime31LifecycleHelperRef;
 

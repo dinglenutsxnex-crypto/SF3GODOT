@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [AddComponentMenu("NGUI/Tween/Spring Position")]
-public class SpringPosition : MonoBehaviour
+public partial class SpringPosition : MonoBehaviour
 {
 	public delegate void OnFinished();
 

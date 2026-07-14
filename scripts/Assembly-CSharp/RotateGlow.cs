@@ -1,7 +1,7 @@
 using SF3;
 using UnityEngine;
 
-public class RotateGlow : MonoBehaviour
+public partial class RotateGlow : MonoBehaviour
 {
 	public Vector3 Angle;
 

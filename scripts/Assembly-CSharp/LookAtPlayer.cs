@@ -2,7 +2,7 @@ using System.Linq;
 using SF3.GameModels;
 using UnityEngine;
 
-public class LookAtPlayer : MonoBehaviour
+public partial class LookAtPlayer : MonoBehaviour
 {
 	private Transform _player;
 

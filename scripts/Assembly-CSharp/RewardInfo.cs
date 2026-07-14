@@ -5,7 +5,7 @@ using SF3.Items;
 using SF3_Attributes;
 using UnityEngine;
 
-public class RewardInfo : MonoBehaviour
+public partial class RewardInfo : MonoBehaviour
 {
 	[SerializeField]
 	private NekkiUILabel itemName;

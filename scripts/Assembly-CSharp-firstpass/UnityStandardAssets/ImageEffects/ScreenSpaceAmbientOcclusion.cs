@@ -6,7 +6,7 @@ namespace UnityStandardAssets.ImageEffects
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(Camera))]
 	[AddComponentMenu("Image Effects/Rendering/Screen Space Ambient Occlusion")]
-	public class ScreenSpaceAmbientOcclusion : MonoBehaviour
+	public partial class ScreenSpaceAmbientOcclusion : MonoBehaviour
 	{
 		public enum SSAOSamples
 		{

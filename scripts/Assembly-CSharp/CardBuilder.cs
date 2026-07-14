@@ -1,5 +1,5 @@
 using UnityEngine;
 
-public class CardBuilder : MonoBehaviour
+public partial class CardBuilder : MonoBehaviour
 {
 }

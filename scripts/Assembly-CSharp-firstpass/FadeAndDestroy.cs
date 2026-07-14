@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SlicedSprite))]
-public class FadeAndDestroy : MonoBehaviour
+public partial class FadeAndDestroy : MonoBehaviour
 {
 	public float m_FadeDelay = 1f;
 

@@ -4,7 +4,7 @@ using DOTweenUtils;
 using Nekki.UI;
 using UnityEngine;
 
-public class ShopAttributeDiff : MonoBehaviour
+public partial class ShopAttributeDiff : MonoBehaviour
 {
 	private NekkiUILabel _label;
 

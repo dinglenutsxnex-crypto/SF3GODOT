@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class BattleBadgeUnit : MonoBehaviour
+public partial class BattleBadgeUnit : MonoBehaviour
 {
 	[SerializeField]
 	private UISprite _sprite;

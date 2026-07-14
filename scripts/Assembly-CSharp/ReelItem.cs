@@ -3,7 +3,7 @@ using System.Collections;
 using SF3.Items;
 using UnityEngine;
 
-public class ReelItem : MonoBehaviour
+public partial class ReelItem : MonoBehaviour
 {
 	public delegate void OnDrag();
 

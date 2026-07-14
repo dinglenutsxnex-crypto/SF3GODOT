@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UITween : MonoBehaviour
+public partial class UITween : MonoBehaviour
 {
 	public enum TweenTypes
 	{

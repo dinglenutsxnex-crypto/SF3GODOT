@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SF3.Audio
 {
-	public class AudioManager : MonoBehaviour
+	public partial class AudioManager : MonoBehaviour
 	{
 		private Dictionary<string, AudioSource> sources;
 

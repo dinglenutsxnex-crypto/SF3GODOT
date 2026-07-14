@@ -5,7 +5,7 @@ using DOTweenUtils;
 using SF3.Audio;
 using UnityEngine;
 
-public class RewardInAnimation : MonoBehaviour
+public partial class RewardInAnimation : MonoBehaviour
 {
 	public delegate void OnAnimationEnd();
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Prime31
 {
-	public class StoreKitEventListener : MonoBehaviour
+	public partial class StoreKitEventListener : MonoBehaviour
 	{
 	}
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class ColorChanger : MonoBehaviour
+	public partial class ColorChanger : MonoBehaviour
 	{
 		public Color fromColor = Color.white;
 

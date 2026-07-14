@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class ColorManager : MonoBehaviour
+public partial class ColorManager : MonoBehaviour
 {
 	[SerializeField]
 	private ColorPreset[] skinColors;

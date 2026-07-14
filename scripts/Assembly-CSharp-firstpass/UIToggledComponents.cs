@@ -4,7 +4,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 [RequireComponent(typeof(UIToggle))]
 [AddComponentMenu("NGUI/Interaction/Toggled Components")]
-public class UIToggledComponents : MonoBehaviour
+public partial class UIToggledComponents : MonoBehaviour
 {
 	public List<MonoBehaviour> activate;
 

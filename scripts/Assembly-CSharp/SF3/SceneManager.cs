@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace SF3
 {
-	public class SceneManager : MonoBehaviour
+	public partial class SceneManager : MonoBehaviour
 	{
 		private static SceneManager _instance;
 

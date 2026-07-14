@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Nekki.UI
 {
 	[ExecuteInEditMode]
-	public class NekkiUIDragObject : MonoBehaviour
+	public partial class NekkiUIDragObject : MonoBehaviour
 	{
 		public enum DragEffect
 		{

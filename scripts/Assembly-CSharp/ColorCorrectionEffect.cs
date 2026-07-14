@@ -2,7 +2,7 @@ using System;
 using SF3;
 using UnityEngine;
 
-public class ColorCorrectionEffect : MonoBehaviour
+public partial class ColorCorrectionEffect : MonoBehaviour
 {
 	public Material colorCorrectionMaterial;
 

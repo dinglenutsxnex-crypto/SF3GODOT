@@ -3,7 +3,7 @@ using Nekki.UI;
 using SF3.UserData;
 using UnityEngine;
 
-public class ExpCircle : MonoBehaviour
+public partial class ExpCircle : MonoBehaviour
 {
 	public delegate void AnimationEnd();
 

@@ -3,7 +3,7 @@ using System.Collections;
 using Nekki.UI;
 using UnityEngine;
 
-public class TooltipManager : MonoBehaviour
+public partial class TooltipManager : MonoBehaviour
 {
 	[SerializeField]
 	private TooltipUnit _prototype;

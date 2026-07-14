@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SF3
 {
-	public class GlowEffectShadowform : MonoBehaviour
+	public partial class GlowEffectShadowform : MonoBehaviour
 	{
 		public enum GlowMode
 		{

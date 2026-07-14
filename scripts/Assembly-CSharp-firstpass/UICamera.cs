@@ -6,7 +6,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/UI/NGUI Event System (UICamera)")]
 [RequireComponent(typeof(Camera))]
-public class UICamera : MonoBehaviour
+public partial class UICamera : MonoBehaviour
 {
 	public enum ControlScheme
 	{

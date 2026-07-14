@@ -7,7 +7,7 @@ using sf3DTO;
 
 namespace SF3
 {
-	public class MapBattleUI : MonoBehaviour
+	public partial class MapBattleUI : MonoBehaviour
 	{
 		[SerializeField]
 		private MapBattleButton _mapBattleIconPrefab;

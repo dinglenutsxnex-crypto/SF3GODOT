@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 
-public class ReelItemAnimation : MonoBehaviour, IReelItemAnimation
+public partial class ReelItemAnimation : MonoBehaviour, IReelItemAnimation
 {
 	[Serializable]
 	private class Animation
