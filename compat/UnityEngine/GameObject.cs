@@ -24,15 +24,19 @@ namespace UnityEngine
 		public bool isStatic { get; set; }
 		public HideFlags hideFlags { get; set; }
 
+		internal Node Node => _node;
+
 		internal GameObject(Node node)
 		{
 			_node = node;
+			SetupTransform();
 		}
 
 		public GameObject()
 		{
 			_node = new Node();
 			name = "Game Object";
+			SetupTransform();
 			UnityEngineAutoLoad.Instance.AddChild(_node);
 		}
 
@@ -40,6 +44,7 @@ namespace UnityEngine
 		{
 			_node = new Node();
 			this.name = name;
+			SetupTransform();
 			UnityEngineAutoLoad.Instance.AddChild(_node);
 		}
 
@@ -47,7 +52,18 @@ namespace UnityEngine
 		{
 			_node = new Node();
 			this.name = name;
+			SetupTransform();
 			UnityEngineAutoLoad.Instance.AddChild(_node);
+		}
+
+		private void SetupTransform()
+		{
+			if (_node is Node3D n3d)
+				transform = new Transform(n3d);
+			else if (_node is Control ctrl)
+				transform = new Transform(ctrl);
+			else
+				transform = new Transform(_node);
 		}
 
 		public void SetActive(bool active)
