@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Reflection;
 using Godot;
 using UnityEngine.EventSystems;
 
@@ -7,7 +8,68 @@ namespace UnityEngine
 {
     public class Component : Godot.Node
     {
-        public GameObject gameObject { get; set; }
+        private bool _startCalled;
+        private MethodInfo _awakeMethod;
+        private MethodInfo _startMethod;
+        private MethodInfo _updateMethod;
+        private MethodInfo _fixedUpdateMethod;
+        private GameObject _gameObject;
+
+        public Component()
+        {
+            Connect("tree_entered", Callable.From(() => OnTreeEntered()));
+        }
+
+        public GameObject gameObject
+        {
+            get
+            {
+                if (_gameObject == null)
+                    _gameObject = new GameObject(this);
+                return _gameObject;
+            }
+            set { _gameObject = value; }
+        }
+
+        private void OnTreeEntered()
+        {
+            Connect("ready", Callable.From(() => OnReady()));
+            GetTree().Connect("process_frame", Callable.From(() => OnProcessFrame()));
+        }
+
+        private void OnReady()
+        {
+            var t = GetType();
+            const BindingFlags bf = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+            _awakeMethod = FindMethod("Awake", typeof(void), t, bf);
+            _startMethod = FindMethod("Start", typeof(void), t, bf);
+            _updateMethod = FindMethod("Update", typeof(void), t, bf);
+            _fixedUpdateMethod = FindMethod("FixedUpdate", typeof(void), t, bf);
+            _awakeMethod?.Invoke(this, null);
+        }
+
+        private void OnProcessFrame()
+        {
+            if (!_startCalled)
+            {
+                _startCalled = true;
+                _startMethod?.Invoke(this, null);
+            }
+            _updateMethod?.Invoke(this, null);
+        }
+
+        private static MethodInfo FindMethod(string name, Type returnType, Type type, BindingFlags flags)
+        {
+            while (type != null && type != typeof(Component) && type != typeof(Godot.Node) && type != typeof(object))
+            {
+                var m = type.GetMethod(name, flags);
+                if (m != null && m.GetParameters().Length == 0 && m.ReturnType == returnType)
+                    return m;
+                type = type.BaseType;
+            }
+            return null;
+        }
+
         public Transform transform { get; set; }
         public string tag { get; set; }
         public string name { get => base.Name; set => base.Name = value; }

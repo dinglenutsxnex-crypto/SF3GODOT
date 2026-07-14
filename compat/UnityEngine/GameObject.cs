@@ -2,11 +2,12 @@
 using Godot;
 using System.Reflection;
 
+
 namespace UnityEngine
 {
 	public class GameObject : UnityEngineObject
     {
-		Node _node;
+		internal Node _node;
 
 		public new string name
 		{
@@ -92,12 +93,22 @@ namespace UnityEngine
 
 		public T GetComponent<T>()
 		{
+			if (_node is T t) return t;
 			return default;
 		}
 
-		public T AddComponent<T>()
+		public Component GetComponent(Type type)
 		{
-			return default;
+			if (type != null && type.IsInstanceOfType(_node))
+				return _node as Component;
+			return null;
+		}
+
+		public T AddComponent<T>() where T : Component
+		{
+			T component = System.Activator.CreateInstance<T>();
+			_node.AddChild(component);
+			return component;
 		}
 
 		public void SendMessage(string methodName) { }
@@ -135,7 +146,6 @@ namespace UnityEngine
 
 		public static GameObject CreatePrimitive(PrimitiveType type) => new GameObject();
 
-		public Component GetComponent(Type type) => null;
 		public Component GetComponent(string type) => null;
 		public T GetComponentInChildren<T>() => default;
 		public T GetComponentInChildren<T>(bool includeInactive) => default;

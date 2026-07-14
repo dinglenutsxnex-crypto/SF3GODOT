@@ -1,6 +1,7 @@
 using SF3;
 using UnityEngine;
 
+[UnityEngine.UseAsMonoBehaviour]
 public partial class GameLoad : MonoBehaviour
 {
 	private EnterPoint _enterPoint;

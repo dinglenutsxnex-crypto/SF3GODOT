@@ -2,6 +2,6 @@
 
 namespace UnityEngine
 {
-	[AttributeUsage (AttributeTargets.Class)]
+	[AttributeUsage (AttributeTargets.Class, Inherited = true)]
 	public class UseAsMonoBehaviour : Attribute {}
 }

@@ -1,14 +1,23 @@
 using System;
+using Godot;
 
 namespace UnityEngine
 {
 	public class Transform : Object, System.Collections.IEnumerable
 	{
-		public Godot.Node3D node;
+		public Godot.Node node;
 		public Transform transform => this;
 
-		public string name { get { throw new NotImplementedException(); } set { throw new NotImplementedException(); } }
-		public GameObject gameObject { get { throw new NotImplementedException(); } set { throw new NotImplementedException(); } }
+		public string name { get { return node?.Name ?? ""; } set { if (node != null) node.Name = value; } }
+		public GameObject gameObject
+		{
+			get
+			{
+				if (node is Component c) return c.gameObject;
+				return new GameObject(node);
+			}
+			set { }
+		}
 
 		public Vector3 localPosition { get; set; }
 		public Vector3 localScale { get; set; }
@@ -17,14 +26,32 @@ namespace UnityEngine
 		public Vector3 localEulerAngles { get; set; }
 		public Matrix4x4 localToWorldMatrix => default;
 		public Matrix4x4 worldToLocalMatrix => default;
-		public int childCount => 0;
-		public Transform parent { get; set; }
-		public Transform root => null;
+		public int childCount => node?.GetChildCount() ?? 0;
+		public Transform parent
+		{
+			get
+			{
+				if (node == null) return null;
+				var p = node.GetParent();
+				if (p == null) return null;
+				return new Transform(p);
+			}
+			set { }
+		}
+		public Transform root
+		{
+			get
+			{
+				if (node == null) return null;
+				var r = node.GetTree()?.Root;
+				return r != null ? new Transform(r) : null;
+			}
+		}
 		public bool hasChanged { get; set; }
 		public int hierarchyCapacity { get; set; }
 		public string tag { get; set; }
 
-		internal Transform(Godot.Node3D node)
+		internal Transform(Godot.Node node)
 		{
 			this.node = node;
 		}
@@ -33,8 +60,17 @@ namespace UnityEngine
 
 		public Vector3 position
 		{
-			get { return node.Position; }
-			set { node.Position = value; }
+			get
+			{
+				if (node is Node3D n3d) return n3d.Position;
+				if (node is Control ctrl) return new Vector3(ctrl.Position.X, ctrl.Position.Y, 0);
+				return Vector3.zero;
+			}
+			set
+			{
+				if (node is Node3D n3d) n3d.Position = value;
+				if (node is Control ctrl) ctrl.Position = new Godot.Vector2(value.x, value.y);
+			}
 		}
 
 		public Quaternion rotation
@@ -56,7 +92,8 @@ namespace UnityEngine
 
 		public void Rotate(Vector3 eulerAngles)
 		{
-			node.Rotate(eulerAngles.normalized, eulerAngles.magnitude * Mathf.Deg2Rad);
+			if (node is Node3D n3d)
+				n3d.Rotate(eulerAngles.normalized, eulerAngles.magnitude * Mathf.Deg2Rad);
 		}
 
 		public void Rotate(Vector3 eulers, Space relativeTo) { }

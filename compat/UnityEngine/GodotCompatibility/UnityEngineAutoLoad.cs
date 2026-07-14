@@ -46,13 +46,22 @@ namespace UnityEngine
 		}
 
 
+		bool IsMonoBehaviourType(Type t)
+		{
+			while (t != null && t != typeof(object))
+			{
+				if (t == typeof(MonoBehaviour)) return true;
+				t = t.BaseType;
+			}
+			return false;
+		}
+
 		void CheckNode(Node currentNode)
 		{
 			UseAsMonoBehaviour attr = currentNode.GetType().GetCustomAttribute<UseAsMonoBehaviour>();
+			bool isMonoBehaviour = IsMonoBehaviourType(currentNode.GetType());
 
-			Debug.Log("Node: " + currentNode.GetName());
-
-			if ( attr != null )
+			if ( attr != null || isMonoBehaviour )
 			{
 				monoNodes.Add(currentNode);
 				monoBehaviours[currentNode] = new MonoBehaviourController(currentNode);

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[UnityEngine.UseAsMonoBehaviour]
 public partial class TutorialMaskGenerator : MonoBehaviour
 {
 	private const int reducingTexture = 4;

@@ -7,7 +7,6 @@ namespace UnityEngine
     {
         List<IEnumerator> coroutines = new List<IEnumerator>();
 
-		public GameObject gameObject { get; set; }
 		public new Transform transform => gameObject?.transform ?? null;
 
 		public string tag { get; set; }
@@ -18,7 +17,6 @@ namespace UnityEngine
 
 		public MonoBehaviour()
 		{
-			gameObject = new GameObject();
 		}
 
 		public static implicit operator GameObject(MonoBehaviour m) => m?.gameObject;
@@ -40,9 +38,9 @@ namespace UnityEngine
 		public void CancelInvoke(string methodName) { }
 		public bool IsInvoking() => false;
 		public bool IsInvoking(string methodName) => false;
-		public Coroutine StartCoroutine(string methodName) => null;
-		public Coroutine StartCoroutine(IEnumerator routine) => null;
-		public Coroutine StartCoroutine(string methodName, object value) => null;
+		public Coroutine StartCoroutine(string methodName) { GodotRoutiner.Go(null); return null; }
+		public Coroutine StartCoroutine(IEnumerator routine) { GodotRoutiner.Go(routine); return null; }
+		public Coroutine StartCoroutine(string methodName, object value) { GodotRoutiner.Go(null); return null; }
 		public void StopCoroutine(Coroutine routine) { }
 		public void StopCoroutine(IEnumerator routine) { }
 		public void StopCoroutine(string methodName) { }
