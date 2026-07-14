@@ -4,7 +4,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [AddComponentMenu("NGUI/UI/Root")]
-public class UIRoot : MonoBehaviour
+public partial class UIRoot : MonoBehaviour
 {
 	public enum Scaling
 	{
