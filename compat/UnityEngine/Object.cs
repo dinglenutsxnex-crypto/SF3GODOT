@@ -47,7 +47,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject FindObjectOfType(Type type)
+		public static object FindObjectOfType(Type type)
 		{
 			throw new NotImplementedException();
 		}
@@ -62,17 +62,17 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject[] FindObjectsOfType(Type type)
+		public static object[] FindObjectsOfType(Type type)
 		{
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject[] FindObjectsOfType(Type type, bool includeInactive)
+		public static object[] FindObjectsOfType(Type type, bool includeInactive)
 		{
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject Instantiate(UnityEngineObject original)
+		public static object Instantiate(object original)
 		{
 			throw new NotImplementedException();
 		}
@@ -82,7 +82,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject Instantiate(UnityEngineObject original, Transform parent)
+		public static object Instantiate(object original, Transform parent)
 		{
 			throw new NotImplementedException();
 		}
@@ -92,7 +92,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject Instantiate(UnityEngineObject original, Transform parent, bool instantiateInWorldSpace)
+		public static object Instantiate(object original, Transform parent, bool instantiateInWorldSpace)
 		{
 			throw new NotImplementedException();
 		}
@@ -102,7 +102,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject Instantiate(UnityEngineObject original, Vector3 position, Quaternion rotation)
+		public static object Instantiate(object original, Vector3 position, Quaternion rotation)
 		{
 			throw new NotImplementedException();
 		}
@@ -112,7 +112,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static UnityEngineObject Instantiate(UnityEngineObject original, Vector3 position, Quaternion rotation, Transform parent)
+		public static object Instantiate(object original, Vector3 position, Quaternion rotation, Transform parent)
 		{
 			throw new NotImplementedException();
 		}

@@ -146,9 +146,9 @@ public class UIPopupList : UIWidgetContainer
 				bitmapFont = null;
 				font = null;
 			}
-			else if (value is UIFont)
+			else if ((object)value is UIFont)
 			{
-				bitmapFont = value as UIFont;
+				bitmapFont = (object)value as UIFont;
 				trueTypeFont = null;
 				font = null;
 			}

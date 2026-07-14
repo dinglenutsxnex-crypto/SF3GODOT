@@ -79,7 +79,7 @@ public static class NGUITools
 		{
 			if (mListener == null || !GetActive(mListener))
 			{
-				AudioListener[] array = UObject.FindObjectsOfType(typeof(AudioListener)) as AudioListener[];
+				AudioListener[] array = UObject.FindObjectsOfType(typeof(AudioListener)).Cast<AudioListener>().ToArray();
 				if (array != null)
 				{
 					for (int i = 0; i < array.Length; i++)
@@ -146,7 +146,7 @@ public static class NGUITools
 
 	public static T[] FindActive<T>() where T : Component
 	{
-		return UObject.FindObjectsOfType(typeof(T)) as T[];
+		return UObject.FindObjectsOfType(typeof(T)).Cast<T>().ToArray();
 	}
 
 	public static Camera FindCameraForLayer(int layer)

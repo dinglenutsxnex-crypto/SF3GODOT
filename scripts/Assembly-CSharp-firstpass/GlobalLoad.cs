@@ -167,27 +167,27 @@ public class GlobalLoad : GlobalPath
 		return (T)null;
 	}
 
-	private static T ObjecOrDefault<T>(T obj, T defaultObj = null) where T : UObject
+	private static T ObjecOrDefault<T>(T obj, T defaultObj = null) where T : class
 	{
 		return obj ?? defaultObj;
 	}
 
-	public static T[] GetLoadObjectsInternal<T>(string internalAlias, string appendedPath = "") where T : UObject
+	public static T[] GetLoadObjectsInternal<T>(string internalAlias, string appendedPath = "") where T : class
 	{
 		return LoadAll<T>(GlobalPath.GetInternalPath(internalAlias, appendedPath));
 	}
 
-	public static T[] GetLoadObjects<T>(string fullPath) where T : UObject
+	public static T[] GetLoadObjects<T>(string fullPath) where T : class
 	{
 		return LoadAll<T>(GlobalPath.GetResoursesPath(fullPath));
 	}
 
-	public static T GetLoadObjectInternal<T>(string internalAlias, string appendedPath = "") where T : UObject
+	public static T GetLoadObjectInternal<T>(string internalAlias, string appendedPath = "") where T : class
 	{
 		return Load<T>(GlobalPath.GetInternalPath(internalAlias, appendedPath));
 	}
 
-	public static T GetLoadObject<T>(string fullPath) where T : UObject
+	public static T GetLoadObject<T>(string fullPath) where T : class
 	{
 		return Load<T>(GlobalPath.GetResoursesPath(fullPath));
 	}
@@ -205,7 +205,7 @@ public class GlobalLoad : GlobalPath
 		return default(TResult);
 	}
 
-	private static T[] LoadAll<T>(string path) where T : UObject
+	private static T[] LoadAll<T>(string path) where T : class
 	{
 		T[] array = FirstOf<T[], string>(path, GetBundles<T>, GetResources<T>);
 		if (array == null)
@@ -215,7 +215,7 @@ public class GlobalLoad : GlobalPath
 		return array;
 	}
 
-	private static T Load<T>(string path) where T : UObject
+	private static T Load<T>(string path) where T : class
 	{
 		T val = FirstOf<T, string>(path, GetBundle<T>, GetResource<T>);
 		if (val == null)
@@ -225,33 +225,33 @@ public class GlobalLoad : GlobalPath
 		return val;
 	}
 
-	private static T[] GetResources<T>(string path) where T : UObject
+	private static T[] GetResources<T>(string path) where T : class
 	{
 		return ResourcesUtil.GetResources<T>(path);
 	}
 
-	private static T GetResource<T>(string path) where T : UObject
+	private static T GetResource<T>(string path) where T : class
 	{
 		return ResourcesUtil.GetResource<T>(path);
 	}
 
-	private static T[] GetBundles<T>(string path) where T : UObject
+	private static T[] GetBundles<T>(string path) where T : class
 	{
 		return BundlesUtil.GetObjects<T>(path);
 	}
 
-	private static T GetBundle<T>(string path) where T : UObject
+	private static T GetBundle<T>(string path) where T : class
 	{
 		return BundlesUtil.GetObject<T>(path);
 	}
 
-	public static void Unload(UObject obj, bool immediate = true)
+	public static void Unload(object obj, bool immediate = true)
 	{
-		if (!(obj == null))
+		if (obj != null)
 		{
-			if (obj.GetInstanceID() <= 0)
+			if (obj is UObject uo && uo.GetInstanceID() <= 0)
 			{
-				Destroy(obj, immediate);
+				Destroy(uo, immediate);
 			}
 			else
 			{
@@ -260,7 +260,7 @@ public class GlobalLoad : GlobalPath
 		}
 	}
 
-	public static void Destroy(UObject obj, bool immediate = true)
+	public static void Destroy(object obj, bool immediate = true)
 	{
 		try
 		{

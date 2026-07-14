@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace SF3
@@ -165,7 +166,7 @@ namespace SF3
 			{
 				_enableFlag = true;
 				_disableFlag = true;
-				Cloth[] array = (Cloth[])UObject.FindObjectsOfType(typeof(Cloth));
+				Cloth[] array = UObject.FindObjectsOfType(typeof(Cloth)).Cast<Cloth>().ToArray();
 				Cloth[] array2 = array;
 				foreach (Cloth cloth in array2)
 				{
@@ -174,7 +175,7 @@ namespace SF3
 			}
 			if (_disableFlag && (double)delta > 0.1)
 			{
-				Cloth[] array3 = (Cloth[])UObject.FindObjectsOfType(typeof(Cloth));
+				Cloth[] array3 = UObject.FindObjectsOfType(typeof(Cloth)).Cast<Cloth>().ToArray();
 				Cloth[] array4 = array3;
 				foreach (Cloth cloth2 in array4)
 				{

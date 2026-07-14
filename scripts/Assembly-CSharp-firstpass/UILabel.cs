@@ -304,7 +304,7 @@ public class UILabel : UIWidget
 		}
 		set
 		{
-			UIFont uIFont = value as UIFont;
+			UIFont uIFont = (object)value as UIFont;
 			if (uIFont != null)
 			{
 				bitmapFont = uIFont;

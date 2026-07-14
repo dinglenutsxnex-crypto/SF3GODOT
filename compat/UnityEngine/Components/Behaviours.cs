@@ -1,9 +1,50 @@
 using System;
 using System.Collections;
+using Godot;
 using UnityEngine.EventSystems;
 
 namespace UnityEngine
 {
+    public class Component : Godot.Node
+    {
+        public GameObject gameObject { get; set; }
+        public Transform transform { get; set; }
+        public string tag { get; set; }
+        public string name { get => base.Name; set => base.Name = value; }
+        public HideFlags hideFlags { get; set; }
+        public int GetInstanceID() => (int)base.GetInstanceId();
+        public T GetComponent<T>() => default;
+        public Component GetComponent(Type type) => null;
+        public Component GetComponent(string type) => null;
+        public T GetComponentInChildren<T>() => default;
+        public T GetComponentInChildren<T>(bool includeInactive) => default;
+        public Component GetComponentInChildren(Type type) => null;
+        public Component GetComponentInChildren(Type type, bool includeInactive) => null;
+        public T[] GetComponentsInChildren<T>() => null;
+        public T[] GetComponentsInChildren<T>(bool includeInactive) => null;
+        public void GetComponentsInChildren<T>(System.Collections.Generic.List<T> results) { }
+        public void GetComponentsInChildren<T>(bool includeInactive, System.Collections.Generic.List<T> results) { }
+        public T GetComponentInParent<T>() => default;
+        public T GetComponentInParent<T>(bool includeInactive) => default;
+        public T[] GetComponentsInParent<T>() => null;
+        public T[] GetComponentsInParent<T>(bool includeInactive) => null;
+        public T[] GetComponents<T>() => null;
+        public void GetComponents<T>(System.Collections.Generic.List<T> results) { }
+        public bool TryGetComponent<T>(out T component) { component = default; return false; }
+        public void SendMessage(string methodName) { }
+        public void SendMessage(string methodName, object value) { }
+        public void SendMessage(string methodName, SendMessageOptions options) { }
+        public void SendMessageUpwards(string methodName) { }
+        public void SendMessageUpwards(string methodName, object value) { }
+        public void BroadcastMessage(string methodName) { }
+        public void BroadcastMessage(string methodName, object parameter) { }
+        public void BroadcastMessage(string methodName, SendMessageOptions options) { }
+        public void BroadcastMessage(string methodName, object parameter, SendMessageOptions options) { }
+        public bool CompareTag(string tag) => false;
+
+        public static implicit operator bool(Component exists) => exists != null;
+    }
+
     public class Behaviour : Component
     {
         public bool enabled { get; set; }
@@ -440,40 +481,5 @@ namespace UnityEngine
     {
         Force,
         Impulse,
-    }
-
-    public class Component : UnityEngineObject
-    {
-        public GameObject gameObject { get; set; }
-        public Transform transform { get; set; }
-        public string tag { get; set; }
-        public T GetComponent<T>() => default;
-        public Component GetComponent(Type type) => null;
-        public Component GetComponent(string type) => null;
-        public T GetComponentInChildren<T>() => default;
-        public T GetComponentInChildren<T>(bool includeInactive) => default;
-        public Component GetComponentInChildren(Type type) => null;
-        public Component GetComponentInChildren(Type type, bool includeInactive) => null;
-        public T[] GetComponentsInChildren<T>() => null;
-        public T[] GetComponentsInChildren<T>(bool includeInactive) => null;
-        public void GetComponentsInChildren<T>(System.Collections.Generic.List<T> results) { }
-        public void GetComponentsInChildren<T>(bool includeInactive, System.Collections.Generic.List<T> results) { }
-        public T GetComponentInParent<T>() => default;
-        public T GetComponentInParent<T>(bool includeInactive) => default;
-        public T[] GetComponentsInParent<T>() => null;
-        public T[] GetComponentsInParent<T>(bool includeInactive) => null;
-        public T[] GetComponents<T>() => null;
-        public void GetComponents<T>(System.Collections.Generic.List<T> results) { }
-        public bool TryGetComponent<T>(out T component) { component = default; return false; }
-        public void SendMessage(string methodName) { }
-        public void SendMessage(string methodName, object value) { }
-        public void SendMessage(string methodName, SendMessageOptions options) { }
-        public void SendMessageUpwards(string methodName) { }
-        public void SendMessageUpwards(string methodName, object value) { }
-        public void BroadcastMessage(string methodName) { }
-        public void BroadcastMessage(string methodName, object parameter) { }
-        public void BroadcastMessage(string methodName, SendMessageOptions options) { }
-        public void BroadcastMessage(string methodName, object parameter, SendMessageOptions options) { }
-        public bool CompareTag(string tag) => false;
     }
 }
