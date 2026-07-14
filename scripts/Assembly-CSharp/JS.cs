@@ -219,7 +219,7 @@ public class JS : MonoBehaviour
 		{
 			if (!_instance)
 			{
-				_instance = UnityEngine.Object.FindObjectOfType<JS>();
+				_instance = UObject.FindObjectOfType<JS>();
 				if (!_instance)
 				{
 					_instance = new GameObject("JS").AddComponent<JS>();

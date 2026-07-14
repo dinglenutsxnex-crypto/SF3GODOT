@@ -174,7 +174,7 @@ namespace SF3.Audio
 		{
 			foreach (GameObject sound in sounds)
 			{
-				Object.Destroy(sound);
+				UObject.Destroy(sound);
 			}
 			sources.Clear();
 			sounds.Clear();

@@ -26,7 +26,7 @@ public class DebugDevelopmentServerChooser : DebugGOLineController
 	{
 		for (int i = 2; i <= _servers; i++)
 		{
-			DebugDeveloperServerButton debugDeveloperServerButton = UnityEngine.Object.Instantiate(_choseButtonPrototype);
+			DebugDeveloperServerButton debugDeveloperServerButton = UObject.Instantiate(_choseButtonPrototype);
 			debugDeveloperServerButton.Init(i, ChooseServer);
 			debugDeveloperServerButton.transform.SetParent(_choseButtonPrototype.transform.parent);
 			debugDeveloperServerButton.transform.localScale = _choseButtonPrototype.transform.localScale;

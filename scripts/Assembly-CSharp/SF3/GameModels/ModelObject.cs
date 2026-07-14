@@ -158,7 +158,7 @@ namespace SF3.GameModels
 				{
 					if (skins[i] != null)
 					{
-						UnityEngine.Object.DestroyImmediate(skins[i].gameObject);
+						UObject.DestroyImmediate(skins[i].gameObject);
 					}
 				}
 			}
@@ -170,7 +170,7 @@ namespace SF3.GameModels
 			{
 				if (skeletons[j] != null)
 				{
-					UnityEngine.Object.DestroyImmediate(skeletons[j].gameObject);
+					UObject.DestroyImmediate(skeletons[j].gameObject);
 				}
 			}
 		}

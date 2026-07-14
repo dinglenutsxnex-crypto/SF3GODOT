@@ -32,7 +32,7 @@ namespace SF3.Effects
 				{
 					foreach (GameEffectBase effect in effects)
 					{
-						UnityEngine.Object.Destroy(effect.gameObject);
+						UObject.Destroy(effect.gameObject);
 					}
 					effects.Clear();
 				}
@@ -41,7 +41,7 @@ namespace SF3.Effects
 					int num = effects.Count / (modelsUsed.Count + 1);
 					for (int i = 0; i < num; i++)
 					{
-						UnityEngine.Object.Destroy(effects[i].gameObject);
+						UObject.Destroy(effects[i].gameObject);
 					}
 					effects.RemoveRange(0, num);
 				}
@@ -188,7 +188,7 @@ namespace SF3.Effects
 			}
 			for (int i = 0; i < count; i++)
 			{
-				GameEffectBase component = UnityEngine.Object.Instantiate(original).GetComponent<GameEffectBase>();
+				GameEffectBase component = UObject.Instantiate(original).GetComponent<GameEffectBase>();
 				if (!(component is GUIEffect))
 				{
 					component.transform.parent = _parentTransform;

@@ -225,7 +225,7 @@ namespace SF3.Items
 
 		private void InitSelectedBoosterpack()
 		{
-			_selectedBoosterpack = UnityEngine.Object.Instantiate(_boosterpack);
+			_selectedBoosterpack = UObject.Instantiate(_boosterpack);
 			_selectedBoosterpack.transform.parent = _selectedBoosterpackAnchor;
 			_selectedBoosterpack.transform.localScale = Vector3.one;
 			_selectedBoosterpack.transform.localPosition = _selectedBoosterpackPosition;
@@ -256,7 +256,7 @@ namespace SF3.Items
 		{
 			if (count > 0)
 			{
-				BoosterpackScrollItem boosterpack = UnityEngine.Object.Instantiate(_boosterpackScrollItem);
+				BoosterpackScrollItem boosterpack = UObject.Instantiate(_boosterpackScrollItem);
 				EventDelegate onClick = new EventDelegate(delegate
 				{
 					OnBoosterpackSelected(boosterpack);
@@ -445,8 +445,8 @@ namespace SF3.Items
 		private void RecreateSelectedBoosterpack()
 		{
 			_selectedBoosterpack.gameObject.SetActive(false);
-			UnityEngine.Object.Destroy(_selectedBoosterpack.gameObject);
-			_selectedBoosterpack = UnityEngine.Object.Instantiate(_boosterpack);
+			UObject.Destroy(_selectedBoosterpack.gameObject);
+			_selectedBoosterpack = UObject.Instantiate(_boosterpack);
 			_selectedBoosterpack.transform.parent = _selectedBoosterpackAnchor;
 			_selectedBoosterpack.transform.localScale = Vector3.one;
 			_selectedBoosterpack.transform.localPosition = _selectedBoosterpackPosition;
@@ -515,7 +515,7 @@ namespace SF3.Items
 
 		private CardItem CreateCard(BaseItem item, Vector3 position)
 		{
-			CardItem cardItem = UnityEngine.Object.Instantiate(_reelItem);
+			CardItem cardItem = UObject.Instantiate(_reelItem);
 			Transform transform = cardItem.gameObject.transform;
 			transform.parent = _reelItems;
 			transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
@@ -588,7 +588,7 @@ namespace SF3.Items
 			if (_selectedCard != null)
 			{
 				_selectedCard.gameObject.SetActive(false);
-				UnityEngine.Object.Destroy(_selectedCard.gameObject);
+				UObject.Destroy(_selectedCard.gameObject);
 				_selectedCard = null;
 			}
 			if (_cards.Count == 0)
@@ -651,7 +651,7 @@ namespace SF3.Items
 			_rewardInfo.SetProgress(_selectedBoosterItem.ownedItem);
 			parent.AppendCallback(delegate
 			{
-				UnityEngine.Object.Destroy(_underlayedCard.gameObject);
+				UObject.Destroy(_underlayedCard.gameObject);
 				_rewardInfo.ShowAll(_selectedBoosterItem.ownedItem, _equipedItem.GetEquipedAnalogByType(_selectedBoosterItem.ownedItem));
 				stackParticles.Play();
 			});
@@ -663,7 +663,7 @@ namespace SF3.Items
 			}));
 			parent.AppendCallback(delegate
 			{
-				UnityEngine.Object.Destroy(stackParticles.gameObject);
+				UObject.Destroy(stackParticles.gameObject);
 			});
 		}
 
@@ -680,7 +680,7 @@ namespace SF3.Items
 
 		private CardItem DuplicateCard(CardItem card)
 		{
-			CardItem cardItem = UnityEngine.Object.Instantiate(card);
+			CardItem cardItem = UObject.Instantiate(card);
 			cardItem.transform.parent = card.transform.parent.transform;
 			cardItem.transform.localPosition = _stackCardPosition;
 			cardItem.transform.localScale = Vector3.one * 1.4f;
@@ -699,7 +699,7 @@ namespace SF3.Items
 			}
 			list.ForEach(delegate(GameObject child)
 			{
-				UnityEngine.Object.Destroy(child);
+				UObject.Destroy(child);
 			});
 			_scrollItems.Clear();
 		}
@@ -708,11 +708,11 @@ namespace SF3.Items
 		{
 			foreach (CardItem card in _cards)
 			{
-				UnityEngine.Object.Destroy(card.gameObject);
+				UObject.Destroy(card.gameObject);
 			}
 			if (_selectedCard != null)
 			{
-				UnityEngine.Object.Destroy(_selectedCard.gameObject);
+				UObject.Destroy(_selectedCard.gameObject);
 			}
 			_cards.Clear();
 		}

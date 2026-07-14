@@ -124,7 +124,7 @@ public class UIPopupList : UIWidgetContainer
 
 	private bool mTweening;
 
-	public UnityEngine.Object ambigiousFont
+	public UObject ambigiousFont
 	{
 		get
 		{
@@ -562,11 +562,11 @@ public class UIPopupList : UIWidgetContainer
 			{
 				componentsInChildren2[j].enabled = false;
 			}
-			UnityEngine.Object.Destroy(mChild, 0.15f);
+			UObject.Destroy(mChild, 0.15f);
 		}
 		else
 		{
-			UnityEngine.Object.Destroy(mChild);
+			UObject.Destroy(mChild);
 		}
 		mBackground = null;
 		mHighlight = null;

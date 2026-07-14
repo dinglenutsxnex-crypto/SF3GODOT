@@ -370,7 +370,7 @@ public static class SpriteSlicer2D
 		}
 		if (destroySlicedObjects)
 		{
-			UnityEngine.Object.Destroy(component.gameObject);
+			UObject.Destroy(component.gameObject);
 		}
 		else
 		{
@@ -621,7 +621,7 @@ public static class SpriteSlicer2D
 			}
 			if (destroySlicedObjects)
 			{
-				UnityEngine.Object.Destroy(rigidbody.gameObject);
+				UObject.Destroy(rigidbody.gameObject);
 			}
 			else
 			{

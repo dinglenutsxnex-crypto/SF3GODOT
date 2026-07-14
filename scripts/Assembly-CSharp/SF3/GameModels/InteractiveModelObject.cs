@@ -65,7 +65,7 @@ namespace SF3.GameModels
 				if (!(droppedInteractiveObject == null))
 				{
 					droppedInteractiveObject.modelObject.DestroyItem();
-					Object.DestroyImmediate(droppedInteractiveObject.gameObject);
+					UObject.DestroyImmediate(droppedInteractiveObject.gameObject);
 				}
 			}
 			droppedInteractiveObjects.Clear();

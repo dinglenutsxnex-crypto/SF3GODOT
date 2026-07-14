@@ -32,7 +32,7 @@ public class RewardsWindowUnit : MonoBehaviour
 	{
 		if (item != null)
 		{
-			_item = Object.Instantiate(_baseItem);
+			_item = UObject.Instantiate(_baseItem);
 			_item.transform.parent = base.transform;
 			_item.gameObject.SetActive(true);
 			_item.Init(item);
@@ -54,7 +54,7 @@ public class RewardsWindowUnit : MonoBehaviour
 
 	private void Empty()
 	{
-		Object.Destroy(base.gameObject);
+		UObject.Destroy(base.gameObject);
 	}
 
 	private void UpdatePosition(int line, int index, int itemsCount)

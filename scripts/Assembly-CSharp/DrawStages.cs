@@ -17,7 +17,7 @@ public class DrawStages : MonoBehaviour
 	{
 		if (!NekkiUtils.IsDebug)
 		{
-			Object.Destroy(this);
+			UObject.Destroy(this);
 		}
 	}
 

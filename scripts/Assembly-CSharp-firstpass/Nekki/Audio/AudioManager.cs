@@ -294,7 +294,7 @@ namespace Nekki.Audio
 		{
 			if ((bool)_instance && _instance != this)
 			{
-				UnityEngine.Object.Destroy(base.gameObject);
+				UObject.Destroy(base.gameObject);
 			}
 		}
 

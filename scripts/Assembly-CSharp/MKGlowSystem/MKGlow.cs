@@ -416,32 +416,32 @@ namespace MKGlowSystem
 		{
 			if ((bool)m_CompositeMaterial)
 			{
-				Object.DestroyImmediate(m_CompositeMaterial);
+				UObject.DestroyImmediate(m_CompositeMaterial);
 			}
 			if ((bool)m_BlurMaterial)
 			{
-				Object.DestroyImmediate(m_BlurMaterial);
+				UObject.DestroyImmediate(m_BlurMaterial);
 			}
 			if ((bool)m_FastBlurMaterial)
 			{
-				Object.DestroyImmediate(m_FastBlurMaterial);
+				UObject.DestroyImmediate(m_FastBlurMaterial);
 			}
 			if ((bool)m_FSDSMaterial)
 			{
-				Object.DestroyImmediate(m_FSDSMaterial);
+				UObject.DestroyImmediate(m_FSDSMaterial);
 			}
 			if ((bool)m_GlowCamera)
 			{
-				Object.DestroyImmediate(GlowCamera);
+				UObject.DestroyImmediate(GlowCamera);
 			}
 			if ((bool)m_GlowCameraObject)
 			{
-				Object.DestroyImmediate(GlowCameraObject);
+				UObject.DestroyImmediate(GlowCameraObject);
 			}
 			if ((bool)m_GlowTexture)
 			{
 				RenderTexture.ReleaseTemporary(m_GlowTexture);
-				Object.DestroyImmediate(m_GlowTexture);
+				UObject.DestroyImmediate(m_GlowTexture);
 			}
 		}
 
@@ -477,11 +477,11 @@ namespace MKGlowSystem
 			{
 				if ((bool)GlowCamera)
 				{
-					Object.DestroyImmediate(GlowCamera);
+					UObject.DestroyImmediate(GlowCamera);
 				}
 				if ((bool)GlowCameraObject)
 				{
-					Object.DestroyImmediate(GlowCameraObject);
+					UObject.DestroyImmediate(GlowCameraObject);
 				}
 			}
 			Mathf.Clamp(BlurSpread, 0.2f, 2f);

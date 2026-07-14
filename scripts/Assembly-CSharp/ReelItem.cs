@@ -189,7 +189,7 @@ public class ReelItem : MonoBehaviour
 		{
 			onTweenFinish();
 		}
-		UnityEngine.Object.Destroy(base.gameObject);
+		UObject.Destroy(base.gameObject);
 	}
 
 	public void Appear(Action onTweenFinish = null)

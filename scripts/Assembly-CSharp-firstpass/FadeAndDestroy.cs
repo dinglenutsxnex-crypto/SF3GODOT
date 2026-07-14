@@ -42,7 +42,7 @@ public class FadeAndDestroy : MonoBehaviour
 			}
 			if (m_Timer - m_FadeDelay >= m_FadeTime)
 			{
-				Object.Destroy(base.gameObject);
+				UObject.Destroy(base.gameObject);
 			}
 		}
 	}

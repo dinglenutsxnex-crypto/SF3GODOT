@@ -38,7 +38,7 @@ public class BundlesUtil
 		}
 	}
 
-	public static T[] GetObjects<T>(string path) where T : Object
+	public static T[] GetObjects<T>(string path) where T : UObject
 	{
 		AssetBundle assetBundleSafe = GetAssetBundleSafe(ref path);
 		if (assetBundleSafe == null)
@@ -48,7 +48,7 @@ public class BundlesUtil
 		return assetBundleSafe.LoadAssetWithSubAssets<T>(path);
 	}
 
-	public static T GetObject<T>(string path) where T : Object
+	public static T GetObject<T>(string path) where T : UObject
 	{
 		AssetBundle assetBundleSafe = GetAssetBundleSafe(ref path);
 		if (assetBundleSafe == null)
@@ -73,7 +73,7 @@ public class BundlesUtil
 		return null;
 	}
 
-	public static void UnloadAsset(Object obj)
+	public static void UnloadAsset(UObject obj)
 	{
 		ResourcesUtil.UnloadAsset(obj);
 	}

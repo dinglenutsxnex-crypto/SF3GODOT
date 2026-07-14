@@ -583,7 +583,7 @@ public class ReelDriver : MonoBehaviour
 	{
 		foreach (SplineObject item in _pool)
 		{
-			UnityEngine.Object.Destroy(item.Obj);
+			UObject.Destroy(item.Obj);
 		}
 		_pool.Clear();
 		if (this.Cleared != null)
@@ -838,7 +838,7 @@ public class ReelDriver : MonoBehaviour
 				index = _pool.Count;
 			}
 		}
-		GameObject gameObject = UnityEngine.Object.Instantiate(_prototype);
+		GameObject gameObject = UObject.Instantiate(_prototype);
 		gameObject.transform.parent = base.transform;
 		gameObject.transform.localScale = _prototype.transform.localScale;
 		gameObject.transform.localPosition = _prototype.transform.localPosition;
@@ -892,7 +892,7 @@ public class ReelDriver : MonoBehaviour
 
 	private void CreateProgress()
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate(_progressbarPrf);
+		GameObject gameObject = UObject.Instantiate(_progressbarPrf);
 		_progressbar = gameObject.GetComponent<UIProgressBar>();
 		gameObject.transform.parent = _controlContainer;
 		gameObject.transform.localScale = Vector3.one;
@@ -938,7 +938,7 @@ public class ReelDriver : MonoBehaviour
 	private void CreateButtons()
 	{
 		Vector3 position = _uiCamera.ScreenToWorldPoint(_reelCamera.WorldToScreenPoint(PositionAt(0.5f)));
-		GameObject gameObject = UnityEngine.Object.Instantiate(_leftBtnPrf);
+		GameObject gameObject = UObject.Instantiate(_leftBtnPrf);
 		_leftBtn = gameObject.GetComponent<UIButton>();
 		gameObject.transform.parent = _controlContainer;
 		gameObject.transform.localScale = Vector3.one;
@@ -946,7 +946,7 @@ public class ReelDriver : MonoBehaviour
 		gameObject.transform.localPosition = new Vector3(gameObject.transform.localPosition.x + _xOffset, _yOffset, gameObject.transform.localPosition.z);
 		gameObject.SetActive(false);
 		_leftBtn.onClick.Add(new EventDelegate(leftBtnOnClick));
-		gameObject = UnityEngine.Object.Instantiate(_rightBtnPrf);
+		gameObject = UObject.Instantiate(_rightBtnPrf);
 		_rightBtn = gameObject.GetComponent<UIButton>();
 		gameObject.transform.parent = _controlContainer;
 		gameObject.transform.localScale = Vector3.one;

@@ -25,7 +25,7 @@ namespace DG.Tweening.Core
 			if (DOTween.instance != this)
 			{
 				_duplicateToDestroy = true;
-				Object.Destroy(base.gameObject);
+				UObject.Destroy(base.gameObject);
 			}
 		}
 
@@ -166,7 +166,7 @@ namespace DG.Tweening.Core
 			if (!(DOTween.instance != null))
 			{
 				GameObject obj = new GameObject("[DOTween]");
-				Object.DontDestroyOnLoad(obj);
+				UObject.DontDestroyOnLoad(obj);
 				DOTween.instance = obj.AddComponent<DOTweenComponent>();
 			}
 		}
@@ -175,7 +175,7 @@ namespace DG.Tweening.Core
 		{
 			if (DOTween.instance != null)
 			{
-				Object.Destroy(DOTween.instance.gameObject);
+				UObject.Destroy(DOTween.instance.gameObject);
 			}
 			DOTween.instance = null;
 		}

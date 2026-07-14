@@ -16,7 +16,7 @@ public class TutorialMaskGenerator : MonoBehaviour
 
 	public GameObject AddMask(GameObject mask)
 	{
-		GameObject gameObject = Object.Instantiate(mask);
+		GameObject gameObject = UObject.Instantiate(mask);
 		gameObject.transform.SetParent(canvas.transform, false);
 		return gameObject;
 	}

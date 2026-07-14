@@ -57,20 +57,20 @@ namespace SF3.Items
 
 		public void Init()
 		{
-			Transform transform = Object.Instantiate(itemCardPrefab).transform;
+			Transform transform = UObject.Instantiate(itemCardPrefab).transform;
 			transform.parent = itemCardPosition;
 			transform.localPosition = Vector3.zero;
 			transform.localScale = Vector3.one;
 			itemCard = transform.GetComponent<CardItem>();
 			itemCard.gameObject.SetActive(true);
-			GameObject gameObject = Object.Instantiate(progressPrf);
+			GameObject gameObject = UObject.Instantiate(progressPrf);
 			_progress = gameObject.GetComponent<UIProgressBar>();
 			_progress.gameObject.SetActive(false);
 			Transform transform2 = _progress.transform;
 			transform2.parent = progressPosition;
 			transform2.localPosition = Vector3.zero;
 			transform2.localScale = Vector3.one;
-			GameObject gameObject2 = Object.Instantiate(perkInfoBarPrf);
+			GameObject gameObject2 = UObject.Instantiate(perkInfoBarPrf);
 			gameObject2.transform.parent = perkInfoBarPosition.transform;
 			gameObject2.transform.localScale = Vector3.one;
 			gameObject2.transform.localPosition = Vector3.zero;

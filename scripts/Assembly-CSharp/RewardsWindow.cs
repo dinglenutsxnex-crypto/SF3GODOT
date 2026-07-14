@@ -326,7 +326,7 @@ public class RewardsWindow : NekkiUIModule
 
 	private RewardCoin CreateEmptyRewardField(GameObject prefab)
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate(prefab);
+		GameObject gameObject = UObject.Instantiate(prefab);
 		gameObject.transform.parent = _coinPlaceholder;
 		gameObject.transform.localScale = Vector3.one;
 		gameObject.transform.localPosition = new Vector3(_xOffset, _yOffset, 0f);
@@ -338,7 +338,7 @@ public class RewardsWindow : NekkiUIModule
 
 	private IAnimatedExpBar CreateExpBar()
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate(_expBarPrf);
+		GameObject gameObject = UObject.Instantiate(_expBarPrf);
 		gameObject.transform.parent = _expBarPlaceholder.transform;
 		gameObject.transform.localPosition = Vector3.zero;
 		gameObject.transform.localScale = Vector3.one;
@@ -478,13 +478,13 @@ public class RewardsWindow : NekkiUIModule
 			GameObject gameObject;
 			if (item.originItem is SF3.Items.Booster)
 			{
-				gameObject = UnityEngine.Object.Instantiate(_boosterpackPrf);
+				gameObject = UObject.Instantiate(_boosterpackPrf);
 				BoosterpackItem component = gameObject.GetComponent<BoosterpackItem>();
 				component.Init(item.originItem);
 			}
 			else
 			{
-				gameObject = UnityEngine.Object.Instantiate(_reelItemPrf);
+				gameObject = UObject.Instantiate(_reelItemPrf);
 				CardItem component2 = gameObject.GetComponent<CardItem>();
 				component2.Init(item.originItem);
 			}

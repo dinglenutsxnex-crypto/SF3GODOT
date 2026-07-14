@@ -245,7 +245,7 @@ namespace SF3
 				_minDist = currentMaxDistance;
 				currentMaxDistance = minDist;
 			}
-			MKGlow[] array = UnityEngine.Object.FindObjectsOfType<MKGlow>();
+			MKGlow[] array = UObject.FindObjectsOfType<MKGlow>();
 			MKGlow[] array2 = array;
 			foreach (MKGlow mKGlow in array2)
 			{

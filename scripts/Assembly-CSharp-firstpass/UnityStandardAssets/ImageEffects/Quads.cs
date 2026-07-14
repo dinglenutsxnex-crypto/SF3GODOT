@@ -35,7 +35,7 @@ namespace UnityStandardAssets.ImageEffects
 			{
 				if (null != meshes[i])
 				{
-					Object.DestroyImmediate(meshes[i]);
+					UObject.DestroyImmediate(meshes[i]);
 					meshes[i] = null;
 				}
 			}

@@ -2,7 +2,7 @@ using System;
 
 namespace UnityEngine
 {
-    public class Shader : Object
+    public class Shader : UnityEngineObject
     {
         public static Shader Find(string name) => null;
         public static int PropertyToID(string name) => 0;
@@ -102,7 +102,7 @@ namespace UnityEngine
         public void Apply() { }
     }
 
-    public class Mesh : Object
+    public class Mesh : UnityEngineObject
     {
         public Vector3[] vertices { get; set; }
         public Vector3[] normals { get; set; }
@@ -179,7 +179,7 @@ namespace UnityEngine
         public static implicit operator RenderTargetIdentifier(string name) => default;
     }
 
-    public class ScriptableObject : Object
+    public class ScriptableObject : UnityEngineObject
     {
         public static T CreateInstance<T>() where T : ScriptableObject => default;
         public static ScriptableObject CreateInstance(Type type) => null;
@@ -188,7 +188,7 @@ namespace UnityEngine
         protected virtual void OnDestroy() { }
     }
 
-    public class TextAsset : Object
+    public class TextAsset : UnityEngineObject
     {
         public string text => "";
         public byte[] bytes => null;

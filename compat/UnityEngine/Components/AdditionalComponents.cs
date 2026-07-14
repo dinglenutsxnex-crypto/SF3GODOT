@@ -41,7 +41,7 @@ namespace UnityEngine
         public Color color { get; set; }
     }
 
-    public class PhysicsMaterial2D : Object
+    public class PhysicsMaterial2D : UnityEngineObject
     {
         public float bounciness { get; set; }
         public float friction { get; set; }

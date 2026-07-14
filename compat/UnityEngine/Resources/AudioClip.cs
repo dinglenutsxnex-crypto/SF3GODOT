@@ -5,7 +5,7 @@ using UnityEngine.Scripting;
 
 namespace UnityEngine
 {
-	public sealed class AudioClip : Object
+	public sealed class AudioClip : UnityEngineObject
 	{
 		public delegate void PCMReaderCallback (float[] data);
 

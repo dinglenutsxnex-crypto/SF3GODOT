@@ -69,9 +69,9 @@ public class PerkCarousel : MonoBehaviour
 		{
 			if ((bool)_perkAltas.texture)
 			{
-				Object.Destroy(_perkAltas.texture);
+				UObject.Destroy(_perkAltas.texture);
 			}
-			Object.Destroy(_perkAltas);
+			UObject.Destroy(_perkAltas);
 		}
 		if (icons == null || icons.Length == 0)
 		{
@@ -165,7 +165,7 @@ public class PerkCarousel : MonoBehaviour
 
 	private void Show(TriggerActionShowStatusIcon action)
 	{
-		PerkUnit component = Object.Instantiate(_perkBase.gameObject).GetComponent<PerkUnit>();
+		PerkUnit component = UObject.Instantiate(_perkBase.gameObject).GetComponent<PerkUnit>();
 		component.transform.parent = base.transform;
 		component.transform.localScale = Vector3.one;
 		component.transform.localPosition = Vector3.zero;
@@ -177,7 +177,7 @@ public class PerkCarousel : MonoBehaviour
 			{
 				if (_perks[i].name == action.name)
 				{
-					Object.Destroy(_perks[i].gameObject);
+					UObject.Destroy(_perks[i].gameObject);
 					index = i;
 					flag = true;
 					break;
@@ -218,7 +218,7 @@ public class PerkCarousel : MonoBehaviour
 		{
 			foreach (PerkUnit perk in _perks)
 			{
-				Object.Destroy(perk.gameObject);
+				UObject.Destroy(perk.gameObject);
 			}
 			_perks.Clear();
 		}
@@ -235,7 +235,7 @@ public class PerkCarousel : MonoBehaviour
 			foreach (PerkUnit item in list)
 			{
 				_perks.Remove(item);
-				Object.Destroy(item.gameObject);
+				UObject.Destroy(item.gameObject);
 			}
 			list.Clear();
 		}

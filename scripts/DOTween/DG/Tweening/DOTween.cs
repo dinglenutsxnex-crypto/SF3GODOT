@@ -5,6 +5,7 @@ using DG.Tweening.Core.Surrogates;
 using DG.Tweening.Plugins.Core;
 using DG.Tweening.Plugins.Options;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DG.Tweening
 {

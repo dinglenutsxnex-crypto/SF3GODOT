@@ -53,7 +53,7 @@ public class TooltipManager : MonoBehaviour
 
 	private IEnumerator ShowTip(Vector3 tippose, float showTime, Action<NekkiUILabel, UISprite, GameObject> format)
 	{
-		_currentTip = UnityEngine.Object.Instantiate(_prototype, new Vector3(-10000f, -10000f), Quaternion.identity);
+		_currentTip = UObject.Instantiate(_prototype, new Vector3(-10000f, -10000f), Quaternion.identity);
 		_currentTip.Init(tippose, showTime, format, null);
 		for (int i = 0; i < 4; i++)
 		{
@@ -69,7 +69,7 @@ public class TooltipManager : MonoBehaviour
 	{
 		if (_currentTip != null)
 		{
-			UnityEngine.Object.Destroy(_currentTip.gameObject);
+			UObject.Destroy(_currentTip.gameObject);
 			_currentTip = null;
 			_currentTooltipHolder = null;
 		}

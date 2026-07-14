@@ -76,7 +76,7 @@ namespace UnityStandardAssets.ImageEffects
 			{
 				Material obj = createdMaterials[0];
 				createdMaterials.RemoveAt(0);
-				Object.Destroy(obj);
+				UObject.Destroy(obj);
 			}
 		}
 

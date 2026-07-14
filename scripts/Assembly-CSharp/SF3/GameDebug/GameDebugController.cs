@@ -32,7 +32,7 @@ namespace SF3.GameDebug
 		{
 			if (!NekkiUtils.IsDebug)
 			{
-				Object.Destroy(this);
+				UObject.Destroy(this);
 			}
 		}
 

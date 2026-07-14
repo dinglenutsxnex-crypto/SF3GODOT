@@ -5,7 +5,7 @@ namespace DynamicShadowProjector
 	[RequireComponent(typeof(ShadowTextureRenderer))]
 	public class MipmappedShadowFallback : MonoBehaviour
 	{
-		public Object m_fallbackShaderOrMaterial;
+		public UObject m_fallbackShaderOrMaterial;
 
 		public int m_blurLevel = 1;
 

@@ -33,7 +33,7 @@ namespace Nekki.StandardAssets
 		{
 			if ((bool)blurMaterial)
 			{
-				Object.DestroyImmediate(blurMaterial);
+				UObject.DestroyImmediate(blurMaterial);
 			}
 		}
 

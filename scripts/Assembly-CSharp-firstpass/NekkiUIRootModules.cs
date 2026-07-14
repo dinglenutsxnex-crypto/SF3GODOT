@@ -71,7 +71,7 @@ public class NekkiUIRootModules : MonoBehaviour
 	{
 		foreach (KeyValuePair<string, GameObject> preCachedPrefab in _preCachedPrefabs)
 		{
-			UnityEngine.Object.Destroy(preCachedPrefab.Value);
+			UObject.Destroy(preCachedPrefab.Value);
 		}
 		_preCachedPrefabs = new Dictionary<string, GameObject>();
 	}

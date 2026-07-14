@@ -70,7 +70,7 @@ public class TooltipUnit : MonoBehaviour
 		yield return new WaitForSeconds(showTime);
 		if ((bool)base.gameObject)
 		{
-			UnityEngine.Object.Destroy(base.gameObject);
+			UObject.Destroy(base.gameObject);
 		}
 	}
 

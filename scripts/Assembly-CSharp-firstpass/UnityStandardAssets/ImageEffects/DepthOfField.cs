@@ -97,12 +97,12 @@ namespace UnityStandardAssets.ImageEffects
 			ReleaseComputeResources();
 			if ((bool)dofHdrMaterial)
 			{
-				Object.DestroyImmediate(dofHdrMaterial);
+				UObject.DestroyImmediate(dofHdrMaterial);
 			}
 			dofHdrMaterial = null;
 			if ((bool)dx11bokehMaterial)
 			{
-				Object.DestroyImmediate(dx11bokehMaterial);
+				UObject.DestroyImmediate(dx11bokehMaterial);
 			}
 			dx11bokehMaterial = null;
 		}

@@ -17,7 +17,7 @@ namespace UnityEngine
 		public static Object[] LoadAll(string path) => new Object[0];
 		public static Object[] LoadAll(string path, System.Type systemTypeInstance) => new Object[0];
 		public static void UnloadAsset(Object assetToUnload) { }
-		public static T[] FindObjectsOfTypeAll<T>() where T : Object => new T[0];
+		public static T[] FindObjectsOfTypeAll<T>() where T : class => new T[0];
 public static Object[] FindObjectsOfTypeAll(System.Type type) => new Object[0];
 	}
 }

@@ -65,7 +65,7 @@ namespace SF3
 		{
 			foreach (Transform item in perkTable.gameObject.transform)
 			{
-				Object.Destroy(item.gameObject);
+				UObject.Destroy(item.gameObject);
 			}
 			perkTable.gameObject.SetActive(false);
 			bonusLabel.gameObject.SetActive(false);
@@ -90,7 +90,7 @@ namespace SF3
 
 		private GameObject CreatePerkCell(GameObject prf)
 		{
-			GameObject gameObject = Object.Instantiate(prf);
+			GameObject gameObject = UObject.Instantiate(prf);
 			gameObject.transform.parent = perkTable.gameObject.transform;
 			gameObject.transform.localScale = Vector3.one;
 			gameObject.transform.localPosition = Vector3.zero;

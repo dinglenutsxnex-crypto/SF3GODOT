@@ -382,7 +382,7 @@ public class HUD : UIModuleHolder
 		roundsSprites = new UISprite[number];
 		for (int i = 0; i < number; i++)
 		{
-			GameObject gameObject = UnityEngine.Object.Instantiate(roundSegmentPrefab);
+			GameObject gameObject = UObject.Instantiate(roundSegmentPrefab);
 			roundsSprites[i] = gameObject.GetComponent<UISprite>();
 			gameObject.transform.parent = roundsUIParent;
 			gameObject.transform.localScale = new Vector3(-1f, 1f, 1f);

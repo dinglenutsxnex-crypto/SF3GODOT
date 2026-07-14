@@ -92,7 +92,7 @@ namespace SF3.Items
 				component2.onRemovedItem = (ItemRemoveEventHandler)Delegate.Remove(component2.onRemovedItem, onRemovedItem);
 				PerkSlot component3 = item.GetComponent<PerkSlot>();
 				component3.onChangedItem = (ItemChangeEventHandler)Delegate.Remove(component3.onChangedItem, onChangedItem);
-				UnityEngine.Object.Destroy(item.gameObject);
+				UObject.Destroy(item.gameObject);
 			}
 			if (slotItems.Count == 0)
 			{
@@ -103,7 +103,7 @@ namespace SF3.Items
 			num = ((slotItems.Count % 2 != 0) ? (0f - ((slotOffset + (float)_slotSprite.width) * Mathf.Ceil((float)slotItems.Count / 2f) - (float)_slotSprite.width - slotOffset)) : (0f - ((slotOffset + (float)_slotSprite.width) * (float)slotItems.Count / 2f - (float)(_slotSprite.width / 2) - slotOffset / 2f)));
 			for (int i = 0; i < slotItems.Count; i++)
 			{
-				GameObject gameObject = UnityEngine.Object.Instantiate(slotPrf);
+				GameObject gameObject = UObject.Instantiate(slotPrf);
 				gameObject.transform.parent = base.transform;
 				gameObject.transform.localPosition = new Vector3(num + (slotOffset + (float)_slotSprite.width) * (float)i, 0f, 0f);
 				gameObject.transform.localScale = base.transform.localScale;

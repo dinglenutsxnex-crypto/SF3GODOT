@@ -25,14 +25,14 @@ namespace UnityStandardAssets.ImageEffects
 		protected override void OnDisable()
 		{
 			base.OnDisable();
-			Object.DestroyImmediate(accumTexture);
+			UObject.DestroyImmediate(accumTexture);
 		}
 
 		private void OnRenderImage(RenderTexture source, RenderTexture destination)
 		{
 			if (accumTexture == null || accumTexture.width != source.width || accumTexture.height != source.height)
 			{
-				Object.DestroyImmediate(accumTexture);
+				UObject.DestroyImmediate(accumTexture);
 				accumTexture = new RenderTexture(source.width, source.height, 0);
 				accumTexture.hideFlags = HideFlags.HideAndDontSave;
 				Graphics.Blit(source, accumTexture);

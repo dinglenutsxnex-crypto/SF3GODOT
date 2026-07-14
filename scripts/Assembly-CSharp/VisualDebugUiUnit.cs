@@ -19,7 +19,7 @@ public class VisualDebugUiUnit : MonoBehaviour
 	{
 		foreach (VisualDebugUiUnit unit in _units)
 		{
-			Object.Destroy(unit.gameObject);
+			UObject.Destroy(unit.gameObject);
 		}
 		_units.Clear();
 	}

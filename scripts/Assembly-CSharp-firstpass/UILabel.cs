@@ -296,11 +296,11 @@ public class UILabel : UIWidget
 		}
 	}
 
-	public UnityEngine.Object ambigiousFont
+	public UObject ambigiousFont
 	{
 		get
 		{
-			return (!(mFont != null)) ? ((UnityEngine.Object)mTrueTypeFont) : ((UnityEngine.Object)mFont);
+			return (!(mFont != null)) ? ((UObject)mTrueTypeFont) : ((UObject)mFont);
 		}
 		set
 		{

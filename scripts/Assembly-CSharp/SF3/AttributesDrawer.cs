@@ -87,7 +87,7 @@ namespace SF3
 		{
 			foreach (Transform item in base.transform)
 			{
-				Object.Destroy(item.gameObject);
+				UObject.Destroy(item.gameObject);
 			}
 		}
 

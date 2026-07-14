@@ -1,4 +1,5 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.ImageEffects
 {
@@ -93,11 +94,11 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if ((bool)m_MaterialRGB)
 			{
-				Object.DestroyImmediate(m_MaterialRGB);
+				UObject.DestroyImmediate(m_MaterialRGB);
 			}
 			if ((bool)m_MaterialYUV)
 			{
-				Object.DestroyImmediate(m_MaterialYUV);
+				UObject.DestroyImmediate(m_MaterialYUV);
 			}
 		}
 

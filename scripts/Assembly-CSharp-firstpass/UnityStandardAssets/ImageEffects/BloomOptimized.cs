@@ -54,7 +54,7 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if ((bool)fastBloomMaterial)
 			{
-				Object.DestroyImmediate(fastBloomMaterial);
+				UObject.DestroyImmediate(fastBloomMaterial);
 			}
 		}
 

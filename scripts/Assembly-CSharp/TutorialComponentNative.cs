@@ -144,15 +144,15 @@ public class TutorialComponentNative : TutorialComponent
 		base.DestroySelectionParts();
 		if (_selector != null)
 		{
-			Object.Destroy(_selector.gameObject);
+			UObject.Destroy(_selector.gameObject);
 		}
 		if (_arrow != null)
 		{
-			Object.Destroy(_arrow.gameObject);
+			UObject.Destroy(_arrow.gameObject);
 		}
 		if (_selectMask != null)
 		{
-			Object.Destroy(_selectMask.gameObject);
+			UObject.Destroy(_selectMask.gameObject);
 		}
 	}
 }

@@ -47,7 +47,7 @@ public class SysDlg : MonoBehaviour
 			return;
 		}
 		Time.timeScale = 1f;
-		Object.Destroy(base.gameObject);
+		UObject.Destroy(base.gameObject);
 	}
 
 	private void OnGUI()

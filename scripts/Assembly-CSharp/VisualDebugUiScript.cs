@@ -17,7 +17,7 @@ public class VisualDebugUiScript : MonoBehaviour
 	{
 		foreach (VisualDebugUiScript unit in _units)
 		{
-			Object.Destroy(unit.gameObject);
+			UObject.Destroy(unit.gameObject);
 		}
 		_units.Clear();
 	}

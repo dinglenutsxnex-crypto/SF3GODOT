@@ -9,7 +9,7 @@ public class EventDelegate
 	[Serializable]
 	public class Parameter
 	{
-		public UnityEngine.Object obj;
+		public UObject obj;
 
 		public string field;
 
@@ -95,7 +95,7 @@ public class EventDelegate
 		{
 		}
 
-		public Parameter(UnityEngine.Object obj, string field)
+		public Parameter(UObject obj, string field)
 		{
 			this.obj = obj;
 			this.field = field;

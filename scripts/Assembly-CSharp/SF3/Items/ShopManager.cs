@@ -535,7 +535,7 @@ namespace SF3.Items
 			{
 				foreach (ReelItem reelItem in _reelItems)
 				{
-					UnityEngine.Object.Destroy(reelItem.gameObject);
+					UObject.Destroy(reelItem.gameObject);
 				}
 			}
 			Vector2 vector = ((!isBoosterpack) ? _cardsOffset : _boosterOffset);
@@ -604,7 +604,7 @@ namespace SF3.Items
 			int num = _reelItems.Count / _columnsCount;
 			int num2 = _reelItems.Count - num * _columnsCount;
 			Vector2 vector = ((!isBoosterpack) ? _cardsOffset : _boosterOffset);
-			GameObject gameObject = ((!isBoosterpack) ? UnityEngine.Object.Instantiate(_itemCardPrefab) : UnityEngine.Object.Instantiate(_itemBoosterPrefab));
+			GameObject gameObject = ((!isBoosterpack) ? UObject.Instantiate(_itemCardPrefab) : UObject.Instantiate(_itemBoosterPrefab));
 			gameObject.transform.parent = _itemsParent;
 			Vector3 vector2 = gameObject.GetComponent<ReelItem>().LocalSize() * _cardScale;
 			gameObject.transform.localPosition = new Vector3(vector2.x * (float)num2 + vector.x * (float)num2 + vector2.x / 2f, 0f - (vector2.y * (float)num + vector.y * (float)num), 0f);

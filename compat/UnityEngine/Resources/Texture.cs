@@ -5,7 +5,7 @@ using UnityEngine.Scripting;
 
 namespace UnityEngine
 {
-	public class Texture : UnityEngine.Object
+	public class Texture : UObject
 	{
 		//
 		// Static Properties

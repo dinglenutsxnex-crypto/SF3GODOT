@@ -100,7 +100,7 @@ public class BlackFireSkin : MonoBehaviour
 			skinnedMesh.bones = list.ToArray();
 			if (!init)
 			{
-				Object.Destroy(mainBone.gameObject);
+				UObject.Destroy(mainBone.gameObject);
 			}
 		}
 	}

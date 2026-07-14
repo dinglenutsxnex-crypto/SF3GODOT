@@ -314,7 +314,7 @@ namespace DynamicShadowProjector
 			}
 			foreach (KeyValuePair<Material, Material> item in m_replacedMaterialCache)
 			{
-				UnityEngine.Object.DestroyImmediate(item.Value);
+				UObject.DestroyImmediate(item.Value);
 			}
 			m_replacedMaterialCache.Clear();
 		}

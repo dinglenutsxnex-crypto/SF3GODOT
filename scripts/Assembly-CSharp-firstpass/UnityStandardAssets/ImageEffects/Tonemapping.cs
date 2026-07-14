@@ -100,17 +100,17 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if ((bool)rt)
 			{
-				Object.DestroyImmediate(rt);
+				UObject.DestroyImmediate(rt);
 				rt = null;
 			}
 			if ((bool)tonemapMaterial)
 			{
-				Object.DestroyImmediate(tonemapMaterial);
+				UObject.DestroyImmediate(tonemapMaterial);
 				tonemapMaterial = null;
 			}
 			if ((bool)curveTex)
 			{
-				Object.DestroyImmediate(curveTex);
+				UObject.DestroyImmediate(curveTex);
 				curveTex = null;
 			}
 		}

@@ -29,7 +29,7 @@ public class iOSBridge : MonoBehaviour
 
 	public void removeInstance()
 	{
-		UnityEngine.Object.Destroy(this);
+		UObject.Destroy(this);
 	}
 
 	public void call(string tag)

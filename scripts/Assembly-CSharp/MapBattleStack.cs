@@ -21,7 +21,7 @@ public class MapBattleStack : MonoBehaviour
 		else
 		{
 			GameObject gameObject = Instance.gameObject;
-			Object.Destroy(Instance);
+			UObject.Destroy(Instance);
 			Instance = gameObject.AddComponent<MapBattleStack>();
 			Instance._battleUi = mapBattleUi;
 		}

@@ -27,7 +27,7 @@ public class SceneLoader : ExtentionBehaviour
 		{
 			if (!_instance)
 			{
-				SceneLoader sceneLoader = Object.FindObjectOfType<SceneLoader>();
+				SceneLoader sceneLoader = UObject.FindObjectOfType<SceneLoader>();
 				if (!sceneLoader)
 				{
 					_instance = new GameObject("_sceneLoader").AddComponent<SceneLoader>();
@@ -58,7 +58,7 @@ public class SceneLoader : ExtentionBehaviour
 	{
 		if (_inited)
 		{
-			Object.Destroy(base.gameObject);
+			UObject.Destroy(base.gameObject);
 			return;
 		}
 		Application.targetFrameRate = 60;
@@ -98,7 +98,7 @@ public class SceneLoader : ExtentionBehaviour
 	{
 		if (CachedScenes.ContainsKey(scene))
 		{
-			Instance.callEvent(0, Object.Instantiate(CachedScenes[scene].mainAsset));
+			Instance.callEvent(0, UObject.Instantiate(CachedScenes[scene].mainAsset));
 		}
 		else if (File.Exists(string.Format("{0}/{1}/SceneRoot_{2}.ab", Datapath, GetPathForCurrentPlatform(), scene)))
 		{
@@ -162,7 +162,7 @@ public class SceneLoader : ExtentionBehaviour
 			{
 				CachedScenes[scene] = w.assetBundle;
 			}
-			Instance.callEvent(0, Object.Instantiate(CachedScenes[scene].mainAsset));
+			Instance.callEvent(0, UObject.Instantiate(CachedScenes[scene].mainAsset));
 		}
 		else
 		{
@@ -186,14 +186,14 @@ public class SceneLoader : ExtentionBehaviour
 			{
 				CachedScenes[scene] = w.assetBundle;
 			}
-			Instance.callEvent(0, Object.Instantiate(CachedScenes[scene].mainAsset));
+			Instance.callEvent(0, UObject.Instantiate(CachedScenes[scene].mainAsset));
 		}
 		else
 		{
 			GameObject prefab = GlobalLoad.GetPrefab(string.Format("Export/SceneRoot_{0}", scene));
 			if ((bool)prefab)
 			{
-				Instance.callEvent(0, Object.Instantiate(prefab));
+				Instance.callEvent(0, UObject.Instantiate(prefab));
 			}
 			else
 			{
@@ -218,14 +218,14 @@ public class SceneLoader : ExtentionBehaviour
 			{
 				CachedScenes[scene] = w.assetBundle;
 			}
-			Instance.callEvent(0, Object.Instantiate(CachedScenes[scene].mainAsset));
+			Instance.callEvent(0, UObject.Instantiate(CachedScenes[scene].mainAsset));
 		}
 		else
 		{
 			GameObject prefab = GlobalLoad.GetPrefab(string.Format("Export/SceneRoot_{0}_config", scene));
 			if ((bool)prefab)
 			{
-				Instance.callEvent(0, Object.Instantiate(prefab));
+				Instance.callEvent(0, UObject.Instantiate(prefab));
 			}
 			else
 			{

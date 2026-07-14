@@ -169,7 +169,7 @@ namespace SF3
 		{
 			glowMaterial.mainTexture = null;
 			origCamera.targetTexture = null;
-			Object.DestroyObject(shaderCamera);
+			UObject.DestroyObject(shaderCamera);
 			DisableShaderKeywords();
 		}
 

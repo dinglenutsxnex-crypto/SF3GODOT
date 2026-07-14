@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class ResourcesUtil
 {
-	public static T[] GetResources<T>(string path) where T : UnityEngine.Object
+	public static T[] GetResources<T>(string path) where T : UObject
 	{
 		path = ConvertResourcesPath(path);
 		return Resources.LoadAll<T>(path);
 	}
 
-	public static T GetResource<T>(string path) where T : UnityEngine.Object
+	public static T GetResource<T>(string path) where T : UObject
 	{
 		path = ConvertResourcesPath(path);
 		return Resources.Load<T>(path);
 	}
 
-	public static void UnloadAsset(UnityEngine.Object value, bool immediate = true)
+	public static void UnloadAsset(UObject value, bool immediate = true)
 	{
 		if (value is GameObject)
 		{

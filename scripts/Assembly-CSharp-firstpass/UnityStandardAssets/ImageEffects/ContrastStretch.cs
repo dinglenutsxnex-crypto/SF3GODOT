@@ -115,24 +115,24 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			for (int i = 0; i < 2; i++)
 			{
-				Object.DestroyImmediate(adaptRenderTex[i]);
+				UObject.DestroyImmediate(adaptRenderTex[i]);
 				adaptRenderTex[i] = null;
 			}
 			if ((bool)m_materialLum)
 			{
-				Object.DestroyImmediate(m_materialLum);
+				UObject.DestroyImmediate(m_materialLum);
 			}
 			if ((bool)m_materialReduce)
 			{
-				Object.DestroyImmediate(m_materialReduce);
+				UObject.DestroyImmediate(m_materialReduce);
 			}
 			if ((bool)m_materialAdapt)
 			{
-				Object.DestroyImmediate(m_materialAdapt);
+				UObject.DestroyImmediate(m_materialAdapt);
 			}
 			if ((bool)m_materialApply)
 			{
-				Object.DestroyImmediate(m_materialApply);
+				UObject.DestroyImmediate(m_materialApply);
 			}
 		}
 

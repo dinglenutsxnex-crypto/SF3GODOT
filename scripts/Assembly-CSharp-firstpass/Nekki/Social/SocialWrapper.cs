@@ -37,7 +37,7 @@ namespace Nekki.Social
 			SocialWrapper component = gameObject.GetComponent<SocialWrapper>();
 			if (component != null)
 			{
-				UnityEngine.Object.Destroy(component);
+				UObject.Destroy(component);
 			}
 			_instance = gameObject.AddComponent<SocialWrapper>();
 			_instance._callbacks = callbacks;

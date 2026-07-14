@@ -526,7 +526,7 @@ namespace DynamicShadowProjector
 			}
 			if (m_shadowTexture != null)
 			{
-				Object.DestroyImmediate(m_shadowTexture);
+				UObject.DestroyImmediate(m_shadowTexture);
 			}
 			m_shadowTexture = new RenderTexture(m_textureWidth, m_textureHeight, 0, format, RenderTextureReadWrite.Linear);
 			if (useIntermediateTexture)
@@ -692,7 +692,7 @@ namespace DynamicShadowProjector
 			{
 				if (m_projectorMaterial != null && m_projectorMaterial.hideFlags == HideFlags.HideAndDontSave)
 				{
-					Object.DestroyImmediate(m_projectorMaterial);
+					UObject.DestroyImmediate(m_projectorMaterial);
 				}
 				if (s_sharedMaterials == null)
 				{
@@ -725,12 +725,12 @@ namespace DynamicShadowProjector
 					{
 						m_projector.material = null;
 					}
-					Object.DestroyImmediate(m_projectorMaterial);
+					UObject.DestroyImmediate(m_projectorMaterial);
 				}
 			}
 			if (m_shadowTexture != null)
 			{
-				Object.DestroyImmediate(m_shadowTexture);
+				UObject.DestroyImmediate(m_shadowTexture);
 				m_shadowTexture = null;
 			}
 			if (m_camera != null)

@@ -114,7 +114,7 @@ public class ObjectDebug : MonoBehaviour
 	private void GetUnits()
 	{
 		_units.Clear();
-		GameObject[] array = Object.FindObjectsOfType<GameObject>();
+		GameObject[] array = UObject.FindObjectsOfType<GameObject>();
 		GameObject[] array2 = array;
 		foreach (GameObject gameObject in array2)
 		{
@@ -134,7 +134,7 @@ public class ObjectDebug : MonoBehaviour
 	{
 		if (GUI.Button(new Rect(_windowPosition.width - 30f, 5f, 25f, 25f), "X"))
 		{
-			Object.Destroy(base.gameObject);
+			UObject.Destroy(base.gameObject);
 		}
 		_scroll1 = GUI.BeginScrollView(new Rect(5f, 20f, _windowPosition.width / 2f, _windowPosition.height - 25f), _scroll1, new Rect(0f, 0f, _windowPosition.width - 100f, 2000f));
 		GUILayout.BeginVertical();

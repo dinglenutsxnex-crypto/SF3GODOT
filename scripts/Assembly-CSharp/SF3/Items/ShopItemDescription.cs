@@ -310,7 +310,7 @@ namespace SF3.Items
 				int count = _boosterpackLootPics.Count;
 				for (int i = 0; i < num - count; i++)
 				{
-					GameObject gameObject = UnityEngine.Object.Instantiate(_lootIconPrefab);
+					GameObject gameObject = UObject.Instantiate(_lootIconPrefab);
 					gameObject.transform.SetParent(_boosterpackLoot.transform);
 					gameObject.transform.localPosition = Vector3.zero;
 					gameObject.transform.localScale = Vector3.one;
@@ -370,7 +370,7 @@ namespace SF3.Items
 			{
 				for (int i = _boosterpackLootPics.Count - 1; (float)i > (float)(_boosterpackLootPics.Count - 1) - cardsToDelete; i++)
 				{
-					UnityEngine.Object.Destroy(_boosterpackLootPics[i].gameObject);
+					UObject.Destroy(_boosterpackLootPics[i].gameObject);
 				}
 			}
 		}

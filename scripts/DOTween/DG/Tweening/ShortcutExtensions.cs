@@ -3,8 +3,7 @@ using DG.Tweening.Core.Enums;
 using DG.Tweening.Core.Surrogates;
 using DG.Tweening.CustomPlugins;
 using DG.Tweening.Plugins;
-using DG.Tweening.Plugins.Core.PathCore;
-using DOTweenPath = DG.Tweening.Plugins.Core.PathCore.Path;
+using Path = DG.Tweening.Plugins.Core.PathCore.Path;
 using DG.Tweening.Plugins.Options;
 using UnityEngine;
 

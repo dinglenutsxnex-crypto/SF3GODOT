@@ -2,7 +2,7 @@ using System;
 
 namespace UnityEngine
 {
-	public class Material : Object
+	public class Material : UnityEngineObject
 	{
 		public new string name { get; set; }
 		public new HideFlags hideFlags { get; set; }
@@ -75,7 +75,6 @@ namespace UnityEngine
 
 		public int shaderPassEnabled(string passName) => 0;
 
-		public static implicit operator bool(Material exists) => exists != null;
 
 		public void CopyPropertiesFromMaterial(Material mat) { }
 		public new int GetInstanceID() => 0;

@@ -1,6 +1,7 @@
 using Nekki.Yaml;
 using SF3.Audio;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace SF3.Moves
 {

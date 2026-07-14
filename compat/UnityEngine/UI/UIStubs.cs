@@ -276,7 +276,7 @@ namespace UnityEngine
         Wrap, Overflow,
     }
 
-    public class Font : Object
+    public class Font : UnityEngineObject
     {
         public string[] fontNames { get; set; }
         public int fontSize { get; set; }

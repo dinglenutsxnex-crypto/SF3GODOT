@@ -154,7 +154,7 @@ public class CardAnimator : MonoBehaviour, ICardAnimation
 		}
 		if (_stackParticle != null && (bool)_stackParticle.gameObject)
 		{
-			UnityEngine.Object.Destroy(_stackParticle.gameObject);
+			UObject.Destroy(_stackParticle.gameObject);
 		}
 		_currentCard = _items.Count;
 		HideInfo();
@@ -228,7 +228,7 @@ public class CardAnimator : MonoBehaviour, ICardAnimation
 
 	private IReelItemAnimation CreateReelItem(BaseItem item, Vector3 position, Quaternion rotation)
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate(_reelItemPrf);
+		GameObject gameObject = UObject.Instantiate(_reelItemPrf);
 		gameObject.transform.parent = _reelItemPlecholder;
 		gameObject.transform.localScale = Vector3.one;
 		gameObject.transform.localPosition = position;

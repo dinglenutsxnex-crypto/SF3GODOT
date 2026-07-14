@@ -2,7 +2,7 @@
 
 namespace UnityEngine
 {
-	public class Sprite : Object
+	public class Sprite : UnityEngineObject
 	{
 		public Rect rect => default;
 		public Texture2D texture => null;

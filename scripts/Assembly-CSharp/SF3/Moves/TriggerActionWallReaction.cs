@@ -2,6 +2,7 @@ using Nekki.Yaml;
 using SF3.GameModels;
 using SF3.Settings;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace SF3.Moves
 {

@@ -141,7 +141,7 @@ public class DebugUI : UIModuleHolder
 			if (_lastDrawcallsRequest + 1f < GameTimeController.time)
 			{
 				_lastDrawcallsRequest = GameTimeController.time;
-				GameObject[] array = Object.FindObjectsOfType<GameObject>();
+				GameObject[] array = UObject.FindObjectsOfType<GameObject>();
 				int num = 1;
 				for (int i = 0; i < array.Length; i++)
 				{
@@ -163,7 +163,7 @@ public class DebugUI : UIModuleHolder
 			if (_lastObjRequest + 1f < GameTimeController.time)
 			{
 				_lastObjRequest = GameTimeController.time;
-				_lastObjectsCount = Object.FindObjectsOfType<GameObject>().Length;
+				_lastObjectsCount = UObject.FindObjectsOfType<GameObject>().Length;
 			}
 			return string.Empty + _lastObjectsCount;
 		}

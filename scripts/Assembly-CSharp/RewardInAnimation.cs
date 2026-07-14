@@ -66,7 +66,7 @@ public class RewardInAnimation : MonoBehaviour
 
 	private void Awake()
 	{
-		texture.material = UnityEngine.Object.Instantiate(material);
+		texture.material = UObject.Instantiate(material);
 	}
 
 	[ContextMenu("Play")]

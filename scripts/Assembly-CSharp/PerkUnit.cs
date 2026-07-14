@@ -112,7 +112,7 @@ public class PerkUnit : MonoBehaviour
 			if ((bool)this)
 			{
 				onDone();
-				UnityEngine.Object.Destroy(base.gameObject);
+				UObject.Destroy(base.gameObject);
 			}
 		});
 		UITweener[] tween = _tween;

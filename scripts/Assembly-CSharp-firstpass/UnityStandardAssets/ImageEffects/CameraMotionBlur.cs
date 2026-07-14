@@ -125,17 +125,17 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if (null != motionBlurMaterial)
 			{
-				Object.DestroyImmediate(motionBlurMaterial);
+				UObject.DestroyImmediate(motionBlurMaterial);
 				motionBlurMaterial = null;
 			}
 			if (null != dx11MotionBlurMaterial)
 			{
-				Object.DestroyImmediate(dx11MotionBlurMaterial);
+				UObject.DestroyImmediate(dx11MotionBlurMaterial);
 				dx11MotionBlurMaterial = null;
 			}
 			if (null != tmpCam)
 			{
-				Object.DestroyImmediate(tmpCam);
+				UObject.DestroyImmediate(tmpCam);
 				tmpCam = null;
 			}
 		}

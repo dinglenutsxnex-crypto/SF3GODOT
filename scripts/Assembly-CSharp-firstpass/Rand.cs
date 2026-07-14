@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public static class Rand
 {

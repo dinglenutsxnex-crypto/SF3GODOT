@@ -4,6 +4,8 @@
     <RootNamespace>SF3GODOT</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <NoWarn>CS0649;CS0414;CS0067;CS0169;CS0108;CS0114;CS0105;CS0219;CS0472;CS0162;CS0111;CS0102;CS0535;CS0104;GD0001;SYSLIB0011;SYSLIB0003;SYSLIB0022</NoWarn>
   </PropertyGroup>
 

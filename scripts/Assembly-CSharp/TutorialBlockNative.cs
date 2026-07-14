@@ -54,7 +54,7 @@ public class TutorialBlockNative : MonoBehaviour
 
 	private T NewTutorialPointer<T>(GameObject prefab) where T : TutorialPointer
 	{
-		GameObject gameObject = Object.Instantiate(prefab);
+		GameObject gameObject = UObject.Instantiate(prefab);
 		gameObject.transform.SetParent(base.transform);
 		T component = gameObject.GetComponent<T>();
 		component.Init(animationDuration);

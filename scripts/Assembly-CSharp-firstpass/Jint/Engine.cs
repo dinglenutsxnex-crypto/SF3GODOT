@@ -25,6 +25,7 @@ using Jint.Runtime.Descriptors;
 using Jint.Runtime.Environments;
 using Jint.Runtime.Interop;
 using Jint.Runtime.References;
+using ExecutionContext = Jint.Runtime.Environments.ExecutionContext;
 
 namespace Jint
 {
@@ -38,7 +39,7 @@ namespace Jint
 
 		private readonly StatementInterpreter _statements;
 
-		private readonly Stack<ExecutionContext> _executionContexts;
+		private readonly Stack<Jint.Runtime.Environments.ExecutionContext> _executionContexts;
 
 		private JsValue _completionValue = JsValue.Undefined;
 
@@ -170,7 +171,7 @@ namespace Jint
 
 		public ErrorConstructor UriError { get; private set; }
 
-		public ExecutionContext ExecutionContext
+		public Jint.Runtime.Environments.ExecutionContext ExecutionContext
 		{
 			get
 			{
@@ -274,13 +275,13 @@ namespace Jint
 			return null;
 		}
 
-		public ExecutionContext EnterExecutionContext(LexicalEnvironment lexicalEnvironment, LexicalEnvironment variableEnvironment, JsValue thisBinding)
+		public Jint.Runtime.Environments.ExecutionContext EnterExecutionContext(LexicalEnvironment lexicalEnvironment, LexicalEnvironment variableEnvironment, JsValue thisBinding)
 		{
-			ExecutionContext executionContext = new ExecutionContext();
+			Jint.Runtime.Environments.ExecutionContext executionContext = new Jint.Runtime.Environments.ExecutionContext();
 			executionContext.LexicalEnvironment = lexicalEnvironment;
 			executionContext.VariableEnvironment = variableEnvironment;
 			executionContext.ThisBinding = thisBinding;
-			ExecutionContext executionContext2 = executionContext;
+			Jint.Runtime.Environments.ExecutionContext executionContext2 = executionContext;
 			_executionContexts.Push(executionContext2);
 			return executionContext2;
 		}

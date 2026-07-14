@@ -2,6 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Linq;
 using UnityEngine;
 
 public static class NGUITools
@@ -78,7 +79,7 @@ public static class NGUITools
 		{
 			if (mListener == null || !GetActive(mListener))
 			{
-				AudioListener[] array = UnityEngine.Object.FindObjectsOfType(typeof(AudioListener)) as AudioListener[];
+				AudioListener[] array = UObject.FindObjectsOfType(typeof(AudioListener)) as AudioListener[];
 				if (array != null)
 				{
 					for (int i = 0; i < array.Length; i++)
@@ -95,7 +96,7 @@ public static class NGUITools
 					Camera camera = Camera.main;
 					if (camera == null)
 					{
-						camera = UnityEngine.Object.FindObjectOfType(typeof(Camera)) as Camera;
+						camera = UObject.FindObjectOfType(typeof(Camera)) as Camera;
 					}
 					if (camera != null)
 					{
@@ -145,7 +146,7 @@ public static class NGUITools
 
 	public static T[] FindActive<T>() where T : Component
 	{
-		return UnityEngine.Object.FindObjectsOfType(typeof(T)) as T[];
+		return UObject.FindObjectsOfType(typeof(T)) as T[];
 	}
 
 	public static Camera FindCameraForLayer(int layer)
@@ -324,7 +325,7 @@ public static class NGUITools
 		return text;
 	}
 
-	public static string GetTypeName(UnityEngine.Object obj)
+	public static string GetTypeName(UObject obj)
 	{
 		if (obj == null)
 		{
@@ -342,11 +343,11 @@ public static class NGUITools
 		return text;
 	}
 
-	public static void RegisterUndo(UnityEngine.Object obj, string name)
+	public static void RegisterUndo(UObject obj, string name)
 	{
 	}
 
-	public static void SetDirty(UnityEngine.Object obj)
+	public static void SetDirty(UObject obj)
 	{
 	}
 
@@ -372,7 +373,7 @@ public static class NGUITools
 
 	public static GameObject AddChild(GameObject parent, GameObject prefab)
 	{
-		GameObject gameObject = UnityEngine.Object.Instantiate(prefab);
+		GameObject gameObject = UObject.Instantiate(prefab);
 		if (gameObject != null && parent != null)
 		{
 			Transform transform = gameObject.transform;
@@ -780,7 +781,7 @@ public static class NGUITools
 		return trans.GetComponentInParent<T>();
 	}
 
-	public static void Destroy(UnityEngine.Object obj)
+	public static void Destroy(UObject obj)
 	{
 		if (!(obj != null))
 		{
@@ -793,32 +794,32 @@ public static class NGUITools
 				GameObject gameObject = obj as GameObject;
 				gameObject.transform.parent = null;
 			}
-			UnityEngine.Object.Destroy(obj);
+			UObject.Destroy(obj);
 		}
 		else
 		{
-			UnityEngine.Object.DestroyImmediate(obj);
+			UObject.DestroyImmediate(obj);
 		}
 	}
 
-	public static void DestroyImmediate(UnityEngine.Object obj)
+	public static void DestroyImmediate(UObject obj)
 	{
 		if (obj != null)
 		{
 			if (Application.isEditor)
 			{
-				UnityEngine.Object.DestroyImmediate(obj);
+				UObject.DestroyImmediate(obj);
 			}
 			else
 			{
-				UnityEngine.Object.Destroy(obj);
+				UObject.Destroy(obj);
 			}
 		}
 	}
 
 	public static void Broadcast(string funcName)
 	{
-		GameObject[] array = UnityEngine.Object.FindObjectsOfType(typeof(GameObject)) as GameObject[];
+		GameObject[] array = UObject.FindObjectsOfType(typeof(GameObject)).Cast<GameObject>().ToArray();
 		int i = 0;
 		for (int num = array.Length; i < num; i++)
 		{
@@ -828,7 +829,7 @@ public static class NGUITools
 
 	public static void Broadcast(string funcName, object param)
 	{
-		GameObject[] array = UnityEngine.Object.FindObjectsOfType(typeof(GameObject)) as GameObject[];
+		GameObject[] array = UObject.FindObjectsOfType(typeof(GameObject)).Cast<GameObject>().ToArray();
 		int i = 0;
 		for (int num = array.Length; i < num; i++)
 		{

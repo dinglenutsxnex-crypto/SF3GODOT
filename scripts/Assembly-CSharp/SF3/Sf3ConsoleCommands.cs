@@ -747,34 +747,34 @@ namespace SF3
 
 		private static string NoShadow(string[] args)
 		{
-			Projector[] array = UnityEngine.Object.FindObjectsOfType<Projector>();
+			Projector[] array = UObject.FindObjectsOfType<Projector>();
 			for (int i = 0; i < array.Length; i++)
 			{
-				UnityEngine.Object.Destroy(array[i].gameObject);
+				UObject.Destroy(array[i].gameObject);
 			}
 			return "Shadow destroyed";
 		}
 
 		private static string RemoveCloth(string[] args)
 		{
-			Cloth[] array = UnityEngine.Object.FindObjectsOfType<Cloth>();
+			Cloth[] array = UObject.FindObjectsOfType<Cloth>();
 			for (int i = 0; i < array.Length; i++)
 			{
-				UnityEngine.Object.Destroy(array[i]);
+				UObject.Destroy(array[i]);
 			}
 			return "Cloth removed";
 		}
 
 		private static string SkinToSimpleMesh(string[] args)
 		{
-			SkinnedMeshRenderer[] array = UnityEngine.Object.FindObjectsOfType<SkinnedMeshRenderer>();
+			SkinnedMeshRenderer[] array = UObject.FindObjectsOfType<SkinnedMeshRenderer>();
 			for (int i = 0; i < array.Length; i++)
 			{
 				if (!(array[i].GetComponent<Cloth>() != null))
 				{
 					array[i].gameObject.AddComponent<MeshFilter>().mesh = array[i].sharedMesh;
 					array[i].gameObject.AddComponent<MeshRenderer>().material = array[i].material;
-					UnityEngine.Object.Destroy(array[i]);
+					UObject.Destroy(array[i]);
 				}
 			}
 			return "Skins removed";
@@ -783,46 +783,46 @@ namespace SF3
 		private static string RemoveSkin(string[] args)
 		{
 			RemoveCloth(new string[1] { string.Empty });
-			SkinnedMeshRenderer[] array = UnityEngine.Object.FindObjectsOfType<SkinnedMeshRenderer>();
+			SkinnedMeshRenderer[] array = UObject.FindObjectsOfType<SkinnedMeshRenderer>();
 			for (int i = 0; i < array.Length; i++)
 			{
-				UnityEngine.Object.Destroy(array[i]);
+				UObject.Destroy(array[i]);
 			}
 			return "Skinned meshes removed";
 		}
 
 		private static string RemovePhysicsComponents(string[] args)
 		{
-			Collider[] array = UnityEngine.Object.FindObjectsOfType<Collider>();
+			Collider[] array = UObject.FindObjectsOfType<Collider>();
 			for (int i = 0; i < array.Length; i++)
 			{
 				if (array[i].gameObject.layer != 31)
 				{
-					UnityEngine.Object.Destroy(array[i]);
+					UObject.Destroy(array[i]);
 				}
 			}
-			Joint[] array2 = UnityEngine.Object.FindObjectsOfType<Joint>();
+			Joint[] array2 = UObject.FindObjectsOfType<Joint>();
 			for (int j = 0; j < array2.Length; j++)
 			{
-				UnityEngine.Object.Destroy(array2[j]);
+				UObject.Destroy(array2[j]);
 			}
-			Rigidbody[] array3 = UnityEngine.Object.FindObjectsOfType<Rigidbody>();
+			Rigidbody[] array3 = UObject.FindObjectsOfType<Rigidbody>();
 			for (int k = 0; k < array3.Length; k++)
 			{
-				UnityEngine.Object.Destroy(array3[k]);
+				UObject.Destroy(array3[k]);
 			}
 			return "Physics components removed";
 		}
 
 		private static string UnlitShader(string[] args)
 		{
-			MeshRenderer[] array = UnityEngine.Object.FindObjectsOfType<MeshRenderer>();
+			MeshRenderer[] array = UObject.FindObjectsOfType<MeshRenderer>();
 			MeshRenderer[] array2 = array;
 			foreach (MeshRenderer meshRenderer in array2)
 			{
 				meshRenderer.material.shader = Shader.Find("Unlit/Texture");
 			}
-			SkinnedMeshRenderer[] array3 = UnityEngine.Object.FindObjectsOfType<SkinnedMeshRenderer>();
+			SkinnedMeshRenderer[] array3 = UObject.FindObjectsOfType<SkinnedMeshRenderer>();
 			SkinnedMeshRenderer[] array4 = array3;
 			foreach (SkinnedMeshRenderer skinnedMeshRenderer in array4)
 			{
@@ -852,7 +852,7 @@ namespace SF3
 				bool result = false;
 				if (bool.TryParse(args[0], out result))
 				{
-					ModelSkin[] array = UnityEngine.Object.FindObjectsOfType<ModelSkin>();
+					ModelSkin[] array = UObject.FindObjectsOfType<ModelSkin>();
 					ModelSkin[] array2 = array;
 					foreach (ModelSkin modelSkin in array2)
 					{
@@ -1036,7 +1036,7 @@ namespace SF3
 				bool result = false;
 				if (bool.TryParse(args[0], out result))
 				{
-					Cloth[] array = UnityEngine.Object.FindObjectsOfType<Cloth>();
+					Cloth[] array = UObject.FindObjectsOfType<Cloth>();
 					for (int i = 0; i < array.Length; i++)
 					{
 						array[i].enabled = result;
@@ -1044,7 +1044,7 @@ namespace SF3
 					}
 					return "Cloth " + ((!result) ? "disabled" : "enabled");
 				}
-				Cloth[] array2 = UnityEngine.Object.FindObjectsOfType<Cloth>();
+				Cloth[] array2 = UObject.FindObjectsOfType<Cloth>();
 				for (int j = 0; j < array2.Length; j++)
 				{
 					array2[j].enabled = true;
@@ -1214,7 +1214,7 @@ namespace SF3
 
 		private static string TestDisconnect(params string[] args)
 		{
-			UnityEngine.Object.FindObjectOfType<NekkiConsolePanel>().OnButton();
+			UObject.FindObjectOfType<NekkiConsolePanel>().OnButton();
 			NetworkConnection.current.RestartConnection("test disconnect", false);
 			return "disconnect";
 		}

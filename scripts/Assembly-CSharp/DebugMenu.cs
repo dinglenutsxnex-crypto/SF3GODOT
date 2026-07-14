@@ -67,7 +67,7 @@ public class DebugMenu : UIModuleHolder, ISceneInitializationObject
 		string[] array = commands;
 		foreach (string com in array)
 		{
-			GameObject gameObject = Object.Instantiate(hideUIButton.gameObject);
+			GameObject gameObject = UObject.Instantiate(hideUIButton.gameObject);
 			gameObject.transform.parent = scrollView.transform;
 			gameObject.GetComponent<UIButton>().onClick.Clear();
 			gameObject.GetComponent<UIButton>().onClick.Add(new EventDelegate(delegate

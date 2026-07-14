@@ -102,15 +102,15 @@ public class TutorialComponent : MonoBehaviour
 	{
 		if (_selector != null)
 		{
-			Object.Destroy(_selector.gameObject);
+			UObject.Destroy(_selector.gameObject);
 		}
 		if (_arrow != null)
 		{
-			Object.Destroy(_arrow.gameObject);
+			UObject.Destroy(_arrow.gameObject);
 		}
 		if (_selectMask != null)
 		{
-			Object.Destroy(_selectMask.gameObject);
+			UObject.Destroy(_selectMask.gameObject);
 		}
 	}
 
@@ -176,7 +176,7 @@ public class TutorialComponent : MonoBehaviour
 	{
 		if (_selector != null)
 		{
-			Object.Destroy(_selector.gameObject);
+			UObject.Destroy(_selector.gameObject);
 		}
 		TutorialManager.Instance.RemoveWithCheck(id, base.gameObject);
 	}

@@ -55,7 +55,7 @@ public static class GameRestarter
 	{
 		List<GameObject> list = new List<GameObject>();
 		SceneManager.GetActiveScene().GetRootGameObjects(list);
-		GameObject[] array = UnityEngine.Object.FindObjectsOfType<GameObject>();
+		GameObject[] array = UObject.FindObjectsOfType<GameObject>();
 		GameObject[] array2 = array;
 		foreach (GameObject gameObject in array2)
 		{
@@ -67,7 +67,7 @@ public static class GameRestarter
 		}
 		foreach (GameObject item in list)
 		{
-			UnityEngine.Object.Destroy(item);
+			UObject.Destroy(item);
 		}
 	}
 

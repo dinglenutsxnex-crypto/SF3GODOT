@@ -27,8 +27,6 @@ namespace UnityEngine
 
 		public static void Destroy(object obj) { }
 		public static void DestroyImmediate(object obj) { }
-		public static void Destroy(Object obj) { }
-		public static void DestroyImmediate(Object obj) { }
 		public static void DestroyObject(object obj) { }
 
 		public void SendMessage(string methodName) { }

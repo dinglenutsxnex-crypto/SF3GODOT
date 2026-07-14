@@ -146,7 +146,7 @@ public class TutorialManager : MonoBehaviour
 		{
 			GlobalLoad.Unload(_tutorialBlockNGUI.gameObject);
 		}
-		_tutorialBlockNGUI = UnityEngine.Object.Instantiate(GlobalLoad.GetPrefab("UI/Tutorial/TutorialBlock").GetComponent<TutorialBlockNGUI>());
+		_tutorialBlockNGUI = UObject.Instantiate(GlobalLoad.GetPrefab("UI/Tutorial/TutorialBlock").GetComponent<TutorialBlockNGUI>());
 		_tutorialBlockNGUI.gameObject.SetActive(false);
 		_tutorialBlockNGUI.transform.SetParent(blockAnchor, true);
 		_tutorialBlockNGUI.transform.localScale = Vector3.one;
@@ -308,7 +308,7 @@ public class TutorialManager : MonoBehaviour
 
 	private void RefreshComponentsList()
 	{
-		TutorialComponent[] array = UnityEngine.Object.FindObjectsOfType<TutorialComponent>();
+		TutorialComponent[] array = UObject.FindObjectsOfType<TutorialComponent>();
 		TutorialComponent[] array2 = array;
 		foreach (TutorialComponent tutorialComponent in array2)
 		{

@@ -90,7 +90,7 @@ public class OptimizedGlow : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		Object.Destroy(glowBounds);
+		UObject.Destroy(glowBounds);
 		glowRenderTextureA.Release();
 		glowRenderTextureB.Release();
 		GlobalLoad.Unload(glowRenderTextureA);

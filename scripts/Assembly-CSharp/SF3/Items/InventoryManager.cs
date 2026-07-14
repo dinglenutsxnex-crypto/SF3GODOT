@@ -180,7 +180,7 @@ namespace SF3.Items
 				}));
 				inventoryButton.UpateBadge();
 			}
-			GameObject gameObject = UnityEngine.Object.Instantiate(perkInfoBarPrf);
+			GameObject gameObject = UObject.Instantiate(perkInfoBarPrf);
 			gameObject.transform.parent = perkInfoBarPosition.transform;
 			gameObject.transform.localScale = Vector3.one;
 			gameObject.transform.localPosition = Vector3.zero;

@@ -153,7 +153,7 @@ public class LocationColorAnimation : MonoBehaviour
 		RenderSettings.ambientMode = AmbientMode.Flat;
 		RenderSettings.ambientIntensity = ambientIntensity;
 		RenderSettings.ambientLight = ambientColor;
-		_vignette = UnityEngine.Object.FindObjectOfType<ColorCorrectionEffect>();
+		_vignette = UObject.FindObjectOfType<ColorCorrectionEffect>();
 		_vignette.VignetteEnabled = false;
 		GameObject[] array = activateInShadowForm;
 		foreach (GameObject gameObject in array)

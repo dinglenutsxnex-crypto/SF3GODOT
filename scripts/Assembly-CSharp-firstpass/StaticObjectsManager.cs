@@ -17,7 +17,7 @@ public class StaticObjectsManager : MonoBehaviour
 			if (_instance == null)
 			{
 				GameObject gameObject = new GameObject("STATIC_OBJECTS");
-				UnityEngine.Object.DontDestroyOnLoad(gameObject);
+				UObject.DontDestroyOnLoad(gameObject);
 				_instance = gameObject.AddComponent<StaticObjectsManager>();
 				_instance._transform = gameObject.transform;
 				_instance._staticObjects = new HashSet<GameObject>();
@@ -42,7 +42,7 @@ public class StaticObjectsManager : MonoBehaviour
 			}
 			else
 			{
-				UnityEngine.Object.DontDestroyOnLoad(objectValue);
+				UObject.DontDestroyOnLoad(objectValue);
 			}
 			if (objectValue.name[0] != '_')
 			{
@@ -57,7 +57,7 @@ public class StaticObjectsManager : MonoBehaviour
 		if (Instance._staticObjects.Contains(objectValue))
 		{
 			Instance._staticObjects.Remove(objectValue);
-			UnityEngine.Object.Destroy(objectValue);
+			UObject.Destroy(objectValue);
 		}
 	}
 
@@ -67,12 +67,12 @@ public class StaticObjectsManager : MonoBehaviour
 		{
 			if ((bool)staticObject)
 			{
-				UnityEngine.Object.Destroy(staticObject);
+				UObject.Destroy(staticObject);
 			}
 		}
 		if ((bool)Instance)
 		{
-			UnityEngine.Object.Destroy(Instance.gameObject);
+			UObject.Destroy(Instance.gameObject);
 		}
 		_instance = null;
 	}

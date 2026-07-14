@@ -69,7 +69,7 @@ public class TiledMap : MonoBehaviour
 		foreach (UITexture tile in tiles)
 		{
 			GlobalLoad.Unload(tile.mainTexture);
-			Object.Destroy(tile.gameObject);
+			UObject.Destroy(tile.gameObject);
 		}
 		fillX = 0;
 		fillY = 0;

@@ -72,7 +72,7 @@ namespace SF3
 				{
 					UnSelectBattle();
 				}
-				UnityEngine.Object.Destroy(_mapBattlesIcons[battleID].transform.gameObject);
+				UObject.Destroy(_mapBattlesIcons[battleID].transform.gameObject);
 				_mapBattlesIcons.Remove(battleID);
 			}
 		}
@@ -87,7 +87,7 @@ namespace SF3
 			BattleInfo battleInfo = battle.GetBattleInfo();
 			if (!_mapBattlesIcons.ContainsKey(battle.GetID()))
 			{
-				MapBattleButton mapBattleButton = UnityEngine.Object.Instantiate(_mapBattleIconPrefab);
+				MapBattleButton mapBattleButton = UObject.Instantiate(_mapBattleIconPrefab);
 				mapBattleButton.Initialize(battleInfo.id, _gameObject.transform, battleInfo.name, battleInfo.icon, decorationType, _mapPanelObject);
 				_mapBattlesIcons.Add(battleInfo.id, mapBattleButton);
 				if (battle.GetBattleType() == sf3DTO.BattleType.Mission && battle.GetIsCompleted())
@@ -156,7 +156,7 @@ namespace SF3
 				{
 					if ((bool)value.transform)
 					{
-						UnityEngine.Object.Destroy(value.transform.gameObject);
+						UObject.Destroy(value.transform.gameObject);
 					}
 				}
 			}

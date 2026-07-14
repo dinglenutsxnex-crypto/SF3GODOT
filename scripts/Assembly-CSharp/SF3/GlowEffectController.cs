@@ -29,7 +29,7 @@ namespace SF3
 		{
 			if (_instance != this)
 			{
-				Object.Destroy(this);
+				UObject.Destroy(this);
 				return;
 			}
 			_instance = this;

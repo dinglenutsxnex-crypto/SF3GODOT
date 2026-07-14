@@ -45,7 +45,7 @@ public class VisualDebugUI : UIModuleHolder
 		{
 			if ((bool)VisualObject)
 			{
-				Object.Destroy(VisualObject);
+				UObject.Destroy(VisualObject);
 			}
 			iteration = iteretion;
 			VisualDebugUiUnit component = NGUITools.AddChild(scrollView.gameObject, baseUnit.gameObject).GetComponent<VisualDebugUiUnit>();
@@ -176,7 +176,7 @@ public class VisualDebugUI : UIModuleHolder
 
 	private List<Transform> GetObjects()
 	{
-		GameObject[] array = Object.FindObjectsOfType<GameObject>();
+		GameObject[] array = UObject.FindObjectsOfType<GameObject>();
 		List<GameObject> list = new List<GameObject>();
 		GameObject[] array2 = array;
 		foreach (GameObject gameObject in array2)

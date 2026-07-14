@@ -108,7 +108,7 @@ namespace UnityEngine
         Additive,
     }
 
-    public class AnimationClip : Object
+    public class AnimationClip : UnityEngineObject
     {
         public float length => 0f;
         public float normalizedTime => 0f;
@@ -442,7 +442,7 @@ namespace UnityEngine
         Impulse,
     }
 
-    public class Component : Object
+    public class Component : UnityEngineObject
     {
         public GameObject gameObject { get; set; }
         public Transform transform { get; set; }

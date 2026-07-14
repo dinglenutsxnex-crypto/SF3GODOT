@@ -17,7 +17,7 @@ namespace UnityEngine
         public Vector3 ClosestPointOnBounds(Vector3 position) => default;
     }
 
-    public class PhysicMaterial : Object
+    public class PhysicMaterial : UnityEngineObject
     {
         public float dynamicFriction { get; set; }
         public float staticFriction { get; set; }

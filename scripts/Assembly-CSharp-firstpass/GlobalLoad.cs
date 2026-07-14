@@ -42,7 +42,7 @@ public class GlobalLoad : GlobalPath
 	{
 		if (gameObject != null)
 		{
-			GameObject gameObject2 = UnityEngine.Object.Instantiate(gameObject);
+			GameObject gameObject2 = UObject.Instantiate(gameObject);
 			gameObject2.name = gameObject2.name.Replace("(Clone)", string.Empty);
 			return gameObject2;
 		}
@@ -167,27 +167,27 @@ public class GlobalLoad : GlobalPath
 		return (T)null;
 	}
 
-	private static T ObjecOrDefault<T>(T obj, T defaultObj = null) where T : UnityEngine.Object
+	private static T ObjecOrDefault<T>(T obj, T defaultObj = null) where T : UObject
 	{
 		return obj ?? defaultObj;
 	}
 
-	public static T[] GetLoadObjectsInternal<T>(string internalAlias, string appendedPath = "") where T : UnityEngine.Object
+	public static T[] GetLoadObjectsInternal<T>(string internalAlias, string appendedPath = "") where T : UObject
 	{
 		return LoadAll<T>(GlobalPath.GetInternalPath(internalAlias, appendedPath));
 	}
 
-	public static T[] GetLoadObjects<T>(string fullPath) where T : UnityEngine.Object
+	public static T[] GetLoadObjects<T>(string fullPath) where T : UObject
 	{
 		return LoadAll<T>(GlobalPath.GetResoursesPath(fullPath));
 	}
 
-	public static T GetLoadObjectInternal<T>(string internalAlias, string appendedPath = "") where T : UnityEngine.Object
+	public static T GetLoadObjectInternal<T>(string internalAlias, string appendedPath = "") where T : UObject
 	{
 		return Load<T>(GlobalPath.GetInternalPath(internalAlias, appendedPath));
 	}
 
-	public static T GetLoadObject<T>(string fullPath) where T : UnityEngine.Object
+	public static T GetLoadObject<T>(string fullPath) where T : UObject
 	{
 		return Load<T>(GlobalPath.GetResoursesPath(fullPath));
 	}
@@ -205,7 +205,7 @@ public class GlobalLoad : GlobalPath
 		return default(TResult);
 	}
 
-	private static T[] LoadAll<T>(string path) where T : UnityEngine.Object
+	private static T[] LoadAll<T>(string path) where T : UObject
 	{
 		T[] array = FirstOf<T[], string>(path, GetBundles<T>, GetResources<T>);
 		if (array == null)
@@ -215,7 +215,7 @@ public class GlobalLoad : GlobalPath
 		return array;
 	}
 
-	private static T Load<T>(string path) where T : UnityEngine.Object
+	private static T Load<T>(string path) where T : UObject
 	{
 		T val = FirstOf<T, string>(path, GetBundle<T>, GetResource<T>);
 		if (val == null)
@@ -225,27 +225,27 @@ public class GlobalLoad : GlobalPath
 		return val;
 	}
 
-	private static T[] GetResources<T>(string path) where T : UnityEngine.Object
+	private static T[] GetResources<T>(string path) where T : UObject
 	{
 		return ResourcesUtil.GetResources<T>(path);
 	}
 
-	private static T GetResource<T>(string path) where T : UnityEngine.Object
+	private static T GetResource<T>(string path) where T : UObject
 	{
 		return ResourcesUtil.GetResource<T>(path);
 	}
 
-	private static T[] GetBundles<T>(string path) where T : UnityEngine.Object
+	private static T[] GetBundles<T>(string path) where T : UObject
 	{
 		return BundlesUtil.GetObjects<T>(path);
 	}
 
-	private static T GetBundle<T>(string path) where T : UnityEngine.Object
+	private static T GetBundle<T>(string path) where T : UObject
 	{
 		return BundlesUtil.GetObject<T>(path);
 	}
 
-	public static void Unload(UnityEngine.Object obj, bool immediate = true)
+	public static void Unload(UObject obj, bool immediate = true)
 	{
 		if (!(obj == null))
 		{
@@ -260,17 +260,17 @@ public class GlobalLoad : GlobalPath
 		}
 	}
 
-	public static void Destroy(UnityEngine.Object obj, bool immediate = true)
+	public static void Destroy(UObject obj, bool immediate = true)
 	{
 		try
 		{
 			if (!immediate)
 			{
-				UnityEngine.Object.Destroy(obj);
+				UObject.Destroy(obj);
 			}
 			else
 			{
-				UnityEngine.Object.DestroyImmediate(obj);
+				UObject.DestroyImmediate(obj);
 			}
 		}
 		catch (Exception exception)

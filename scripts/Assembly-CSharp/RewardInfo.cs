@@ -52,7 +52,7 @@ public class RewardInfo : MonoBehaviour
 
 	private void CreateProgressBar()
 	{
-		GameObject gameObject = Object.Instantiate(progressBarPrf);
+		GameObject gameObject = UObject.Instantiate(progressBarPrf);
 		gameObject.transform.parent = progressBarPlaceholder;
 		gameObject.transform.localPosition = Vector3.zero;
 		gameObject.transform.localScale = Vector3.one;

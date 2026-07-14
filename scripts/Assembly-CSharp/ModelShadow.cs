@@ -145,7 +145,7 @@ public class ModelShadow : MonoBehaviour
 
 	public void CreateShadow()
 	{
-		_shadow = UnityEngine.Object.Instantiate(shadowX).GetComponent<DrawTargetObject>();
+		_shadow = UObject.Instantiate(shadowX).GetComponent<DrawTargetObject>();
 		_shadow.target = base.transform.parent;
 		_shadow.transform.parent = base.transform.parent.Find("centerOfMass");
 		_shadow.transform.localPosition = new Vector3(-59.13672f, 47.67383f, 23.17383f);
@@ -153,7 +153,7 @@ public class ModelShadow : MonoBehaviour
 		_realShadow = _shadow.gameObject;
 		Vector3 position = base.transform.position + Vector3.up;
 		position.z -= 16f;
-		_shadowTransf = UnityEngine.Object.Instantiate(shadowPrefab, position, shadowPrefab.transform.rotation).transform;
+		_shadowTransf = UObject.Instantiate(shadowPrefab, position, shadowPrefab.transform.rotation).transform;
 		Transform shadowTransf = _shadowTransf;
 		shadowTransf.name = shadowTransf.name + " " + base.transform.parent.name;
 		_shadowTransf.parent = base.transform;

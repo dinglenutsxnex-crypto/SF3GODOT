@@ -78,7 +78,7 @@ public class BoosterpackScrollItem : MonoBehaviour
 		}
 		else
 		{
-			Object.Destroy(base.gameObject);
+			UObject.Destroy(base.gameObject);
 		}
 	}
 

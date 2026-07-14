@@ -33,7 +33,7 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if ((bool)m_Material)
 			{
-				Object.DestroyImmediate(m_Material);
+				UObject.DestroyImmediate(m_Material);
 			}
 		}
 

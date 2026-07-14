@@ -51,13 +51,13 @@ namespace SF3
 		private void GetSceneObjects()
 		{
 			nameSceneObjects.Clear();
-			Transform[] array = Object.FindObjectsOfType<Transform>();
+			Transform[] array = UObject.FindObjectsOfType<Transform>();
 			Transform[] array2 = array;
 			foreach (Transform transform in array2)
 			{
 				if (transform.parent == null)
 				{
-					GameObject gameObject = Object.Instantiate(_testLabel);
+					GameObject gameObject = UObject.Instantiate(_testLabel);
 					gameObject.transform.parent = objToDisable.transform;
 					lastLocalPos.y -= 20f;
 					gameObject.transform.localPosition = lastLocalPos;

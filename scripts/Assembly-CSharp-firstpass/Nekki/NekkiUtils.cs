@@ -154,7 +154,7 @@ namespace Nekki
 
 		public static GameObject Instantiate(string prefabPath)
 		{
-			return UnityEngine.Object.Instantiate(GlobalLoad.GetPrefab(prefabPath));
+			return UObject.Instantiate(GlobalLoad.GetPrefab(prefabPath));
 		}
 
 		public static T Instantiate<T>(string prefabPath) where T : Component

@@ -29,17 +29,17 @@ public class SimpeFPS : MonoBehaviour
 	private IEnumerator DeleteNGUI()
 	{
 		yield return new WaitForSeconds(2f);
-		UIWidget[] widjet = Object.FindObjectsOfType<UIWidget>();
+		UIWidget[] widjet = UObject.FindObjectsOfType<UIWidget>();
 		for (int i = 0; i < widjet.Length; i++)
 		{
-			Object.Destroy(widjet[i]);
+			UObject.Destroy(widjet[i]);
 		}
-		UIRoot root = Object.FindObjectOfType<UIRoot>();
-		Object.Destroy(root);
-		UIPanel[] panels = Object.FindObjectsOfType<UIPanel>();
+		UIRoot root = UObject.FindObjectOfType<UIRoot>();
+		UObject.Destroy(root);
+		UIPanel[] panels = UObject.FindObjectsOfType<UIPanel>();
 		for (int j = 0; j < panels.Length; j++)
 		{
-			Object.Destroy(panels[j]);
+			UObject.Destroy(panels[j]);
 		}
 	}
 

@@ -68,7 +68,7 @@ public class NekkiCanvasRoot : ExtentionBehaviour
 		{
 			return null;
 		}
-		GameObject gameObject = UnityEngine.Object.Instantiate(module.gameObject);
+		GameObject gameObject = UObject.Instantiate(module.gameObject);
 		gameObject.transform.SetParent(canvas.transform, false);
 		NekkiUIModule component = gameObject.GetComponent<NekkiUIModule>();
 		_mounted.Add(moduleName, component);

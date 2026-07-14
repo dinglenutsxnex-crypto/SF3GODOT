@@ -24,11 +24,11 @@ namespace SF3.Items
 
 		public void Init()
 		{
-			Transform transform = Object.Instantiate(reelItemPrf).transform;
+			Transform transform = UObject.Instantiate(reelItemPrf).transform;
 			transform.parent = itemCardPosition;
 			transform.localPosition = Vector3.zero;
 			transform.localScale = Vector3.one;
-			GameObject gameObject = Object.Instantiate(progressPrf);
+			GameObject gameObject = UObject.Instantiate(progressPrf);
 			_progress = gameObject.GetComponent<UIProgressBar>();
 			_progress.gameObject.SetActive(false);
 			Transform transform2 = _progress.transform;

@@ -99,7 +99,7 @@ public class LookAtPlayer : MonoBehaviour
 
 	private void SearchForPlayer()
 	{
-		Model model2 = Object.FindObjectsOfType<Model>().FirstOrDefault((Model model) => model.isPlayer);
+		Model model2 = UObject.FindObjectsOfType<Model>().FirstOrDefault((Model model) => model.isPlayer);
 		if (!(null == model2))
 		{
 			_player = model2.GetBone(BoneName).transform;

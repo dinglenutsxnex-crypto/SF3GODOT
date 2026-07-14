@@ -120,7 +120,7 @@ public class ConfigurableDialogContent : MonoBehaviour
 
 	private DialogButton CreateButton()
 	{
-		GameObject gameObject = Object.Instantiate(_buttonPrf);
+		GameObject gameObject = UObject.Instantiate(_buttonPrf);
 		gameObject.transform.SetParent(_buttons.transform, false);
 		return gameObject.GetComponent<DialogButton>();
 	}

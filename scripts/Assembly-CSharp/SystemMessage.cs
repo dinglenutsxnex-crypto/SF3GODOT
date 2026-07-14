@@ -77,7 +77,7 @@ public class SystemMessage : MonoBehaviour
 
 	public SystemMessage AddButton(string textAlias, UnityAction callback = null)
 	{
-		GameObject gameObject = Object.Instantiate(_buttonPrf);
+		GameObject gameObject = UObject.Instantiate(_buttonPrf);
 		gameObject.transform.SetParent(_buttonsContainer, false);
 		Button component = gameObject.GetComponent<Button>();
 		component.onClick.AddListener(delegate

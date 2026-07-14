@@ -121,7 +121,7 @@ namespace SF3.CollisionEditor
 			ResetName();
 			if (text3dPrefab != null)
 			{
-				GameObject gameObject = UnityEngine.Object.Instantiate(text3dPrefab.gameObject);
+				GameObject gameObject = UObject.Instantiate(text3dPrefab.gameObject);
 				nameTextMesh = gameObject.GetComponent<TextMesh>();
 				nameTextMesh.transform.parent = currentTransform;
 				nameTextMesh.transform.localPosition = Vector3.zero;
@@ -142,7 +142,7 @@ namespace SF3.CollisionEditor
 			{
 				marker = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 				marker.name = "tactics_pivot_marker";
-				UnityEngine.Object.Destroy(marker.GetComponent<Collider>());
+				UObject.Destroy(marker.GetComponent<Collider>());
 				marker.GetComponent<MeshRenderer>().material.color = new Color(1f, 0f, 1f);
 				marker.transform.localScale = new Vector3(15f, 15f, 15f);
 				marker.transform.parent = base.transform;

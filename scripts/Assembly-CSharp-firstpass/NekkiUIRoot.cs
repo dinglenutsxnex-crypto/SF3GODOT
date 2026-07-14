@@ -65,7 +65,7 @@ public class NekkiUIRoot : ExtentionBehaviour
 		{
 			if (!_instance)
 			{
-				_instance = UnityEngine.Object.FindObjectOfType<NekkiUIRoot>();
+				_instance = UObject.FindObjectOfType<NekkiUIRoot>();
 				if ((bool)_instance)
 				{
 					_instance.Init();
@@ -151,7 +151,7 @@ public class NekkiUIRoot : ExtentionBehaviour
 		_modules.Clear();
 		RecalcAnchors();
 		_instance = this;
-		UnityEngine.Object.DontDestroyOnLoad(this);
+		UObject.DontDestroyOnLoad(this);
 	}
 
 	private void Awake()

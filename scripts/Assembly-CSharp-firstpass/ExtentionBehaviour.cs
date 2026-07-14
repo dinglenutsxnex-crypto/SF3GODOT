@@ -48,22 +48,22 @@ public class ExtentionBehaviour : MonoBehaviour
 		}
 	}
 
-	protected void Log(object message, UnityEngine.Object source = null)
+	protected void Log(object message, UObject source = null)
 	{
 		Debug.Log(message, source ?? this);
 	}
 
-	protected void LogWarning(object message, UnityEngine.Object source = null)
+	protected void LogWarning(object message, UObject source = null)
 	{
 		Debug.LogWarning(message, source ?? this);
 	}
 
-	protected void LogError(object message, UnityEngine.Object source = null)
+	protected void LogError(object message, UObject source = null)
 	{
 		Debug.LogError(message, source ?? this);
 	}
 
-	protected void LogException(Exception ex, UnityEngine.Object source = null)
+	protected void LogException(Exception ex, UObject source = null)
 	{
 		Debug.LogException(ex, source ?? this);
 	}

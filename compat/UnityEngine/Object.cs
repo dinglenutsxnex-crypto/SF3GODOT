@@ -2,7 +2,8 @@ using System;
 
 namespace UnityEngine
 {
-	public class Object
+	// Renamed from Object to avoid CS0104 ambiguity with System.Object
+	public class UnityEngineObject
 	{
 		public string name { get { throw new NotImplementedException(); } set { throw new NotImplementedException(); } }
 		public HideFlags hideFlags { get; set; }
@@ -30,10 +31,6 @@ namespace UnityEngine
 		}
 
 		public static void DestroyObject(object obj) { }
-		public static void DestroyImmediate(Object target)
-		{
-			throw new NotImplementedException();
-		}
 
 		public static void DontDestroyOnLoad(object target)
 		{
@@ -50,7 +47,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static Object FindObjectOfType(Type type)
+		public static UnityEngineObject FindObjectOfType(Type type)
 		{
 			throw new NotImplementedException();
 		}
@@ -65,17 +62,17 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static Object[] FindObjectsOfType(Type type)
+		public static UnityEngineObject[] FindObjectsOfType(Type type)
 		{
 			throw new NotImplementedException();
 		}
 
-		public static Object[] FindObjectsOfType(Type type, bool includeInactive)
+		public static UnityEngineObject[] FindObjectsOfType(Type type, bool includeInactive)
 		{
 			throw new NotImplementedException();
 		}
 
-		public static Object Instantiate(Object original)
+		public static UnityEngineObject Instantiate(UnityEngineObject original)
 		{
 			throw new NotImplementedException();
 		}
@@ -85,7 +82,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static Object Instantiate(Object original, Transform parent)
+		public static UnityEngineObject Instantiate(UnityEngineObject original, Transform parent)
 		{
 			throw new NotImplementedException();
 		}
@@ -95,7 +92,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static Object Instantiate(Object original, Transform parent, bool instantiateInWorldSpace)
+		public static UnityEngineObject Instantiate(UnityEngineObject original, Transform parent, bool instantiateInWorldSpace)
 		{
 			throw new NotImplementedException();
 		}
@@ -105,7 +102,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static Object Instantiate(Object original, Vector3 position, Quaternion rotation)
+		public static UnityEngineObject Instantiate(UnityEngineObject original, Vector3 position, Quaternion rotation)
 		{
 			throw new NotImplementedException();
 		}
@@ -115,7 +112,7 @@ namespace UnityEngine
 			throw new NotImplementedException();
 		}
 
-		public static Object Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent)
+		public static UnityEngineObject Instantiate(UnityEngineObject original, Vector3 position, Quaternion rotation, Transform parent)
 		{
 			throw new NotImplementedException();
 		}
@@ -127,6 +124,6 @@ namespace UnityEngine
 
 		public override string ToString() => name;
 
-		public static implicit operator bool(Object exists) => exists != null;
+		public static implicit operator bool(UnityEngineObject exists) => exists != null;
 	}
 }

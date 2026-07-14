@@ -66,7 +66,7 @@ public class FeedbackDialogController : MonoBehaviour
 			Debug.LogError("The dialog has already been created");
 			return;
 		}
-		GameObject gameObject = UnityEngine.Object.Instantiate(_checkboxPrefab);
+		GameObject gameObject = UObject.Instantiate(_checkboxPrefab);
 		gameObject.transform.SetParent(_checkboxContainer, false);
 		gameObject.GetComponentInChildren<LocalizationText>().SetAlias(alias);
 		gameObject.GetComponentInChildren<Toggle>().onValueChanged.AddListener(OnChecked);

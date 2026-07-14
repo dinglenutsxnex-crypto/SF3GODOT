@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace UnityEngine
 {
-	public class GameObject : Object
+	public class GameObject : UnityEngineObject
     {
 		Node _node;
 

@@ -1,5 +1,6 @@
 using System.Text;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DG.Tweening.Plugins
 {

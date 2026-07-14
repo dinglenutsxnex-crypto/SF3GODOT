@@ -27,7 +27,7 @@ public class TutorialBlockNGUI : MonoBehaviour
 	private void Awake()
 	{
 		activeTargets = new List<TutorialComponent>();
-		Material material = Object.Instantiate(darknessTexture.material);
+		Material material = UObject.Instantiate(darknessTexture.material);
 		Texture texture = material.GetTexture("_Mask");
 		texture.width = Screen.width / 2;
 		texture.height = Screen.height / 2;
@@ -45,7 +45,7 @@ public class TutorialBlockNGUI : MonoBehaviour
 
 	private T NewTutorialPointer<T>(GameObject prefab) where T : TutorialPointer
 	{
-		GameObject gameObject = Object.Instantiate(prefab);
+		GameObject gameObject = UObject.Instantiate(prefab);
 		gameObject.transform.parent = base.transform;
 		T component = gameObject.GetComponent<T>();
 		component.Init(animationDuration);

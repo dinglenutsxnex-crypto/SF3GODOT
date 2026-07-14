@@ -28,7 +28,7 @@ namespace Prime31
 					if (_surrogateGameObject == null)
 					{
 						_surrogateGameObject = new GameObject("P31CoroutineSurrogate");
-						UnityEngine.Object.DontDestroyOnLoad(_surrogateGameObject);
+						UObject.DontDestroyOnLoad(_surrogateGameObject);
 					}
 				}
 				return _surrogateGameObject;

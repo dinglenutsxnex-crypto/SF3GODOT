@@ -48,15 +48,20 @@ namespace SceneConverter
             int extResourceId = 1;
             var extResources = new List<string>();
 
+            // Create a single root node wrapping everything
+            string sceneRootName = sceneName + "_Root";
+            tscn.Add($"[node name=\"{sceneRootName}\" type=\"Node\"]");
+            tscn.Add("");
+
             foreach (var rootNode in hierarchy)
             {
-                ConvertNode(rootNode, tscn, ref nodeId, ref extResourceId, extResources, nodePaths, "", sceneName, projectRoot);
+                ConvertNode(rootNode, tscn, ref nodeId, ref extResourceId, extResources, nodePaths, sceneRootName, sceneName, projectRoot);
             }
 
-            // Write ext_resources
-            foreach (var er in extResources)
+            // Write ext_resources after the gd_scene header
+            for (int i = 0; i < extResources.Count; i++)
             {
-                tscn.Insert(1, er);
+                tscn.Insert(1 + i, extResources[i]);
             }
 
             string outputFile = Path.Combine(outputDir, sceneName + ".tscn");
@@ -65,19 +70,27 @@ namespace SceneConverter
         }
 
         static void ConvertNode(JsonNode node, List<string> tscn, ref int nodeId, ref int extResourceId, 
-            List<string> extResources, Dictionary<string, string> nodePaths, string parentPath, string sceneName, string projectRoot)
+            List<string> extResources, Dictionary<string, string> nodePaths, string parentPath, string sceneName, string projectRoot, string parentType = "Node")
         {
             string name = node["name"]?.GetValue<string>() ?? "Node";
             string type = DetermineNodeType(node);
+
+            // Check parent-child type compatibility
+            if (!IsCompatibleNodeType(type, parentType))
+            {
+                tscn.Add($"# Skipped node '{name}' (type {type}): incompatible under parent type {parentType}");
+                return;
+            }
+
             bool isRoot = string.IsNullOrEmpty(parentPath);
-            string effectiveParentPath = isRoot ? null : parentPath;
-    string myPath = isRoot ? name : effectiveParentPath + "/" + name;
-    nodePaths[name] = myPath;
+            string parentRef = isRoot ? null : parentPath;
+            string myPath = isRoot ? name : parentRef + "/" + name;
+            nodePaths[name] = myPath;
 
             int myId = nodeId++;
             string nodeHeader = isRoot 
                 ? $"[node name=\"{name}\" type=\"{type}\"]"
-                : $"[node name=\"{name}\" type=\"{type}\" parent=\"{effectiveParentPath}\"]";
+                : $"[node name=\"{name}\" type=\"{type}\" parent=\"{parentRef}\"]";
             tscn.Add(nodeHeader);
 
             // Transform
@@ -158,7 +171,7 @@ namespace SceneConverter
             {
                 foreach (var child in children)
                 {
-                    ConvertNode(child, tscn, ref nodeId, ref extResourceId, extResources, nodePaths, myPath, sceneName, projectRoot);
+                    ConvertNode(child, tscn, ref nodeId, ref extResourceId, extResources, nodePaths, myPath, sceneName, projectRoot, type);
                 }
             }
         }
@@ -369,6 +382,26 @@ namespace SceneConverter
                 float sz = size["z"]?.GetValue<float>() ?? 1;
                 tscn.Add($"# BoxCollider size: {sx}, {sy}, {sz}");
             }
+        }
+
+        static bool IsCompatibleNodeType(string childType, string parentType)
+        {
+            if (string.IsNullOrEmpty(parentType) || parentType == "Node")
+                return true;
+
+            // 3D nodes can only have 3D children
+            bool is3DParent = parentType == "Node3D" || parentType == "Camera3D";
+            bool is3DChild = childType == "Node3D" || childType == "Camera3D";
+            if (is3DParent && is3DChild) return true;
+            if (is3DParent && !is3DChild) return false;
+
+            // Control/UI nodes can only have UI children
+            bool isControlParent = parentType == "Control" || parentType == "Label" || parentType == "TextureRect" || parentType == "Panel" || parentType == "CanvasLayer";
+            bool isControlChild = childType == "Control" || childType == "Label" || childType == "TextureRect" || childType == "Panel" || childType == "CanvasLayer" || childType == "Camera2D" || childType == "Node2D" || childType == "Sprite2D";
+            if (isControlParent && isControlChild) return true;
+            if (isControlParent && !isControlChild) return false;
+
+            return true;
         }
 
         static string SanitizePath(string path)

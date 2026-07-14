@@ -146,11 +146,11 @@ namespace Nekki.UI
 			{
 				if (Application.isPlaying)
 				{
-					UnityEngine.Object.Destroy(noImageTexture);
+					UObject.Destroy(noImageTexture);
 				}
 				else
 				{
-					UnityEngine.Object.DestroyImmediate(noImageTexture);
+					UObject.DestroyImmediate(noImageTexture);
 				}
 			}
 		}

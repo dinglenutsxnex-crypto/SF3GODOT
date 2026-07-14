@@ -2,7 +2,7 @@ using System;
 
 namespace UnityEngine.Audio
 {
-    public class AudioMixer : Object
+    public class AudioMixer : UnityEngineObject
     {
         public bool SetFloat(string name, float value) => false;
         public bool GetFloat(string name, out float value) { value = 0; return false; }
@@ -11,13 +11,13 @@ namespace UnityEngine.Audio
         public AudioMixerSnapshot FindSnapshot(string name) => null;
     }
 
-    public class AudioMixerGroup : Object
+    public class AudioMixerGroup : UnityEngineObject
     {
         public AudioMixer audioMixer => null;
         public string Name => "";
     }
 
-    public class AudioMixerSnapshot : Object
+    public class AudioMixerSnapshot : UnityEngineObject
     {
         public AudioMixer audioMixer => null;
         public void TransitionTo(float timeToReach) { }

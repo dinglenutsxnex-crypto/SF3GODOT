@@ -134,10 +134,10 @@ public class NekkiUICamera : UICamera
 	{
 		if (renderCameraToTexture)
 		{
-			Object.Destroy(targetTexture);
+			UObject.Destroy(targetTexture);
 			if (texture != null)
 			{
-				Object.Destroy(texture.gameObject);
+				UObject.Destroy(texture.gameObject);
 			}
 		}
 	}

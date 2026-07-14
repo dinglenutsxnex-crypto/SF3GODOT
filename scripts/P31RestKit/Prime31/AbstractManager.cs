@@ -41,7 +41,7 @@ namespace Prime31
 		{
 			if (!(_threadingCallbackHelper != null))
 			{
-				_threadingCallbackHelper = UnityEngine.Object.FindObjectOfType(typeof(ThreadingCallbackHelper)) as ThreadingCallbackHelper;
+				_threadingCallbackHelper = UObject.FindObjectOfType(typeof(ThreadingCallbackHelper)) as ThreadingCallbackHelper;
 				if (!(_threadingCallbackHelper != null))
 				{
 					GameObject prime31ManagerGameObject = getPrime31ManagerGameObject();
@@ -60,7 +60,7 @@ namespace Prime31
 			if (_prime31GameObject == null)
 			{
 				_prime31GameObject = new GameObject("prime[31]");
-				UnityEngine.Object.DontDestroyOnLoad(_prime31GameObject);
+				UObject.DontDestroyOnLoad(_prime31GameObject);
 			}
 			return _prime31GameObject;
 		}
@@ -69,14 +69,14 @@ namespace Prime31
 		{
 			try
 			{
-				MonoBehaviour monoBehaviour = UnityEngine.Object.FindObjectOfType(type) as MonoBehaviour;
+				MonoBehaviour monoBehaviour = UObject.FindObjectOfType(type) as MonoBehaviour;
 				if (!(monoBehaviour != null))
 				{
 					GameObject prime31ManagerGameObject = getPrime31ManagerGameObject();
 					GameObject gameObject = new GameObject(type.ToString());
 					gameObject.AddComponent(type);
 					gameObject.transform.parent = prime31ManagerGameObject.transform;
-					UnityEngine.Object.DontDestroyOnLoad(gameObject);
+					UObject.DontDestroyOnLoad(gameObject);
 				}
 			}
 			catch (UnityException)
@@ -88,7 +88,7 @@ namespace Prime31
 		private void Awake()
 		{
 			base.gameObject.name = GetType().ToString();
-			UnityEngine.Object.DontDestroyOnLoad(this);
+			UObject.DontDestroyOnLoad(this);
 		}
 	}
 }

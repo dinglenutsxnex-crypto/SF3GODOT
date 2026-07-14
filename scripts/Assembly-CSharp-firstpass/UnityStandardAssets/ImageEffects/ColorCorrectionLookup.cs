@@ -29,7 +29,7 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if ((bool)material)
 			{
-				Object.DestroyImmediate(material);
+				UObject.DestroyImmediate(material);
 				material = null;
 			}
 		}
@@ -38,7 +38,7 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if ((bool)converted3DLut)
 			{
-				Object.DestroyImmediate(converted3DLut);
+				UObject.DestroyImmediate(converted3DLut);
 			}
 			converted3DLut = null;
 		}
@@ -60,7 +60,7 @@ namespace UnityStandardAssets.ImageEffects
 			}
 			if ((bool)converted3DLut)
 			{
-				Object.DestroyImmediate(converted3DLut);
+				UObject.DestroyImmediate(converted3DLut);
 			}
 			converted3DLut = new Texture3D(num, num, num, TextureFormat.ARGB32, false);
 			converted3DLut.SetPixels(array);
@@ -109,7 +109,7 @@ namespace UnityStandardAssets.ImageEffects
 				}
 				if ((bool)converted3DLut)
 				{
-					Object.DestroyImmediate(converted3DLut);
+					UObject.DestroyImmediate(converted3DLut);
 				}
 				converted3DLut = new Texture3D(num, num, num, TextureFormat.ARGB32, false);
 				converted3DLut.SetPixels(array);

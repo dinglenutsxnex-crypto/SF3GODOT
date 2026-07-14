@@ -58,7 +58,7 @@ namespace UnityStandardAssets.ImageEffects
 		{
 			if ((bool)mat)
 			{
-				UnityEngine.Object.DestroyImmediate(mat);
+				UObject.DestroyImmediate(mat);
 				mat = null;
 			}
 		}

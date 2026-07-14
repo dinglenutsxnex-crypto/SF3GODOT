@@ -147,7 +147,7 @@ namespace SF3
 			_battleStagesSprites = new List<GameObject>();
 			for (int i = 0; i < 24; i++)
 			{
-				GameObject gameObject = Object.Instantiate(_stageSpritePrefab);
+				GameObject gameObject = UObject.Instantiate(_stageSpritePrefab);
 				gameObject.transform.parent = _fightsParent;
 				gameObject.transform.eulerAngles = Vector3.zero;
 				gameObject.transform.localScale = Vector3.one;
@@ -320,12 +320,12 @@ namespace SF3
 			foreach (Transform item in _rewardsTableItem.transform)
 			{
 				item.gameObject.SetActive(false);
-				Object.Destroy(item.gameObject);
+				UObject.Destroy(item.gameObject);
 			}
 			foreach (Transform item2 in _rewardsTableCountable.transform)
 			{
 				item2.gameObject.SetActive(false);
-				Object.Destroy(item2.gameObject);
+				UObject.Destroy(item2.gameObject);
 			}
 		}
 
