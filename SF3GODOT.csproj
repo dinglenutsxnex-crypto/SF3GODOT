@@ -1,26 +1,22 @@
 <Project Sdk="Godot.NET.Sdk/4.4.0">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>SF3GODOT</RootNamespace>
+    <RootNamespace>SF3</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <NoWarn>CS0649;CS0414;CS0067;CS0169;CS0108;CS0114;CS0105;CS0219;CS0472;CS0162;CS0111;CS0102;CS0535;CS0104;GD0001;SYSLIB0011;SYSLIB0003;SYSLIB0022</NoWarn>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Jint" Version="4.*" />
+    <PackageReference Include="YamlDotNet" Version="16.*" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.*" />
+    <PackageReference Include="System.Reactive" Version="6.*" />
+    <PackageReference Include="Google.Protobuf" Version="3.*" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="scripts\Assembly-CSharp-firstpass\GooglePlayGames\**" />
-    <Compile Remove="scripts\Assembly-CSharp-firstpass\Prime31\**" />
-    <Compile Remove="scripts\Assembly-CSharp-firstpass\GamepadInput\**" />
-    <Compile Remove="scripts\Assembly-CSharp-firstpass\UnityAndroidNotifications\**" />
-    <Compile Remove="scripts\Assembly-UnityScript\**" />
-    <Compile Remove="scripts\P31RestKit\**" />
-    <Compile Remove="compat\UnityEngine\UnityEngine.UI\**" />
-    <Compile Remove="scripts\Assembly-CSharp-firstpass\Nekki\GamingService\GooglePlayGS.cs" />
-  </ItemGroup>
 </Project>
