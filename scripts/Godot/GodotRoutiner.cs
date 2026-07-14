@@ -17,7 +17,21 @@ public partial class GodotRoutiner : Node
     {
         for (int i = _routines.Count - 1; i >= 0; i--)
         {
-            if (!_routines[i].MoveNext())
+            var routine = _routines[i];
+            var current = routine.Current;
+            if (current is UnityEngine.CustomYieldInstruction cyi)
+            {
+                if (cyi.keepWaiting) continue;
+            }
+            else if (current is UnityEngine.WaitForSeconds wfs)
+            {
+                if (wfs.keepWaiting) continue;
+            }
+            else if (current is UnityEngine.AsyncOperation)
+            {
+                continue;
+            }
+            if (!routine.MoveNext())
                 _routines.RemoveAt(i);
         }
     }

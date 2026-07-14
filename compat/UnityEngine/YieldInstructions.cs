@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Godot;
 
 namespace UnityEngine
 {
@@ -20,7 +21,9 @@ namespace UnityEngine
     }
     public class WaitForSeconds : YieldInstruction
     {
-        public WaitForSeconds(float seconds) { }
+        private float _endTime;
+        public WaitForSeconds(float seconds) { _endTime = (float)Godot.Time.GetTicksMsec() / 1000f + seconds; }
+        public bool keepWaiting => (float)Godot.Time.GetTicksMsec() / 1000f < _endTime;
     }
     public class WaitForEndOfFrame : YieldInstruction { }
     public class WaitForFixedUpdate : YieldInstruction { }
@@ -32,13 +35,29 @@ namespace UnityEngine
     public class WaitForUpdate : YieldInstruction { }
     public class WaitUntil : CustomYieldInstruction
     {
-        public WaitUntil(Func<bool> predicate) { }
-        public override bool keepWaiting => false;
+        private Func<bool> _predicate;
+        public WaitUntil(Func<bool> predicate) { _predicate = predicate; }
+        public override bool keepWaiting
+        {
+            get
+            {
+                try { return !_predicate(); }
+                catch { return false; }
+            }
+        }
     }
     public class WaitWhile : CustomYieldInstruction
     {
-        public WaitWhile(Func<bool> predicate) { }
-        public override bool keepWaiting => false;
+        private Func<bool> _predicate;
+        public WaitWhile(Func<bool> predicate) { _predicate = predicate; }
+        public override bool keepWaiting
+        {
+            get
+            {
+                try { return _predicate(); }
+                catch { return false; }
+            }
+        }
     }
     public abstract class CustomYieldInstruction : IEnumerator
     {
