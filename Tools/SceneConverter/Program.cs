@@ -42,7 +42,6 @@ namespace SceneConverter
             tscn.Add("");
 
             int nodeId = 0;
-            var nodePaths = new Dictionary<string, string>();
 
             // External resources
             int extResourceId = 1;
@@ -55,7 +54,7 @@ namespace SceneConverter
 
             foreach (var rootNode in hierarchy)
             {
-                ConvertNode(rootNode, tscn, ref nodeId, ref extResourceId, extResources, nodePaths, sceneRootName, sceneName, projectRoot);
+                ConvertNode(rootNode, tscn, ref nodeId, ref extResourceId, extResources, sceneRootName, sceneName, projectRoot);
             }
 
             // Write ext_resources after the gd_scene header
@@ -70,9 +69,10 @@ namespace SceneConverter
         }
 
         static void ConvertNode(JsonNode node, List<string> tscn, ref int nodeId, ref int extResourceId, 
-            List<string> extResources, Dictionary<string, string> nodePaths, string parentPath, string sceneName, string projectRoot, string parentType = "Node")
+            List<string> extResources, string parentPath, string sceneName, string projectRoot, string parentType = "Node")
         {
             string name = node["name"]?.GetValue<string>() ?? "Node";
+            name = name.Replace("#", "_");
             string type = DetermineNodeType(node);
 
             // Check parent-child type compatibility
@@ -85,7 +85,6 @@ namespace SceneConverter
             bool isRoot = string.IsNullOrEmpty(parentPath);
             string parentRef = isRoot ? null : parentPath;
             string myPath = isRoot ? name : parentRef + "/" + name;
-            nodePaths[name] = myPath;
 
             int myId = nodeId++;
             string nodeHeader = isRoot 
@@ -137,6 +136,7 @@ namespace SceneConverter
 
             // Components
             var components = node["components"]?.AsArray();
+            bool scriptAssigned = false;
             if (components != null)
             {
                 foreach (var comp in components)
@@ -156,7 +156,7 @@ namespace SceneConverter
                             ApplyNGUIProperties(compType, compData, tscn, type, extResources, ref extResourceId, projectRoot);
                             break;
                         case "script":
-                            ApplyScript(compData, tscn, myPath, extResources, ref extResourceId, projectRoot);
+                            ApplyScript(compData, tscn, myPath, extResources, ref extResourceId, projectRoot, ref scriptAssigned);
                             break;
                         case "boxCollider":
                             ApplyBoxCollider(compData, tscn);
@@ -173,7 +173,7 @@ namespace SceneConverter
             {
                 foreach (var child in children)
                 {
-                    ConvertNode(child, tscn, ref nodeId, ref extResourceId, extResources, nodePaths, myPath, sceneName, projectRoot, type);
+                    ConvertNode(child, tscn, ref nodeId, ref extResourceId, extResources, myPath, sceneName, projectRoot, type);
                 }
             }
         }
@@ -322,7 +322,7 @@ namespace SceneConverter
         }
 
         static void ApplyScript(JsonNode compData, List<string> tscn, string nodePath, 
-            List<string> extResources, ref int extResourceId, string projectRoot)
+            List<string> extResources, ref int extResourceId, string projectRoot, ref bool scriptAssigned)
         {
             var scriptInfo = compData?["script"];
             if (scriptInfo == null) return;
@@ -336,11 +336,10 @@ namespace SceneConverter
             {
                 int curId = extResourceId++;
                 extResources.Add($"[ext_resource type=\"Script\" path=\"{scriptPath}\" id=\"{curId}\"]");
-                // Check if script already assigned to this node
-                bool hasScript = tscn.Any(line => line.TrimStart().StartsWith("script = "));
-                if (!hasScript)
+                if (!scriptAssigned)
                 {
                     tscn.Add($"script = ExtResource(\"{curId}\")");
+                    scriptAssigned = true;
                 }
                 else
                 {
